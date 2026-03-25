@@ -1,0 +1,64 @@
+@media (min-width: 600px){
+/*
+ * estrutura para o cabeçalho da página em telas com, ou mais, de 600px de largura
+ * só manter isso daqui nas outras páginas
+ * 
+ * IMPORTANTE: coloquem esse arquivo css nas outras páginas, mas
+ * não acrescentem nada nele, a fim de não gerar conflitos com as
+ * outras páginas; criem outros arquivos css para as outras páginas
+ * ao invés disso.
+ * */
+	body {
+		font-size: 16px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.header-menu {
+		position: relative;
+		width: 100%;
+		
+	}
+	
+	.figure-header {
+		margin: 0;
+	}
+	
+	#img-header {
+		display: block;
+		width: 100%;
+		top: 0;
+		bottom: 0;
+	}
+	
+	.nav-menu {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		margin: 0;
+		top: 0;
+	}
+	
+	.list-nav {
+		display: flex;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		justify-content: space-around;
+
+	}
+	
+	.nav-option {
+		list-style: none;
+		font-size: 1.9vw;
+	}
+	
+	.nav-option a {
+		font-family: sans-serif;
+		font-weight: 900;
+		text-decoration: none;
+		color: white;
+	}
+}

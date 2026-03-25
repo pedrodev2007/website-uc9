@@ -1,0 +1,35 @@
+
+@media (max-width: 600px) {
+    #img-header {
+        width: 100%;
+    }
+    .div-banner {
+        display: flex;
+        position: relative;
+        bottom: 125px;
+        z-index: -1;
+    }
+    #img-banner {
+        
+        width: 100%;
+    }
+    .nav-menu {
+        display: flex;
+        position: relative;
+        bottom: 75px;
+        right: 20%;
+        align-items: center;
+        font-size: 0.5rem;
+    }
+    .list-nav {
+        display: flex;
+        
+        flex-direction: row;
+    }
+    .nav-option {
+
+        color: white;
+        font-weight: 1000;
+        padding-left: 10%;
+    }
+}
