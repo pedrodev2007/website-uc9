@@ -1,4 +1,10 @@
-@media (min-width: 600px){
+hr {
+	margin: 100px;
+}
+
+
+
+@media (min-width: 767px){
 /*
  * estrutura para o cabeçalho da página em telas com, ou mais, de 600px de largura
  * só manter isso daqui nas outras páginas
@@ -10,8 +16,7 @@
  * */
 	body {
 		font-size: 16px;
-		font-family: 'Inter', sans-serif;
-
+		
 		margin: 0;
 		padding: 0;
 	}
@@ -22,20 +27,14 @@
 
 	.header-menu {
 		position: relative;
+		
+		height: 100px;
 		width: 100%;
 		
 	}
 	
 	.figure-header {
 		margin: 0;
-	}
-	
-	#img-header {
-		display: block;
-		width: 100%;
-		top: 0;
-		bottom: 0;
-		filter: drop-shadow(1px 2px 5px rgb(70, 70, 70));
 	}
 	
 	.nav-menu {
@@ -60,14 +59,15 @@
 	.nav-option {
 		list-style: none;
 		font-size: 1.5vw;
-		text-shadow: 0px 2px 10px rgb(54, 54, 54);
+		
 	}
 
 	.nav-option a {
-		
+		font-family: 'Inter', sans-serif;
 		font-weight: 900;
 		text-decoration: none;
-		color: white;
+		
+		color: #DD2DAA;  /* #DD2DAA  #00A2FF  */
 	}
 }
 
@@ -77,7 +77,7 @@
 
 
 
-@media (max-width: 600px) { /*MOBILE*/
+@media (max-width: 767px) { /*MOBILE*/
 	body {
 		font-size: 16px;
 		font-family: 'Inter', sans-serif;
@@ -85,31 +85,28 @@
 		margin: 0;
 		padding: 0;
 	}
-
+	#menu-img {
+		width: 25px;
+		margin: 50%;
+	}
 
 	.offcanvas-header {
-		background-color: #6AC4EA;
+		background-color: white;
 	}
 	.offcanvas-body{
-		background-color: #6AC4EA;
+		background-color: white;
 	}
 
 	.header-menu {
 		position: relative;
+		
+		height: 100px;
 		width: 100%;
 		
 	}
 	
 	.figure-header {
 		margin: 0;
-	}
-	
-	#img-header {
-		display: block;
-		width: 100%;
-		top: 0;
-		bottom: 0;
-		filter: drop-shadow(1px 2px 5px rgb(70, 70, 70));
 	}
 	
 	.nav-menu {
@@ -143,6 +140,6 @@
 		
 		font-weight: 900;
 		text-decoration: none;
-		color: white;
+		color: #DD2DAA;
 	}
 }
