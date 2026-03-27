@@ -2,9 +2,33 @@ hr {
 	margin: 100px;
 }
 
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: white;
+}
+
+footer {
+	margin-top: 10vw;
+	display: flex;
+	flex-direction: row;
+	background-color: #1AC8B9;
+	width: 100%;
+	height: 400px;
+}
+
+footer div {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	padding: 5%;
+}
+
+footer div a {
+	text-decoration: none;
+}
 
 
-@media (min-width: 767px){
+@media (min-width: 768px){
 /*
  * estrutura para o cabeçalho da página em telas com, ou mais, de 600px de largura
  * só manter isso daqui nas outras páginas
@@ -16,25 +40,39 @@ hr {
  * */
 	body {
 		font-size: 16px;
-		
-		margin: 0;
+		margin-left: 10%;
+		margin-right: 10%;
 		padding: 0;
 	}
 
 	.btn {
-		display: none;
+		margin: 1%;
 	}
 
 	.header-menu {
 		position: relative;
-		
+		background-color: white;
+		filter: drop-shadow(0px 1px 2px rgb(213, 213, 213));
 		height: 100px;
 		width: 100%;
+		border-radius: 50px;
 		
 	}
 	
 	.figure-header {
 		margin: 0;
+	}
+
+	#menu-img {
+		width: 25px;
+		margin: 50%;
+	}
+
+	.offcanvas-header {
+		background-color: white;
+	}
+	.offcanvas-body{
+		background-color: white;
 	}
 	
 	.nav-menu {
@@ -58,7 +96,7 @@ hr {
 	
 	.nav-option {
 		list-style: none;
-		font-size: 1.5vw;
+		font-size: 1vw;
 		
 	}
 
@@ -69,6 +107,34 @@ hr {
 		
 		color: #DD2DAA;  /* #DD2DAA  #00A2FF  */
 	}
+
+	.list-offcanvas {
+		list-style: none;
+	}
+
+	.offcanvas-option {
+		padding: 10px;
+	}
+
+	.offcanvas-option a{ 
+		font-weight: 900;
+		text-decoration: none;
+		color: #DD2DAA;
+	}
+
+	.footer-top-div a {
+		margin: 10px;
+		text-decoration: none;
+		color: white;
+		font-weight: 900;
+		font-size: 2rem;
+	}
+
+	.footer-bottom-div {
+		width: 100%;
+	}
+
+
 }
 
 
@@ -77,11 +143,10 @@ hr {
 
 
 
-@media (max-width: 767px) { /*MOBILE*/
+@media (max-width: 768px) { /*MOBILE*/
 	body {
 		font-size: 16px;
 		font-family: 'Inter', sans-serif;
-
 		margin: 0;
 		padding: 0;
 	}
@@ -137,9 +202,36 @@ hr {
 	}
 
 	.offcanvas-option a{ 
-		
 		font-weight: 900;
 		text-decoration: none;
 		color: #DD2DAA;
+	}
+	footer {
+		margin-top: 10vw;
+		padding-top: 25px;
+		display: flex;
+		flex-direction: column;
+		background-color: #1AC8B9;
+		width: 100%;
+		height: 400px;
+	}
+
+		
+	.footer-top-div {
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+	
+	.footer-top-div a {
+		margin: 10px;
+		color: white;
+		font-weight: 900;
+		text-decoration: none;
+		color: white;
+		font-weight: 900;
+		font-size: 1rem;
 	}
 }

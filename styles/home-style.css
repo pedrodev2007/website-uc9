@@ -1,9 +1,14 @@
+
+
 @media (min-width: 768px) {
 	/* é aquele banner logo abaixo do menu no cabeçalho*/
 	
 	.div-banner {
+		display: flex;
 		z-index: -1;
 		position: relative;
+		justify-content: center;
+		align-items: center;
 		margin-top: 3vw;
 		/*margin-top: -3.3vw;*/
 	}
@@ -13,6 +18,32 @@
 		justify-content: center;
 		margin: 0;
 	}
+
+
+	#div-types {
+
+		display: flex;
+		margin: 10%;
+		flex-direction: column;
+	}
+
+	.type {
+		display: flex;
+		flex-direction: row;
+		padding: 10%;
+	}
+
+	.type p {
+		font-family: 'Inter', sans-serif;
+		margin-top: 10%;
+		margin-left: 25%;
+	}
+	
+	.div-types-img {
+		width: 12vw;
+	}
+
+
 
 	/* título */
 	h1 {
@@ -42,7 +73,7 @@
 	.circle {
 		display: flex;
 		width: 25vw;
-		height: 25vw;
+		height: 23vw;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
@@ -75,9 +106,12 @@
 
 @media (max-width: 768px) { /*MOBILE*/
 	.div-banner {
+		display: flex;
 		z-index: -1;
 		position: relative;
 		margin-top: 3vw;
+		justify-content: center;
+		align-items: center;
 	}
 	
 	.figure-banner {
@@ -89,6 +123,30 @@
 	.btn {
 		padding: 0;
 		margin: 0;
+	}
+
+	/* aquelas imagens de maquina de lavar etc etc*/
+	#div-types {
+		display: flex;
+		margin: 10%;
+		flex-direction: column;
+	}
+
+	.type {
+		display: flex;
+		flex-direction: row;
+		padding: 10%;
+	}
+
+	.type p {
+		font-family: 'Inter', sans-serif;
+		margin-top: 10%;
+		margin-left: 25%;
+	}
+	
+	.div-types-img {
+		width: 24vw;
+		height: auto;
 	}
 
 	
@@ -106,6 +164,8 @@
 	}
 
 	#sobre-section {
+		display: flex;
+		flex-direction: column;
 		width: 100%;
 	}
 
@@ -115,15 +175,17 @@
 	.circles-container {
 		position: relative;
 		display: flex;
+		flex-direction: column;
 		width: 100%;
 		justify-content: center;
+		align-items: center;
 		margin-top: 20vw;
 	}
 
 	.circle {
 		display: flex;
-		width: 25vw;
-		height: 25vw;
+		width: 50vw;
+		height: 50vw;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
@@ -145,8 +207,4 @@
 
 	}
 	
-
-	#mainCircle {
-		margin-top: -2vw;
-	}
 }

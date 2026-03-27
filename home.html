@@ -22,22 +22,7 @@
 		<nav class="nav-menu">
 			<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img id="menu-img" src="src/img/menu-button.png" alt=""></button>
 
-			<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-				<div class="offcanvas-header">
-					
-					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-				</div>
-				<div class="offcanvas-body">
-					<ul class="list-offcanvas">
-						<li class="offcanvas-option"><a href="home.html" target="_blank">HOME</a></li>
-						<li class="offcanvas-option"><a href="quem-somos.html" target="_blank">QUEM SOMOS</a></li>
-						<li class="offcanvas-option"><a href="" target="_blank">VANTAGENS</a></li>
-						<li class="offcanvas-option"><a href="" target="_blank">NOSSAS LAVANDERIAS</a></li>
-						<li class="offcanvas-option"><a href="" target="_blank">ENTRE EM CONTATO</a></li>
-						<li class="offcanvas-option"><a href="" target="_blank">FRANQUIE</a></li>
-					</ul>
-				</div>
-			</div>
+			
 			<ul class="list-nav">
 				<li class="nav-option"><a href="home.html" target="_blank">HOME</a></li>
 				<li class="nav-option"><a href="quem-somos.html">QUEM SOMOS</a></li>
@@ -45,33 +30,90 @@
 				<li class="nav-option"><a href="" target="_blank">NOSSAS LAVANDERIAS</a></li>
 				<li class="nav-option"><a href="" target="_blank">ENTRE EM CONTATO</a></li>
 				<li class="nav-option"><a href="" target="_blank">FRANQUIE</a></li>
-				
 			</ul>
 		</nav>
 	</header>
-	
-    <!--conteúdo exclusivo da página-->
-    <div class="div-banner">
-        <figure class="figure-banner">
-            
-        </figure>
-    </div>
-	<hr>
-	<section id="sobre-section">
-		<h1>O PRINCIPAL SOBRE NÓS:</h1>
-		<div class="circles-container">
-			<button class="circle" onclick="">VANTAGENS</button>
-			<button class="circle" id="mainCircle" onclick="">NOSSAS LAVANDERIAS</button>
-			<button class="circle" onclick="window.open('quem-somos.html', '_blank')">QUEM SOMOS</button>
+	<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+			<div class="offcanvas-header">
+					
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="list-offcanvas">
+					<li class="offcanvas-option"><a href="home.html" target="_blank">HOME</a></li>
+					<li class="offcanvas-option"><a href="quem-somos.html" target="_blank">QUEM SOMOS</a></li>
+					<li class="offcanvas-option"><a href="" target="_blank">VANTAGENS</a></li>
+					<li class="offcanvas-option"><a href="" target="_blank">NOSSAS LAVANDERIAS</a></li>
+					<li class="offcanvas-option"><a href="" target="_blank">ENTRE EM CONTATO</a></li>
+					<li class="offcanvas-option"><a href="" target="_blank">FRANQUIE</a></li>
+					<li class="offcanvas-option"><a href="" target="_blank">CRÉDITOS</a></li>
+				</ul>
+			</div>
 		</div>
-	</section>
-	
+
+    <!--conteúdo exclusivo da página-->
+	<main>
+		<div class="div-banner">
+			<h1>LOGO</h1>
+			<figure class="figure-banner">
+				
+			</figure>
+		</div>
+		<hr>
+
+		<div id="div-types">
+			<figure class="type">
+				<img class="div-types-img" src="src/img/washing-machine.png" alt="Máquina de lavar">
+				<p>Lavagem de extrema qualidade</p>
+				
+			</figure>
+			<figure class="type">
+				<img class="div-types-img" src="src/img/iron.png" alt="Ferro de passar">
+				<p>nós passa roupa também</p>
+				
+			</figure>
+			<figure class="type">
+				<img class="div-types-img" src="src/img/dry-cleaning.png" alt="Roupa">
+				<p>e a roupa fica limpa</p>
+			</figure>
+				
+			</div>
+				
+		</div>
+
+
+		<hr>
+
+		<section id="sobre-section">
+			<h1>O PRINCIPAL SOBRE NÓS:</h1>
+			<div class="circles-container">
+				<button class="circle" onclick="">VANTAGENS</button>
+				<button class="circle" id="mainCircle" onclick="">NOSSAS LAVANDERIAS</button>
+				<button class="circle" onclick="window.open('quem-somos.html', '_blank')">QUEM SOMOS</button>
+			</div>
+		</section>
+	</main>
     
 
 	
-
+	<!---COPIA ISSO DAQUI TAMBÉM-->
     <footer>
-		<figure class="figure-footer"></figure>
+
+		<div class="footer-top-div">
+			<a href="quem-somos.html">QUEM SOMOS</a>
+			<a href="" target="_blank">NOSSAS LAVANDERIAS</a>
+		</div>
+		<div class="footer-top-div">
+			<a href="" target="_blank">ENTRE EM CONTATO</a>
+			<a href="" target="_blank">FRANQUIE</a>
+		</div>
+		<div class="footer-bottom-div">
+			<p>Atendimento 24 horas, de domingo a domingo</p>
+			<a href="">Suporte ao cliente</a>
+		</div>
+	
+			
+			
 	</footer>
 </body>
 </html>
