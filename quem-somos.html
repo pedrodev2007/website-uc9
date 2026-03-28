@@ -10,6 +10,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/quem-somos-style.css">
 </head>
 <body>
 	<!--
@@ -19,9 +20,21 @@
 		<nav class="nav-menu">
 			<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img id="menu-img" src="src/img/menu-button.png" alt=""></button>
 
-			<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+			
+			<ul class="list-nav">
+				<li class="nav-option"><a href="home.html" target="_blank">HOME</a></li>
+				<li class="nav-option"><a href="quem-somos.html">QUEM SOMOS</a></li>
+				<li class="nav-option"><a href="" target="_blank">VANTAGENS</a></li>
+				<li class="nav-option"><a href="" target="_blank">NOSSAS LAVANDERIAS</a></li>
+				<li class="nav-option"><a href="" target="_blank">ENTRE EM CONTATO</a></li>
+				<li class="nav-option"><a href="" target="_blank">FRANQUIE</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
 				<div class="offcanvas-header">
-					
+						
 					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 				</div>
 				<div class="offcanvas-body">
@@ -32,24 +45,66 @@
 						<li class="offcanvas-option"><a href="" target="_blank">NOSSAS LAVANDERIAS</a></li>
 						<li class="offcanvas-option"><a href="" target="_blank">ENTRE EM CONTATO</a></li>
 						<li class="offcanvas-option"><a href="" target="_blank">FRANQUIE</a></li>
+						<li class="offcanvas-option"><a href="creditos.html" target="_blank">CRÉDITOS</a></li>
 					</ul>
 				</div>
 			</div>
-			<ul class="list-nav">
-				<li class="nav-option"><a href="home.html" target="_blank">HOME</a></li>
-				<li class="nav-option"><a href="quem-somos.html">QUEM SOMOS</a></li>
-				<li class="nav-option"><a href="" target="_blank">VANTAGENS</a></li>
-				<li class="nav-option"><a href="" target="_blank">NOSSAS LAVANDERIAS</a></li>
-				<li class="nav-option"><a href="" target="_blank">ENTRE EM CONTATO</a></li>
-				<li class="nav-option"><a href="" target="_blank">FRANQUIE</a></li>
-				
-			</ul>
-		</nav>
-	</header>
-	
-    
-    
 
-    <footer></footer>
+
+		<!---CONTEÚDO EXCLUSIVO DA PÁGINA | NÃO ESTÁ PRONTO-->
+		<section id="origem-section">
+			<figure>
+				<img src="" alt="">
+			</figure>
+			<h1>NOSSA ORIGEM</h1>
+			<p>
+				A Clean Lavanderia está atuando no mercado
+				de lavanderias desde 1910, quando sua primeira
+				unidade foi fundada em São Paulo.
+			</p>
+		</section>
+		<section id="reconhecimento-section">
+			<figure>
+				<img src="" alt="">
+			</figure>
+			<h1 id="titulo-1">RECONHECIDOS MUNDIALMENTE</h1>
+			<p>
+				Fomos premiados pela Conferência da Limpeza
+				Mundial, com o título de "Melhor Lavanderia no Mundo"
+				em 2018, 2019, 2021, 2023, 2024 e 2025.
+			</p>
+		</section>
+		<section id="valores-section">
+			<figure>
+				<img src="" alt="">
+			</figure>
+			<h1>NOSSOS VALORES</h1>
+			<p>
+				Valorizamos a originalidade, a transparência e a beleza
+				de um ambiente limpo e respeitoso com todos os que o frequentam.
+			</p>
+			
+		</section>
+	</main>
+
+    <footer>
+		<div id="footer-top-container">
+			<div class="footer-top-div">
+				<a href="quem-somos.html">QUEM SOMOS</a>
+				<a href="" target="_blank">NOSSAS LAVANDERIAS</a>
+			</div>
+			<div class="footer-top-div">
+				<a href="" target="_blank">ENTRE EM CONTATO</a>
+				<a href="" target="_blank">FRANQUIE</a>
+			</div>
+		</div>
+		<div id="footer-bottom-container">
+			<div class="footer-bottom-div">
+				<p>Atendimento 24 horas, de domingo a domingo.</p>
+				<a href="">Suporte ao cliente</a>
+				<a href="creditos.html" id="credits">Créditos</a>
+			</div>
+		</div>		
+	</footer>
 </body>
 </html>

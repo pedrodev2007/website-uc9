@@ -1,4 +1,31 @@
+#buttons-container {
+	display: flex;
+	margin-top: 10vw;
+	justify-content: center;
+}
+.finalButton {
+	margin: 10%;
+	border-style: hidden;
+	border-radius: 24px;
+	color: white;
+	font-family: 'Inter', sans-serif;
+	min-width: 15vw;
+	min-height: 5vw;
+	font-weight: 900;
+	transition: transform 0.5s;
+}
 
+.finalButton:hover {
+	transform: translateY(-10px);
+}
+
+#franquieBtn {
+	background-color: #DD2DAA;
+}
+
+#goBackBtn {
+	background-color: #2DAADD;
+}
 
 @media (min-width: 768px) {
 	/* é aquele banner logo abaixo do menu no cabeçalho*/
@@ -98,7 +125,6 @@
 	#mainCircle {
 		margin-top: -2vw;
 	}
-
 }
 
 
@@ -145,13 +171,9 @@
 	}
 	
 	.div-types-img {
-		width: 24vw;
-		height: auto;
+		width: 25vw;
+		height: 100%;
 	}
-
-	
-
-	
 
 	/* título */
 	h1 {
@@ -206,5 +228,4 @@
 		background-color: #42b9e9;
 
 	}
-	
 }

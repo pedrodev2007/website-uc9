@@ -1,0 +1,25 @@
+/* ESTILIZAÇÃO EM DESENVOLVIMENTO...*/
+
+h1 {
+    color: #dd2daa;
+    width: 25%;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vw;
+
+}
+
+#titulo-1 {
+    margin-right: 12.5%;
+}
+
+p {
+    width:25%;
+}

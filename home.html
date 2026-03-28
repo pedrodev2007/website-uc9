@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/home-style.css">
     <link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/home-animation.css">
 </head>
 <body>
 
@@ -46,7 +47,7 @@
 					<li class="offcanvas-option"><a href="" target="_blank">NOSSAS LAVANDERIAS</a></li>
 					<li class="offcanvas-option"><a href="" target="_blank">ENTRE EM CONTATO</a></li>
 					<li class="offcanvas-option"><a href="" target="_blank">FRANQUIE</a></li>
-					<li class="offcanvas-option"><a href="" target="_blank">CRÉDITOS</a></li>
+					<li class="offcanvas-option"><a href="creditos.html" target="_blank">CRÉDITOS</a></li>
 				</ul>
 			</div>
 		</div>
@@ -85,35 +86,42 @@
 		<hr>
 
 		<section id="sobre-section">
-			<h1>O PRINCIPAL SOBRE NÓS:</h1>
+			<h1>DESCUBRA SOBRE NÓS:</h1>
 			<div class="circles-container">
 				<button class="circle" onclick="">VANTAGENS</button>
 				<button class="circle" id="mainCircle" onclick="">NOSSAS LAVANDERIAS</button>
 				<button class="circle" onclick="window.open('quem-somos.html', '_blank')">QUEM SOMOS</button>
 			</div>
 		</section>
+
+		<div id="buttons-container">
+			<button class="finalButton" id="goBackBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Voltar para cima</button>
+			<button class="finalButton" id="franquieBtn">Franquie</button>
+		</div>
+		
 	</main>
     
 
 	
 	<!---COPIA ISSO DAQUI TAMBÉM-->
     <footer>
-
-		<div class="footer-top-div">
-			<a href="quem-somos.html">QUEM SOMOS</a>
-			<a href="" target="_blank">NOSSAS LAVANDERIAS</a>
+		<div id="footer-top-container">
+			<div class="footer-top-div">
+				<a href="quem-somos.html">QUEM SOMOS</a>
+				<a href="" target="_blank">NOSSAS LAVANDERIAS</a>
+			</div>
+			<div class="footer-top-div">
+				<a href="" target="_blank">ENTRE EM CONTATO</a>
+				<a href="" target="_blank">FRANQUIE</a>
+			</div>
 		</div>
-		<div class="footer-top-div">
-			<a href="" target="_blank">ENTRE EM CONTATO</a>
-			<a href="" target="_blank">FRANQUIE</a>
-		</div>
-		<div class="footer-bottom-div">
-			<p>Atendimento 24 horas, de domingo a domingo</p>
-			<a href="">Suporte ao cliente</a>
-		</div>
-	
-			
-			
+		<div id="footer-bottom-container">
+			<div class="footer-bottom-div">
+				<p>Atendimento 24 horas, de domingo a domingo.</p>
+				<a href="">Suporte ao cliente</a>
+				<a href="creditos.html" id="credits">Créditos</a>
+			</div>
+		</div>	
 	</footer>
 </body>
 </html>
