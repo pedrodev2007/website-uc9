@@ -1,8 +1,6 @@
 /* ESTILIZAÇÃO EM DESENVOLVIMENTO...*/
-
 h1 {
     color: #dd2daa;
-    width: 25%;
     font-weight: 900;
     text-align: center;
     margin: 0;
@@ -10,16 +8,103 @@ h1 {
 
 section {
     display: flex;
+    width: 100%;
+    position: relative;
     flex-direction: column;
     align-items: center;
-    margin: 5vw;
 
-}
-
-#titulo-1 {
-    margin-right: 12.5%;
 }
 
 p {
-    width:25%;
+    font-weight: 700;
+    color: white;
+}
+
+
+
+
+@media (min-width: 768px) { /*acima de 768px*/
+    h1 {
+		font-size: 200%;
+        width: 25%;
+    }
+    img {
+        width: 50%;
+    }
+
+    #origem-section {
+		margin-top: 5vw;
+        justify-content: flex-end;
+    }
+    #titulo-1 {
+        margin-right: 12.5%;
+    }
+    #origem-text p {
+		width: 25%;
+    }
+    #origem-text {
+        font-size: 1.8vw;
+        margin-top: -45vw;
+        margin-left: 3vw;
+    }
+
+    #reconhecimento-section {
+		margin-top: 15vw;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    #titulo-2 {
+        margin-right: 12.5%;
+    }
+    #reconhecimento-text p {
+		width: 60%;
+		margin-top:2vw;
+		margin-left: 4vw;
+    }
+    #reconhecimento-text {
+        font-size: 1.8vw;
+        margin-top: -40vw;
+        margin-left: 45vw;
+        text-align: center;
+        justify-content: center;
+    }
+    #reconhecimento-section figure {
+		display: flex;
+		justify-content: flex-end;
+		
+    }
+
+    #valores-section {
+		margin-top: 30vw;
+		
+    }
+    
+    #valores-section figure {
+		display: flex;
+		justify-content: center;
+    }
+    
+    #valores-text {
+		font-size: 2vw;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+    }
+    #titulo-3 {
+		font-size: 5vw;
+		margin-top: -75vw;
+    }
+    #valores-text p {
+		margin-left: 5vw;
+		margin-top: 15vw;
+		width: 30%;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
 }
