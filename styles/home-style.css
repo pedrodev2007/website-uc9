@@ -27,7 +27,105 @@
 	background-color: #2DAADD;
 }
 
-@media (min-width: 768px) {
+.div-banner {
+		display: flex;
+		z-index: -1;
+		position: relative;
+		margin-top: 3vw;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.figure-banner {
+		display: flex;
+		justify-content: center;
+		margin: 0;
+	}
+	
+	.btn {
+		padding: 0;
+		margin: 0;
+	}
+
+	/* aquelas imagens de maquina de lavar etc etc*/
+	#div-types {
+		display: flex;
+		margin: 10%;
+		flex-direction: column;
+	}
+
+	.type {
+		display: flex;
+		flex-direction: row;
+		padding: 10%;
+	}
+
+	.type p {
+		font-family: 'Inter', sans-serif;
+		margin-top: 10%;
+		margin-left: 25%;
+	}
+	
+	.div-types-img {
+		width: 25vw;
+		height: 100%;
+	}
+
+	/* título */
+	h1 {
+		font-family: 'Inter', sans-serif;
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: #DD2DAA;
+		margin-top: 10vw;
+		margin-left: 5vw;
+	}
+
+	#sobre-section {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	/* aqueles circulos*/
+
+
+	.circles-container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20vw;
+	}
+
+	.circle {
+		display: flex;
+		width: 50vw;
+		height: 50vw;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border-radius: 100%;
+		border: 0;
+		margin: 2vw;
+		background-color: #2DAADD;
+		text-decoration: none;
+		color: white;
+		font-family: 'Inter', sans-serif;
+		font-size: 3vw;
+		font-weight: 900;
+		cursor: pointer;
+		
+	}
+
+	.circle:hover {
+		background-color: #42b9e9;
+
+	}
+
+@media (min-width: 1200px) {
 	/* é aquele banner logo abaixo do menu no cabeçalho*/
 	
 	.div-banner {
@@ -124,108 +222,5 @@
 
 	#mainCircle {
 		margin-top: -2vw;
-	}
-}
-
-
-
-
-@media (max-width: 768px) { /*MOBILE*/
-	.div-banner {
-		display: flex;
-		z-index: -1;
-		position: relative;
-		margin-top: 3vw;
-		justify-content: center;
-		align-items: center;
-	}
-	
-	.figure-banner {
-		display: flex;
-		justify-content: center;
-		margin: 0;
-	}
-	
-	.btn {
-		padding: 0;
-		margin: 0;
-	}
-
-	/* aquelas imagens de maquina de lavar etc etc*/
-	#div-types {
-		display: flex;
-		margin: 10%;
-		flex-direction: column;
-	}
-
-	.type {
-		display: flex;
-		flex-direction: row;
-		padding: 10%;
-	}
-
-	.type p {
-		font-family: 'Inter', sans-serif;
-		margin-top: 10%;
-		margin-left: 25%;
-	}
-	
-	.div-types-img {
-		width: 25vw;
-		height: 100%;
-	}
-
-	/* título */
-	h1 {
-		font-family: 'Inter', sans-serif;
-		font-size: 2.5rem;
-		font-weight: 800;
-		color: #DD2DAA;
-		margin-top: 10vw;
-		margin-left: 5vw;
-	}
-
-	#sobre-section {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-	}
-
-	/* aqueles circulos*/
-
-
-	.circles-container {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		justify-content: center;
-		align-items: center;
-		margin-top: 20vw;
-	}
-
-	.circle {
-		display: flex;
-		width: 50vw;
-		height: 50vw;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border-radius: 100%;
-		border: 0;
-		margin: 2vw;
-		background-color: #2DAADD;
-		text-decoration: none;
-		color: white;
-		font-family: 'Inter', sans-serif;
-		font-size: 3vw;
-		font-weight: 900;
-		cursor: pointer;
-		
-	}
-
-	.circle:hover {
-		background-color: #42b9e9;
-
 	}
 }
