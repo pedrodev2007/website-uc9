@@ -83,6 +83,7 @@ body {
 	color: #DD2DAA;
 }
 footer {
+	margin: 0;
 	padding-top: 25px;
 	display: flex;
 	flex-direction: column;
@@ -215,7 +216,7 @@ footer {
 	}
 	
 	footer {
-
+		margin: 0;
 		display: flex;
 		flex-direction: column;
 		width: 100%;
@@ -239,6 +240,7 @@ footer {
 	}
 	.footer-top-div {
 		display: flex;
+		flex-direction: row;
 		align-items: center;
 		justify-content: space-around;
 		width: 100%;
@@ -254,6 +256,7 @@ footer {
 	}
 	.footer-bottom-div {
 		display: flex;
+		flex-direction: row;
 		align-items: center;
 		justify-content: space-around;
 		width: 100%;
@@ -267,16 +270,4 @@ footer {
 		text-decoration: underline;
 		color: white;
 	}
-	
-
-	
-
-
 }
-
-/*
- *  A partir daqui para baixo, é a configuração para o mobile
- *  
- * 
- * 
- * */
