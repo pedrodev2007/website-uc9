@@ -1,3 +1,5 @@
+/*MOBILE FIRST*/
+
 hr {
 	margin: 100px;
 }
@@ -123,7 +125,7 @@ footer {
 
 @media (min-width: 1200px){
 /*
- * estrutura para o cabeçalho da página em telas com, ou mais, de 600px de largura
+ * estrutura para o cabeçalho da página em telas com, ou mais, de 1200px de largura
  * só manter isso daqui nas outras páginas
  * 
  * IMPORTANTE: coloquem esse arquivo css nas outras páginas, mas
@@ -186,7 +188,7 @@ footer {
 	
 	.nav-option {
 		list-style: none;
-		font-size: 1vw;
+		font-size: 1rem;
 		transition: transform 0.5s;
 	}
 

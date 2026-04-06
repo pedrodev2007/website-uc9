@@ -1,100 +1,152 @@
-/* MOBILE FIRST */
+/*MOBILE FIRST*/
 
-section {
-    display: flex;
-    width: 100%;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
+/* estilizando classes e tags, de forma geral */
 
-}
 
-p {
-    font-weight: 700;
-    color: white;
-}
 
-h1 {
-	font-size: 200%;
-  width: 25%;
-  color: #dd2daa;
-  font-weight: 900;
-  text-align: center;
-  margin: 0;
-  text-shadow: 0px 2px 3px rgba(0,0,0, 0.2);
-}
-img {
-    width: 50%;
-}
 
-#origem-section {
-  margin-top: 5vw;
-  justify-content: flex-end;
-}
-#titulo-1 {
-  margin-right: 12.5%;
-}
-#origem-text p {
-  width: 25%;
-}
-#origem-text {
-  font-size: 2.5vw;
-  margin-top: -60vw;
-  margin-left: 3vw;
-}
 
-#reconhecimento-section {
-  margin-top: 50vw;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-#titulo-2 {
-    margin-right: 12.5%;
-}
-#reconhecimento-text p {
-  width: 60%;
-  margin-top:2vw;
-  margin-left: 4vw;
-}
-#reconhecimento-text {
-  font-size: 2.5vw;
-  margin-top: -55vw;
-  margin-left: 55vw;
-  text-align: center;
-  justify-content: center;
-}
-#reconhecimento-section figure {
-  display: flex;
-  justify-content: flex-end;
+/* DESIGIN PARA APARELHOS COM, NO MINIMO, 1200px DE LARGURA*/
+@media (min-width: 1200px) {
 
-}
+	.spot-img-class {
+		width: 100%;
+		max-width: 500px;
+	}
 
-#valores-section {
-  margin-top: 65vw;
+	main h1 {
+		font-size: 3rem;
+		font-weight: 900;
+		color: #dd2daa;
+		filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.3));
+	}
 
-}
+	main p {
+		font-weight: 700;
+		color: white;
+		font-size: 1.5rem;
+	}
 
-#valores-section figure {
-  display: flex;
-  justify-content: center;
-}
+	main {
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
 
-#valores-text {
-  font-size: 3vw;
-  width: 100%;
-  display: flex;
-  margin-top: -5vw;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#titulo-3 {
-  font-size: 5vw;
-  margin-top: -75vw;
-}
-#valores-text p {
-  margin-left: 4vw;
-  margin-top: 15vw;
-  text-align: center;
-  width: 35%;
+	.info-section {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr;
+	}
+
+	.section-container {
+		display: grid;
+		grid-row: 1;
+		grid-column: 1;
+		grid-template-rows: 10% 1fr;
+		grid-template-columns:1fr;
+		margin: 0;
+		max-width: 1200px;
+		position: relative;
+	}
+
+	.section-container h1 {
+		grid-row: 1;
+		grid-column: 1;
+	}
+
+	.section-container figure{
+		width: 100%;
+		grid-row: 2;
+		grid-column: 1
+	}
+
+	.section-container p {
+		grid-row: 2;
+		grid-column: 1;		
+	}
+
+
+	/* estilizando tags com id */
+
+	#max-container-1 {
+		display: flex;
+		width: 100%;
+		justify-content: left;
+	}
+	
+	#max-container-2 {
+		display: flex;
+		width: 100%;
+		justify-content: right;
+	}
+	
+	#max-container-3 {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+	}
+
+	#origem-container p {
+		padding-left: 2rem;
+		max-width: 300px;
+		padding-top:8rem;
+		
+	}
+	#origem-container h1 {
+		width: 20%;
+		padding-left: 2rem;
+		padding-top: 5rem;
+	}
+	
+
+	#reconhecimento-container figure{		
+		display: grid;
+	}
+	
+	#reconhecimento-container figure img {
+		justify-self: end;
+	}
+
+	#reconhecimento-container p {
+		text-align: center;
+		width: 50%;
+		max-width: 600px;
+		margin-top: 5rem;
+		padding-right: 2rem;
+		align-self: start;
+		justify-self: end;
+	}
+	#reconhecimento-container h1 {
+		width: 50%;
+		padding-top: 2rem;
+		text-align: center;
+		justify-self: end;
+		
+	}
+	
+	#valores-section {
+		margin-bottom: 20rem;
+	}
+	
+	#valores-container figure{
+		display: grid;
+	}
+	
+	#valores-container figure img {
+		justify-self: center;
+	}
+
+	#valores-container p {
+		width: 30%;
+		text-align: center;
+		justify-self: center;
+		align-self: center;
+		
+		padding-bottom: 5rem;
+	}
+	#valores-container h1 {
+		align-self: start;
+		justify-self: center;
+		text-align: center;
+	}
 }
