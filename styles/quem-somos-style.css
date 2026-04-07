@@ -1,11 +1,8 @@
 /*MOBILE FIRST*/
-/*
-* {
-	outline: 1px solid red !important;
-}*/
+
 main p {
 	width: auto;
-	max-width: 350px
+	max-width: 350px;
 	font-family: 'Inter', sans-serif;
 	font-size: 1.3rem;
 	font-weight: 700;
@@ -141,7 +138,7 @@ main h1 {
 @media (min-width: 1200px) {
 	main p {
 		width: auto;
-		max-width: 350px
+		max-width: 350px;
 		font-family: 'Inter', sans-serif;
 		font-size: 1.8rem;
 		font-weight: 700;

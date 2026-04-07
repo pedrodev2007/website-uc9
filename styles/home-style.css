@@ -1,1 +1,101 @@
 /*MOBILE FIRST*/
+main p {
+    font-family: 'Inter', sans-serif;
+    width: auto;
+    font-size: 1.3rem;
+}
+main h1 {
+    font-family: 'Inter', sans-serif;
+    width: auto;
+    font-size: 2rem;
+    font-weight: 900;
+}
+main figure {
+    width: fit-content;
+}
+
+#logo-title-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#logo-home {
+    width: 100%;
+    max-width: 250px;
+}
+
+#banner-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#banner-img {
+    max-width: 900px;
+}
+
+
+
+
+
+
+#steps-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.step {
+    justify-self: center;
+}
+
+.step p {
+    text-align: center;
+    justify-self: center;
+    max-width: 150px;
+}
+
+#step-1 {
+    grid-row: 1;
+}
+#step-2 {
+    grid-row: 2;
+}
+#step-3 {
+    grid-row: 3;
+}
+
+
+
+
+.steps-img {
+    max-width: 200px;
+}
+
+#final-section {
+    display: flex;
+    justify-content: center;
+}
+
+
+#happy-man-img {
+    max-width: 300px;
+}
+
+
+
+@media (min-width: 1200px) {
+
+
+}

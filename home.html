@@ -37,7 +37,7 @@
 	</header>
 	
 
-    <!--conteúdo exclusivo da página-->
+    
 	<main>
 		<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
 			<div class="offcanvas-header">
@@ -56,62 +56,63 @@
 				</ul>
 			</div>
 		</div>
-		<div class="div-logo-title">
-			<figure class="figure-logo-title">
+		<!--conteúdo exclusivo da página-->
+		<div id="logo-title-container">
+			<figure>
 				<img id="logo-home" src="src/img/clean-lavanderia-logo-home.png">
 			</figure>
 			<h1 id="title-home">CLEAN LAVANDERIA</h1>
 		</div>
-		<div id="div-banner">
+		<div id="banner-container">
 			<figure id="figure-banner">
 				 <img id="banner-img" src="src/img/happy-couple.jpg">
 			</figure>
 		</div>
 		<hr>
-
-		<div id="div-types">
-			<figure class="type">
-				<img class="div-types-img" src="src/img/washing-machine.png" alt="Máquina de lavar">
-				<p>Lavagem de extrema qualidade</p>
-				
-			</figure>
-			<figure class="type">
-				<img class="div-types-img" src="src/img/iron.png" alt="Ferro de passar">
-				<p>nós passa roupa também</p>
-				
-			</figure>
-			<figure class="type">
-				<img class="div-types-img" src="src/img/dry-cleaning.png" alt="Roupa">
-				<p>e a roupa fica limpa</p>
-			</figure>
+		<section>
+			<div id="steps-container"> 
+				<div id="steps-grid">
+					<figure class="step" id="step-1">
+						<img class="steps-img" src="src/img/washing-machine.png" alt="Máquina de lavar">
+						<p>Lavagem de extrema qualidade</p>
+					</figure>
+					<figure class="step" id="step-2">
+						<img class="steps-img" src="src/img/iron.png" alt="Ferro de passar">
+						<p>nós passa roupa também</p>
+						
+					</figure>
+					<figure class="step" id="step-3">
+						<img class="steps-img" src="src/img/dry-cleaning.png" alt="Roupa">
+						<p>e a roupa fica limpa</p>
+					</figure>
+				</div>
 				
 			</div>
-				
-		</div>
-
-
+		</section>
 		<hr>
 
 		<section id="sobre-section">
-			<h1>DESCUBRA SOBRE NÓS:</h1>
-			<div class="circles-container">
-				<button class="circle" onclick="">VANTAGENS</button>
-				<button class="circle" id="mainCircle" onclick="">NOSSAS LAVANDERIAS</button>
-				<button class="circle" onclick="window.open('quem-somos.html', '_blank')">QUEM SOMOS</button>
+			<div id="sobre-grid">
+				<h1>DESCUBRA SOBRE NÓS:</h1>
+				<div class="circles-container">
+					<button class="circle" onclick="">VANTAGENS</button>
+					<button class="circle" id="mainCircle" onclick="">NOSSAS LAVANDERIAS</button>
+					<button class="circle" onclick="window.open('quem-somos.html', '_blank')">QUEM SOMOS</button>
+				</div>
 			</div>
 		</section>
 
-		<div id="buttons-container">
-			<button class="finalButton" id="goBackBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Voltar para cima</button>
-			<button class="finalButton" id="franquieBtn">Franquie</button>
-		</div>
-		
-		<div>
-			<figure id="figure-happy-man">
-				<img id="happy-man-img" src="src/img/happy-man.jpg">
-			</figure>
-		</div>
-		
+		<section id="final-section">
+			<div id="final-grid">
+				<figure id="figure-happy-man">
+					<img id="happy-man-img" src="src/img/happy-man.jpg">
+				</figure>
+				<div id="buttons-container">
+					<button class="finalButton" id="goBackBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Voltar para cima</button>
+					<button class="finalButton" id="franquieBtn">Franquie</button>
+				</div>
+			</div>
+		</section>
 	</main>
     
 
