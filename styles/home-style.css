@@ -13,8 +13,11 @@ main h1 {
 main figure {
     width: fit-content;
 }
+main section { 
+	width: 100%;
+}
 
-#logo-title-container {
+#logo-title-container { /*parte 1*/
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -24,11 +27,15 @@ main figure {
 }
 
 #logo-home {
-    width: 100%;
-    max-width: 250px;
+	width: 100%;
+    max-width: 200px;
 }
 
-#banner-container {
+#title-home {
+	color: #dd2daa;
+}
+
+#banner-container { /*parte 2*/
     display: flex;
     width: 100%;
     justify-content: center;
@@ -36,34 +43,39 @@ main figure {
 }
 
 #banner-img {
+	-webkit-mask-image: radial-gradient(circle, black, transparent 80%);
+	mask-image: radial-gradient(circle, black, transparent 50%);
     max-width: 900px;
 }
 
-
-
-
-
-
-#steps-container {
+#steps-container { /*parte 3*/
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
 #steps-grid {
-    display: grid;
+    display: inline-grid;
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    
 }
 
 .step {
-    justify-self: center;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+    justify-content: center;
+
 }
 
 .step p {
-    text-align: center;
+	align-self: center;
     justify-self: center;
-    max-width: 150px;
+    font-size: 1rem;
+    max-width: 200px;
+    text-align: center;
 }
 
 #step-1 {
@@ -76,26 +88,257 @@ main figure {
     grid-row: 3;
 }
 
-
-
-
 .steps-img {
-    max-width: 200px;
+	width: auto;
+	height: auto;
+	max-width: 213px;
+	max-height: 128px;
+	padding: 20px;
 }
 
-#final-section {
+#sobre-section { /*parte 4*/
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#sobre-section h1 {
+	color: #dd2daa;
+	text-align: center;
+}
+
+#circles-container {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+}
+
+.circle {
+	width: 12rem;
+	aspect-ratio: 1/1;
+	border-radius: 100%;
+	border: 0;
+	color: white;
+	font-weight: 800;
+	font-size: 1.2rem;
+	background-color: #2DAADD;
+	margin: 1rem;
+	padding: 1rem;
+}
+
+#final-section { /*parte 5*/
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    overflow: hidden;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+#buttons-container {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: center;
+}
+.finalButton {
+	margin: 10%;
+	border-style: hidden;
+	border-radius: 24px;
+	color: white;
+	font-family: 'Inter', sans-serif;
+	font-size: 0.8rem;
+	width: 10rem;
+	height: 3rem;
+	font-weight: 900;
+	transition: transform 0.5s;
 }
 
-
-#happy-man-img {
-    max-width: 300px;
+#franquieBtn {
+	background-color: #DD2DAA;
 }
 
+#goBackBtn {
+	background-color: #2DAADD;
+}
 
+@media (min-width: 768px) {
+	main p {
+		font-family: 'Inter', sans-serif;
+		width: auto;
+		font-size: 1.3rem;
+	}
+	main h1 {
+		font-family: 'Inter', sans-serif;
+		width: auto;
+		font-size: 2rem;
+		font-weight: 900;
+	}
+	main figure {
+		width: fit-content;
+	}
+	main section { 
+		width: 100%;
+	}
 
-@media (min-width: 1200px) {
+	#logo-title-container { /*parte 1*/
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem;
+	}
 
+	#logo-home {
+		width: 100%;
+		max-width: 200px;
+	}
 
+	#title-home {
+		color: #dd2daa;
+	}
+
+	#banner-container { /*parte 2*/
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		overflow: hidden;
+	}
+
+	#banner-img {
+		-webkit-mask-image: radial-gradient(circle, black, transparent 80%);
+		mask-image: radial-gradient(circle, black, transparent 50%);
+		max-width: 900px;
+	}
+
+	#steps-container { /*parte 3*/
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	#steps-grid {
+		display: inline-grid;
+		width: fit-content;
+		margin: 0;
+		padding: 0;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		
+	}
+
+	.step {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		padding: 1rem;
+		justify-content: space-around;
+
+	}
+
+	.step p {
+		align-self: center;
+		justify-self: center;
+		max-width: 400px;
+		text-align: justify;
+		padding-left: 5rem;
+	}
+
+	#step-1 {
+		grid-row: 1;
+	}
+	#step-2 {
+		grid-row: 2;
+	}
+	#step-3 {
+		grid-row: 3;
+	}
+
+	.steps-img {
+		width: auto;
+		height: auto;
+		max-width: 426px;
+		max-height: 256px;
+	}
+
+	#sobre-section { /*parte 4*/
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#sobre-section h1 {
+		color: #dd2daa;
+		text-align: center;
+	}
+
+	#circles-container {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.circle {
+		width: 12rem;
+		aspect-ratio: 1/1;
+		border-radius: 100%;
+		border: 0;
+		color: white;
+		font-weight: 800;
+		font-size: 1.2rem;
+		background-color: #2DAADD;
+		margin: 2rem;
+		margin-top: 5rem;
+		padding: 1rem;
+		transition: transform 0.5s;
+	}
+	.circle:hover {
+		transform: translateY(-5px);
+	}
+
+	#final-section { /*parte 5*/
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		overflow: hidden;
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+	}
+	#buttons-container {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		justify-content: center;
+	}
+	.finalButton {
+		margin: 10%;
+		border-style: hidden;
+		border-radius: 24px;
+		color: white;
+		font-family: 'Inter', sans-serif;
+		font-size: 0.8rem;
+		width: 10rem;
+		height: 3rem;
+		font-weight: 900;
+		transition: transform 0.5s;
+	}
+	
+	.finalButton:hover {
+		transform: translateY(-10px);
+	}
+
+	#franquieBtn {
+		background-color: #DD2DAA;
+	}
+
+	#goBackBtn {
+		background-color: #2DAADD;
+	}
 }
