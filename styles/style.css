@@ -1,10 +1,7 @@
+/*MOBILE FIRST*/
+
 hr {
 	margin: 100px;
-}
-
-body {
-	font-family: 'Inter', sans-serif;
-	background-color: white;
 }
 
 footer {
@@ -28,9 +25,107 @@ footer div a {
 	transform: scale(1.1);
 }
 
-@media (min-width: 768px){
+body {
+	font-size: 16px;
+	background-color: white;
+	font-family: 'Inter', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.offcanvas-header {
+	background-color: white;
+}
+.offcanvas-body{
+	background-color: white;
+}
+
+.header-menu {
+	position: relative;
+	
+	height: 100px;
+	width: 100%;
+	
+}
+
+.figure-header {
+	margin: 0;
+}
+
+.nav-menu {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: 0;
+	top: 0;
+}
+
+.list-nav {
+	display: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	justify-content: space-around;
+
+}
+
+.list-offcanvas {
+	list-style: none;
+}
+
+.offcanvas-option {
+	padding: 10px;
+}
+
+.offcanvas-option a{ 
+	font-weight: 900;
+	text-decoration: none;
+	color: #DD2DAA;
+}
+footer {
+	margin: 0;
+	padding-top: 25px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 400px;
+}
+
+.footer-bottom-div {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+}
+
+.footer-bottom-div a {
+	text-decoration: underline;
+	padding: 5px;
+	color: white;
+}
+
+.footer-bottom-div p {
+	padding: 5px;
+	color: white;
+}
+	
+.footer-top-div {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	padding: 0;
+}
+
+.footer-top-div a {
+	padding: 5px;
+	font-weight: 900;
+	font-size: 1rem;
+}
+
+@media (min-width: 1200px){
 /*
- * estrutura para o cabeçalho da página em telas com, ou mais, de 600px de largura
+ * estrutura para o cabeçalho da página em telas com, ou mais, de 1200px de largura
  * só manter isso daqui nas outras páginas
  * 
  * IMPORTANTE: coloquem esse arquivo css nas outras páginas, mas
@@ -93,7 +188,7 @@ footer div a {
 	
 	.nav-option {
 		list-style: none;
-		font-size: 1vw;
+		font-size: 1rem;
 		transition: transform 0.5s;
 	}
 
@@ -123,7 +218,7 @@ footer div a {
 	}
 	
 	footer {
-
+		margin: 0;
 		display: flex;
 		flex-direction: column;
 		width: 100%;
@@ -147,6 +242,7 @@ footer div a {
 	}
 	.footer-top-div {
 		display: flex;
+		flex-direction: row;
 		align-items: center;
 		justify-content: space-around;
 		width: 100%;
@@ -162,6 +258,7 @@ footer div a {
 	}
 	.footer-bottom-div {
 		display: flex;
+		flex-direction: row;
 		align-items: center;
 		justify-content: space-around;
 		width: 100%;
@@ -174,119 +271,5 @@ footer div a {
 	.footer-bottom-div a {
 		text-decoration: underline;
 		color: white;
-	}
-	
-
-	
-
-
-}
-
-/*
- *  A partir daqui para baixo, é a configuração para o mobile
- *  
- * 
- * 
- * */
-
-
-
-
-
-@media (max-width: 768px) { 
-	body {
-		font-size: 16px;
-		font-family: 'Inter', sans-serif;
-		margin: 0;
-		padding: 0;
-	}
-	
-	.offcanvas-header {
-		background-color: white;
-	}
-	.offcanvas-body{
-		background-color: white;
-	}
-
-	.header-menu {
-		position: relative;
-		
-		height: 100px;
-		width: 100%;
-		
-	}
-	
-	.figure-header {
-		margin: 0;
-	}
-	
-	.nav-menu {
-		display: flex;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		margin: 0;
-		top: 0;
-	}
-	
-	.list-nav {
-		display: none;
-		width: 100%;
-		margin: 0;
-		padding: 0;
-		justify-content: space-around;
-
-	}
-	
-	.list-offcanvas {
-		list-style: none;
-	}
-
-	.offcanvas-option {
-		padding: 10px;
-	}
-
-	.offcanvas-option a{ 
-		font-weight: 900;
-		text-decoration: none;
-		color: #DD2DAA;
-	}
-	footer {
-		padding-top: 25px;
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		height: 400px;
-	}
-
-	.footer-bottom-div {
-		display: flex;
-		flex-direction: column;
-		margin: 10px;
-	}
-	
-	.footer-bottom-div a {
-		text-decoration: underline;
-		padding: 5px;
-		color: white;
-	}
-	
-	.footer-bottom-div p {
-		padding: 5px;
-		color: white;
-	}
-		
-	.footer-top-div {
-		display: flex;
-		flex-direction: column;
-		margin: 10px;
-		padding: 0;
-	}
-	
-	.footer-top-div a {
-		padding: 5px;
-		font-weight: 900;
-		font-size: 1rem;
 	}
 }

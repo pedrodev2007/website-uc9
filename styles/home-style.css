@@ -1,6 +1,146 @@
+/*MOBILE FIRST*/
+main p {
+    font-family: 'Inter', sans-serif;
+    width: auto;
+    font-size: 1.3rem;
+}
+main h1 {
+    font-family: 'Inter', sans-serif;
+    width: auto;
+    font-size: 2rem;
+    font-weight: 900;
+}
+main figure {
+    width: fit-content;
+}
+main section { 
+	width: 100%;
+}
+
+#logo-title-container { /*parte 1*/
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#logo-home {
+	width: 100%;
+    max-width: 200px;
+}
+
+#title-home {
+	color: #dd2daa;
+}
+
+#banner-container { /*parte 2*/
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#banner-img {
+	-webkit-mask-image: radial-gradient(circle, black, transparent 80%);
+	mask-image: radial-gradient(circle, black, transparent 50%);
+    max-width: 900px;
+}
+
+#steps-container { /*parte 3*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#steps-grid {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+}
+
+.step {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+    justify-content: center;
+
+}
+
+.step p {
+	align-self: center;
+    justify-self: center;
+    font-size: 1rem;
+    max-width: 200px;
+    text-align: center;
+}
+
+#step-1 {
+    grid-row: 1;
+}
+#step-2 {
+    grid-row: 2;
+}
+#step-3 {
+    grid-row: 3;
+}
+
+.steps-img {
+	width: auto;
+	height: auto;
+	max-width: 213px;
+	max-height: 128px;
+	padding: 20px;
+}
+
+#sobre-section { /*parte 4*/
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#sobre-section h1 {
+	color: #dd2daa;
+	text-align: center;
+}
+
+#circles-container {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+}
+
+.circle {
+	width: 12rem;
+	aspect-ratio: 1/1;
+	border-radius: 100%;
+	border: 0;
+	color: white;
+	font-weight: 800;
+	font-size: 1.2rem;
+	background-color: #2DAADD;
+	margin: 1rem;
+	padding: 1rem;
+}
+
+#final-section { /*parte 5*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
 #buttons-container {
 	display: flex;
-	margin-top: 10vw;
+	width: 100%;
+	flex-direction: row;
 	justify-content: center;
 }
 .finalButton {
@@ -9,14 +149,11 @@
 	border-radius: 24px;
 	color: white;
 	font-family: 'Inter', sans-serif;
-	min-width: 15vw;
-	min-height: 5vw;
+	font-size: 0.8rem;
+	width: 10rem;
+	height: 3rem;
 	font-weight: 900;
 	transition: transform 0.5s;
-}
-
-.finalButton:hover {
-	transform: translateY(-10px);
 }
 
 #franquieBtn {
@@ -28,204 +165,180 @@
 }
 
 @media (min-width: 768px) {
-	/* é aquele banner logo abaixo do menu no cabeçalho*/
-	
-	.div-banner {
-		display: flex;
-		z-index: -1;
-		position: relative;
-		justify-content: center;
-		align-items: center;
-		margin-top: 3vw;
-		/*margin-top: -3.3vw;*/
+	main p {
+		font-family: 'Inter', sans-serif;
+		width: auto;
+		font-size: 1.3rem;
 	}
-	
-	.figure-banner {
-		display: flex;
-		justify-content: center;
-		margin: 0;
+	main h1 {
+		font-family: 'Inter', sans-serif;
+		width: auto;
+		font-size: 2rem;
+		font-weight: 900;
 	}
-
-
-	#div-types {
-
-		display: flex;
-		margin: 10%;
-		flex-direction: column;
+	main figure {
+		width: fit-content;
+	}
+	main section { 
+		width: 100%;
 	}
 
-	.type {
+	#logo-title-container { /*parte 1*/
+		width: 100%;
 		display: flex;
 		flex-direction: row;
-		padding: 10%;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem;
 	}
 
-	.type p {
-		font-family: 'Inter', sans-serif;
-		margin-top: 10%;
-		margin-left: 25%;
-	}
-	
-	.div-types-img {
-		width: 12vw;
-	}
-
-
-
-	/* título */
-	h1 {
-		font-family: 'Inter', sans-serif;
-		font-size: 4rem;
-		font-weight: 800;
-		color: #DD2DAA;
-		margin-top: 10vw;
-		margin-left: 5vw;
-	}
-
-	#sobre-section {
+	#logo-home {
 		width: 100%;
+		max-width: 200px;
 	}
 
-	/* aqueles circulos*/
+	#title-home {
+		color: #dd2daa;
+	}
 
-
-	.circles-container {
-		position: relative;
+	#banner-container { /*parte 2*/
 		display: flex;
 		width: 100%;
 		justify-content: center;
-		margin-top: 20vw;
+		overflow: hidden;
 	}
 
-	.circle {
-		display: flex;
-		width: 25vw;
-		height: 23vw;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border-radius: 100%;
-		border: 0;
-		margin: 2vw;
-		background-color: #2DAADD;
-		text-decoration: none;
-		color: white;
-		font-family: 'Inter', sans-serif;
-		font-size: 3vw;
-		font-weight: 900;
-		cursor: pointer;
+	#banner-img {
+		-webkit-mask-image: radial-gradient(circle, black, transparent 80%);
+		mask-image: radial-gradient(circle, black, transparent 50%);
+		max-width: 900px;
 	}
 
-	.circle:hover {
-		background-color: #42b9e9;
-
-	}
-	
-
-	#mainCircle {
-		margin-top: -2vw;
-	}
-}
-
-
-
-
-@media (max-width: 768px) { /*MOBILE*/
-	.div-banner {
-		display: flex;
-		z-index: -1;
-		position: relative;
-		margin-top: 3vw;
-		justify-content: center;
-		align-items: center;
-	}
-	
-	.figure-banner {
+	#steps-container { /*parte 3*/
+		width: 100%;
 		display: flex;
 		justify-content: center;
+	}
+
+	#steps-grid {
+		display: inline-grid;
+		width: fit-content;
 		margin: 0;
-	}
-	
-	.btn {
 		padding: 0;
-		margin: 0;
-	}
-
-	/* aquelas imagens de maquina de lavar etc etc*/
-	#div-types {
-		display: flex;
-		margin: 10%;
-		flex-direction: column;
-	}
-
-	.type {
-		display: flex;
-		flex-direction: row;
-		padding: 10%;
-	}
-
-	.type p {
-		font-family: 'Inter', sans-serif;
-		margin-top: 10%;
-		margin-left: 25%;
-	}
-	
-	.div-types-img {
-		width: 25vw;
-		height: 100%;
-	}
-
-	/* título */
-	h1 {
-		font-family: 'Inter', sans-serif;
-		font-size: 2.5rem;
-		font-weight: 800;
-		color: #DD2DAA;
-		margin-top: 10vw;
-		margin-left: 5vw;
-	}
-
-	#sobre-section {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-	}
-
-	/* aqueles circulos*/
-
-
-	.circles-container {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		justify-content: center;
-		align-items: center;
-		margin-top: 20vw;
-	}
-
-	.circle {
-		display: flex;
-		width: 50vw;
-		height: 50vw;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border-radius: 100%;
-		border: 0;
-		margin: 2vw;
-		background-color: #2DAADD;
-		text-decoration: none;
-		color: white;
-		font-family: 'Inter', sans-serif;
-		font-size: 3vw;
-		font-weight: 900;
-		cursor: pointer;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
 		
 	}
 
-	.circle:hover {
-		background-color: #42b9e9;
+	.step {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		padding: 1rem;
+		justify-content: space-around;
 
+	}
+
+	.step p {
+		align-self: center;
+		justify-self: center;
+		max-width: 400px;
+		text-align: justify;
+		padding-left: 5rem;
+	}
+
+	#step-1 {
+		grid-row: 1;
+	}
+	#step-2 {
+		grid-row: 2;
+	}
+	#step-3 {
+		grid-row: 3;
+	}
+
+	.steps-img {
+		width: auto;
+		height: auto;
+		max-width: 426px;
+		max-height: 256px;
+	}
+
+	#sobre-section { /*parte 4*/
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#sobre-section h1 {
+		color: #dd2daa;
+		text-align: center;
+	}
+
+	#circles-container {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.circle {
+		width: 12rem;
+		aspect-ratio: 1/1;
+		border-radius: 100%;
+		border: 0;
+		color: white;
+		font-weight: 800;
+		font-size: 1.2rem;
+		background-color: #2DAADD;
+		margin: 2rem;
+		margin-top: 5rem;
+		padding: 1rem;
+		transition: transform 0.5s;
+	}
+	.circle:hover {
+		transform: translateY(-5px);
+	}
+
+	#final-section { /*parte 5*/
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		overflow: hidden;
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+	}
+	#buttons-container {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		justify-content: center;
+	}
+	.finalButton {
+		margin: 10%;
+		border-style: hidden;
+		border-radius: 24px;
+		color: white;
+		font-family: 'Inter', sans-serif;
+		font-size: 0.8rem;
+		width: 10rem;
+		height: 3rem;
+		font-weight: 900;
+		transition: transform 0.5s;
+	}
+	
+	.finalButton:hover {
+		transform: translateY(-10px);
+	}
+
+	#franquieBtn {
+		background-color: #DD2DAA;
+	}
+
+	#goBackBtn {
+		background-color: #2DAADD;
 	}
 }
