@@ -43,8 +43,8 @@ main section {
 }
 
 #banner-img {
-	-webkit-mask-image: radial-gradient(circle, black, transparent 80%);
-	mask-image: radial-gradient(circle, black, transparent 50%);
+	-webkit-mask-image: radial-gradient(circle, black, transparent 56%);
+	mask-image: radial-gradient(circle, black, transparent 56%);
     max-width: 900px;
 }
 
@@ -209,8 +209,8 @@ main section {
 	}
 
 	#banner-img {
-		-webkit-mask-image: radial-gradient(circle, black, transparent 80%);
-		mask-image: radial-gradient(circle, black, transparent 50%);
+		-webkit-mask-image: radial-gradient(circle, black, transparent 56%);
+		mask-image: radial-gradient(circle, black, transparent 56%);
 		max-width: 900px;
 	}
 
