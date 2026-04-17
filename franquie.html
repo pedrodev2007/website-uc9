@@ -15,26 +15,7 @@
 	<link rel="stylesheet" href="styles/home-animation.css">
     <link rel="stylesheet" href="styles/franquie.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="module">
-        (function() {
-            emailjs.init({
-                publicKey: import.meta.env.VITE_API_KEY,
-            })
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            this.document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault()
-
-                emailjs.sendForm('contact-service', 'auto-reply-lavanderia', this).then(() => {
-                    console.log("sucesso");
-                }, (error) => {
-                    console.log("erro: " + error + " " + error.status);
-                });
-            });
-        }
-    </script>
+    <script type="module" src="js/send-form.js"></script>
 </head>
 <body>
 <body>
