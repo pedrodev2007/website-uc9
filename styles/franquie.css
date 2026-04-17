@@ -1,0 +1,488 @@
+
+
+        /* Estiliza a seção hero, o container principal da primeira dobra da página */
+        .hero-section {
+            /* Posição relativa para que elementos internos com 'position: absolute' se guiem por ele */
+            position: relative;
+            /* Ocupa 100% da largura disponível na tela */
+            width: 100%;
+            /* Garante que a altura mínima seja 600px, evitando que fique muito espremida em telas pequenas */
+            min-height: 600px;
+            /* Preenchimento interno: 80px em cima e embaixo, 20px nas laterais */
+            padding: 80px 20px;
+            /* Ativa o Flexbox, facilitando o alinhamento dos elementos internos */
+            display: flex;
+            /* Centraliza os itens horizontalmente dentro do flex container */
+            justify-content: center;
+            /* Centraliza os itens verticalmente dentro do flex container */
+            align-items: center;
+        }
+
+        /* Um container interno para limitar a largura máxima do conteúdo na seção hero */
+        .hero-container {
+            /* Posição relativa para referência de posicionamento absoluto dos elementos filhos */
+            position: relative;
+            /* Limita a largura máxima do conteúdo a 1100px, para não ficar gigante em monitores grandes */
+            max-width: 1300px;
+            /* Ocupa 100% da largura até o limite de 1100px definido acima */
+            width: 100%;
+            /* Ativa o Flexbox para alinhar o texto (blob) e as imagens lado a lado */
+            display: flex;
+            /* Alinha os itens verticalmente ao centro */
+            align-items: center;
+        }
+
+        /* Estiliza o fundo verde orgânico (o "blob") atrás do texto */
+        .hero-blob {
+            /* Define a cor de fundo verde-água (ciano escuro) */
+            background-color: #10c0a8;
+            /* Cria o formato orgânico e irregular da borda usando valores múltiplos de raio */
+            border-radius: 15% 45% 25% 45% / 25% 25% 45% 15%;
+            /* Preenchimento interno do blob: top, right, bottom, left */
+            padding: 80px 200px 80px 60px;
+            /* Define a cor do texto interno como branco */
+            color: #ffffff;
+            /* O blob ocupa 65% da largura do container pai */
+            width: 65%;
+            /* Posição relativa para controlar a sobreposição com z-index */
+            position: relative;
+            /* Garante que o blob fique na camada de trás (abaixo das imagens) */
+            z-index: 1;
+        }
+
+        /* Estiliza o título (h1) dentro do blob verde */
+        .hero-blob h1 {
+            /* Fonte bem grossa (Extrabold) para dar destaque */
+            font-weight: 800;
+            /* Tamanho da fonte grande */
+            font-size: 2.5rem;
+            /* Espaço abaixo do título para separar do parágrafo */
+            margin-bottom: 20px;
+            /* Altura da linha, define o espaçamento entre as linhas do título */
+            line-height: 1.2;
+            /* Adiciona uma sombra sutil ao texto para melhor legibilidade no fundo verde */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Estiliza o parágrafo (p) dentro do blob verde */
+        .hero-blob p {
+            /* Tamanho da fonte ligeiramente maior que o padrão para facilitar a leitura */
+            font-size: 1.05rem;
+            /* Aumenta o espaçamento entre as linhas do texto para melhorar a escaneabilidade */
+            line-height: 1.5;
+            /* Peso normal da fonte */
+            font-weight: 400;
+            /* Zera as margens do parágrafo */
+            margin: 0;
+            /* Limita a largura máxima do texto a 450px para não ficar em linhas muito longas (boa prática de tipografia) */
+            max-width: 450px;
+        }
+
+        /* Container que agrupa e posiciona as imagens sobrepostas */
+        .hero-images {
+            /* Posição absoluta em relação ao .hero-container */
+            position: absolute;
+            /* Cola o container das imagens no lado direito */
+            right: 0;
+            /* Alinha o topo do container exatamente no meio (50%) do container pai */
+            top: 50%;
+            /* Ajuste fino para centralizar verticalmente de verdade, subindo 50% da própria altura */
+            transform: translateY(-50%);
+            /* Define a largura do container de imagens */
+            width: 550px;
+            /* Define a altura do container de imagens */
+            height: 350px;
+            /* Coloca o container de imagens na camada intermediária, acima do blob e abaixo da mulher */
+            z-index: 2;
+            
+        }
+
+        /* Estiliza a imagem de fundo (as máquinas de lavar) */
+        .img-machines {
+            /* Ocupa 100% da largura do .hero-images */
+            width: 100%;
+            /* Ocupa 100% da altura do .hero-images */
+            height: 100%;
+            /* Faz com que a imagem cubra todo o espaço, cortando as bordas se necessário para não achatar */
+            object-fit: cover;
+            /* Arredonda os cantos da imagem */
+            border-radius: 40px;
+            /* Adiciona uma sombra suave para dar a impressão de profundidade, destacando a imagem do fundo */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            
+        }
+
+        /* Estiliza a imagem que fica à frente (a mulher cheirando a toalha) */
+        .img-woman {
+            /* Posição absoluta em relação ao container .hero-images */
+            position: absolute;
+            /* Move a imagem 50px para baixo da borda inferior do container pai */
+            bottom: -50px;
+            /* Move a imagem 100px para a esquerda da borda esquerda do container pai */
+            left: -100px;
+            /* Define a largura da imagem */
+            width: 260px;
+            /* Define a altura da imagem */
+            height: 280px;
+            /* Ajusta a imagem para cobrir a área sem distorcer (cortando excessos) */
+            object-fit: cover;
+            /* Cria um formato de "janela": arredondado em cima (50%), quase reto embaixo (25px) */
+            border-radius: 50% 50% 5px 5px; 
+            /* Adiciona uma borda grossa cinza clara, simulando um porta-retrato */
+            border: 10px dashed #dcdcdc; 
+            /* Cor de fundo cinza, visível caso a imagem não carregue rápido */
+            background-color: #dcdcdc;
+            /* Sombra para dar a sensação de que está flutuando acima da outra imagem */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            /* Coloca a imagem na camada mais alta, sobrepondo as outras */
+            z-index: 3;
+            object-fit: cover
+        }
+
+        /* ========================================================
+           SEÇÃO 2: CARROSSEL DE ÍCONES E GRID DE IMAGENS
+           ======================================================== */
+        
+        /* Estiliza a seção que engloba o carrossel e o grid de fotos */
+        .gallery-section {
+            /* Cor de fundo azul claro que estava no print de referência */
+            background-color: #63c2de;
+            /* Ocupa toda a largura da tela */
+            width: 100%;
+            /* Espaçamento interno inferior para dar respiro aos cards */
+            padding-bottom: 80px;
+            margin: 0;
+            
+        }
+
+        /* Container principal do carrossel infinito */
+        .icon-carousel {
+            /* Fundo branco para a faixa onde os ícones correm */
+            background-color: #ffffff;
+            /* Cria uma linha azul um pouco mais escura no topo para separar da seção anterior */
+            border-top: 10px solid #63c2de;
+            /* Preenchimento superior e inferior */
+            padding: 20px 0;
+            /* CRÍTICO: Esconde os ícones que saem da tela, essencial para o efeito do carrossel */
+            overflow: hidden;
+            /* Define a largura total */
+            width: 100%;
+        }
+
+        /* A "pista" flexível onde os ícones estão enfileirados */
+        .icon-track {
+            /* Usa Flexbox para colocar os ícones lado a lado numa linha reta */
+            display: flex;
+            /* A largura se adapta ao conteúdo (a soma da largura de todos os ícones) */
+            width: max-content;
+            /* Aplica a animação 'scroll' que dura 60s, é constante (linear) e nunca para (infinite) */
+            animation: scroll 60s linear infinite; 
+        }
+
+        /* Definição da animação (Keyframes) que faz a pista andar */
+        @keyframes scroll {
+            /* No começo da animação (0%), a pista está na posição original */
+            0% { transform: translateX(0); }
+            /* No fim da animação (100%), a pista se move para a esquerda até a metade exata de seu comprimento */
+            /* Como os ícones estão duplicados, quando ela pula da metade para o começo (0%), o olho não percebe a diferença */
+            100% { transform: translateX(-50%); } 
+        }
+
+        /* Container individual para cada ícone (SVG) */
+        .icon-item {
+            /* Define a largura fixa de cada espaço de ícone */
+            width: 250px; 
+            /* Impede que o container do ícone encolha se a tela for muito pequena */
+            flex-shrink: 0; 
+            /* Usa Flexbox para alinhar o SVG interno */
+            display: flex;
+            /* Centraliza o SVG horizontalmente */
+            justify-content: center;
+            /* Centraliza o SVG verticalmente */
+            align-items: center;
+        }
+
+        /* Estiliza a imagem vetorial (SVG) que é o ícone em si */
+        .icon-item svg {
+            /* Largura do ícone */
+            width: 50px;
+            /* Altura do ícone */
+            height: 50px;
+            /* Sem preenchimento interno (a cor fica só nas linhas) */
+            fill: none;
+            /* Define a cor do traço como magenta (rosa) */
+            stroke: #d61c76;
+            /* Espessura da linha do desenho */
+            stroke-width: 1.5;
+            /* Deixa as pontas das linhas arredondadas */
+            stroke-linecap: round;
+            /* Deixa as junções das linhas arredondadas */
+            stroke-linejoin: round;
+        }
+
+        /* Container tipo Grade (Grid) para as 3 fotos ilustrativas */
+        .image-grid {
+            /* Largura máxima centralizada */
+            max-width: 1200px;
+            /* Margem auto nas laterais para centralizar na tela */
+            margin: 0 auto;
+            /* Ativa o CSS Grid, excelente ferramenta para layouts de colunas e linhas */
+            display: grid;
+            /* Cria exatamente 3 colunas, dividindo o espaço igualmente (1 fração cada) */
+            grid-template-columns: repeat(3, 1fr);
+            /* Espaçamento (calha) de 25px entre os cartões */
+            gap: 25px;
+            /* Preenchimento interno: top (40px), right (20px), bottom (0), left (20px) */
+            padding: 40px 20px 0 20px;
+        }
+
+        /* Cartão individual que contém cada imagem do Grid */
+        .grid-card {
+            /* Bordas bem arredondadas, tendência atual de UI */
+            border-radius: 20px;
+            /* Esconde as partes da imagem que passarem das bordas arredondadas (faz o corte) */
+            overflow: hidden;
+            /* Define a proporção de tela do cartão como 3:4 (mais alto do que largo, estilo retrato) */
+            aspect-ratio: 3 / 4;
+            /* Sombra suave e elegante abaixo do cartão */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* A imagem (<img>) propriamente dita dentro do cartão */
+        .grid-card img {
+            /* Ocupa 100% da largura do .grid-card */
+            width: 100%;
+            /* Ocupa 100% da altura do .grid-card */
+            height: 100%;
+            /* Cobre todo o espaço do container sem distorcer, recortando se precisar */
+            object-fit: cover;
+            /* Adiciona uma transição suave na propriedade transform (para o efeito de hover) */
+            transition: transform 0.3s ease;
+        }
+
+        /* Efeito Hover: O que acontece quando o mouse passa por cima da imagem */
+        .grid-card:hover img {
+            /* Aplica um zoom sutil de 5% (escala para 1.05) */
+            transform: scale(1.05);
+        }
+
+        /* ========================================================
+           SEÇÃO 3: FORMULÁRIO DE CONTATO (Fale com Especialistas)
+           ======================================================== */
+        
+        /* A seção inteira do formulário */
+        .contact-section {
+            /* Fundo branco/gelo bem claro para contrastar com a seção azul de cima */
+            background-color: #f7fbfb; 
+            /* Ocupa largura total */
+            width: 100%;
+            /* Preenchimentos generosos em cima/baixo e laterais */
+            padding: 80px 20px;
+            /* Flexbox para centralizar o conteúdo geral da seção */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* O container que segura as duas metades: Texto (esquerda) e Formulário (direita) */
+        .contact-container {
+            /* Largura máxima centralizada */
+            max-width: 1100px;
+            width: 100%;
+            /* Flexbox para colocar as metades lado a lado */
+            display: flex;
+            /* Distância entre a coluna de texto e a caixa do formulário */
+            gap: 50px;
+            /* Alinha ambos os itens ao topo do container */
+            align-items: flex-start;
+        }
+
+        /* --- Lado Esquerdo (Texto da Chamada) --- */
+        
+        /* Container para os textos à esquerda */
+        .contact-text {
+            /* Ocupa "1 porção" do espaço flexível (será comparado com o form-box) */
+            flex: 1;
+            /* Um pequeno respiro superior para alinhar melhor visualmente com o form */
+            padding-top: 30px;
+        }
+
+        /* Título h2 "Fale com nossos especialistas" */
+        .contact-text h2 {
+            /* Fonte bem grande e impactante */
+            font-size: 3rem;
+            /* Peso ExtraBold */
+            font-weight: 800;
+            /* Cor escura tipo chumbo (mais suave que preto puro #000) */
+            color: #1a202c; 
+            /* Espaço para separar do parágrafo abaixo */
+            margin-bottom: 20px;
+            /* Espaçamento curto entre as linhas do título */
+            line-height: 1.2;
+        }
+
+        /* Parágrafo abaixo do título na esquerda */
+        .contact-text p {
+            /* Texto um pouco maior que o padrão para melhorar a leitura */
+            font-size: 1.1rem;
+            /* Cor cinza chumbo médio, um tom abaixo do título para dar hierarquia visual */
+            color: #4a5568;
+            /* Altura da linha para conforto na leitura */
+            line-height: 1.6;
+            /* Limita a largura a 90% para o texto não encostar no formulário */
+            max-width: 90%;
+        }
+
+        /* --- Lado Direito (Caixa do Formulário) --- */
+
+        /* A "caixa" colorida que envolve o formulário */
+        .contact-form-box {
+            /* Ocupa "1.2 porções" do espaço (um pouco mais largo que a coluna de texto) */
+            flex: 1.2;
+            /* Fundo com tom pastel clarinho de ciano, acompanhando a paleta verde-água do site */
+            background-color: #e5f5f6; 
+            /* Espaçamento interno nas bordas da caixa (padding) */
+            padding: 40px;
+            /* Arredonda os cantos da caixa */
+            border-radius: 15px;
+            /* Adiciona uma borda fina verde-água bem transparente */
+            border: 1px solid rgba(16, 192, 168, 0.3); 
+            /* Sombra suave para dar destaque à caixa como um "card" elevado */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Div usada para alinhar dois inputs lado a lado (ex: Nome e Email) */
+        .form-row {
+            /* Flexbox para alinhar horizontalmente */
+            display: flex;
+            /* Espaçamento entre os dois inputs da mesma linha */
+            gap: 20px;
+        }
+
+        /* Define que os grupos dentro da linha ocupem espaços iguais (50/50) */
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        /* Container padrão de todo campo (Label + Input) */
+        .form-group {
+            /* Espaçamento inferior separando do próximo campo */
+            margin-bottom: 20px;
+            /* Flexbox em coluna (label em cima, input embaixo) */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Os "rótulos" dos campos (Nome, Email, etc.) */
+        .form-group label {
+            /* Tamanho de fonte um pouquinho menor */
+            font-size: 0.95rem;
+            /* Peso SemiBold */
+            font-weight: 600;
+            /* Cor verde-água principal do site (identidade visual) */
+            color: #10c0a8; 
+            /* Pequena margem para desgrudar do input */
+            margin-bottom: 8px;
+        }
+
+        /* Estilo compartilhado para os campos de digitação (Inputs, Select e Área de Texto) */
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            /* Padding generoso para as caixas ficarem gordinhas e fáceis de clicar (Mobile First) */
+            padding: 14px 15px;
+            /* Borda branca por padrão (que muda de cor no :focus) */
+            border: 1px solid #ffffff;
+            /* Bordas suavemente arredondadas */
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            /* Fundo dos campos é branco */
+            background-color: #ffffff;
+            /* Texto digitado é cinza escuro */
+            color: #333;
+            /* Remove a borda azul feia de contorno padrão dos navegadores ao clicar */
+            outline: none;
+            /* Transição suave de tempo ao trocar a cor da borda no focus */
+            transition: border-color 0.3s;
+        }
+
+        /* Estiliza o texto de dica/ajuda que fica dentro do input vazio (placeholder) */
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            /* Cor cinza claro (não muito escuro para não confundir com dado preenchido) */
+            color: #a0aec0;
+        }
+
+        /* Efeito aplicado aos campos quando o usuário clica/foca neles para digitar */
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            /* Muda a borda de branco para verde-água, indicando o campo ativo (Acessibilidade) */
+            border: 1px solid #10c0a8;
+        }
+
+        /* Estilização do Botão Enviar final */
+        .btn-submit {
+            /* Botão ocupando 100% da largura da caixa pai */
+            width: 100%;
+            /* Cor de fundo verde-água sólido */
+            background-color: #10c0a8; 
+            /* Texto do botão em branco */
+            color: #ffffff;
+            /* Remove bordas feias de botão HTML padrão */
+            border: none;
+            /* Botão alto (16px top/bottom) e fácil de clicar (boa prática de UX) */
+            padding: 16px;
+            /* Cantos arredondados iguais aos dos inputs */
+            border-radius: 8px;
+            /* Fonte um pouco maior que o normal */
+            font-size: 1.1rem;
+            /* Peso negrito */
+            font-weight: 700;
+            /* Altera o cursor do mouse para mãozinha (pointer) sinalizando clique */
+            cursor: pointer;
+            /* Transições para as animações de hover */
+            transition: background-color 0.3s, transform 0.2s;
+            /* Margem no topo descolando o botão do último textarea */
+            margin-top: 10px;
+        }
+
+        /* Efeito de Hover e Feedback tátil visual do botão de envio */
+        .btn-submit:hover {
+            /* Escurece levemente o tom de verde */
+            background-color: #0e9e8a;
+            /* Animação: o botão dá um "pulinho" de 2 pixels pra cima */
+            transform: translateY(-2px);
+        }
+
+        /* ========================================================
+           MEDIA QUERIES (Regras de Responsividade para Mobile/Tablet)
+           ======================================================== */
+        /* O código dentro deste bloco só se aplica em telas com largura de até 992 pixels (Tablets e Celulares) */
+        @media (max-width: 992px) {
+            
+            /* --- Ajustes da Seção Hero para Celular --- */
+            /* Muda o fluxo de horizontal para vertical (texto em cima, imagem embaixo) */
+            .hero-container { flex-direction: column; }
+            /* O blob agora ocupa 100% da tela em vez de 65%, com paddings reduzidos e formato mais simples */
+            .hero-blob { width: 100%; padding: 60px 40px; border-radius: 20px; margin-bottom: 40px; }
+            /* O container das imagens volta pro fluxo normal (position relative) e o translateY(0) cancela o alinhamento de centralizar e zera o top */
+            .hero-images { position: relative; transform: translateY(0); width: 100%; height: 300px; margin-top: 20px; }
+            /* Ajusta a posição da imagem redonda da mulher pra caber melhor no espaço apertado do celular */
+            .img-woman { left: 20px; bottom: -30px; width: 200px; height: 220px; }
+            
+            /* --- Ajuste da Galeria --- */
+            /* Transforma as 3 colunas de fotos do Grid em apenas 1 coluna, empilhando as fotos uma sobre a outra */
+            .image-grid { grid-template-columns: 1fr; } 
+            
+            /* --- Ajustes do Formulário de Contato para Celular --- */
+            /* Coloca a div de texto (h2/p) em cima e o bloco branco do form inteiro embaixo */
+            .contact-container { flex-direction: column; gap: 30px; }
+            /* Desfaz os campos "lado a lado". Ex: Nome fica em cima, Email fica embaixo (cada um ocupando 100%) */
+            .form-row { flex-direction: column; gap: 0; }
+            /* A caixa do formulário (fundo clarinho) pega a largura inteira da tela */
+            .contact-form-box { width: 100%; padding: 30px 20px; }
+            /* Diminui o tamanho do título h2 para não quebrar de forma feia nas linhas pequenas */
+            .contact-text h2 { font-size: 2.2rem; }
+        }

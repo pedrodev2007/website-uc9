@@ -1,0 +1,224 @@
+
+        /* ========================================================
+           PÁGINA 1: AUTOATENDIMENTO (Com sua paleta de cores)
+           ======================================================== */
+        .autoatendimento-section {
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .autoatendimento-container {
+            max-width: 1100px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 60px; 
+        }
+
+        .auto-top-row {
+            display: flex;
+            align-items: center; 
+            gap: 50px;
+        }
+
+        .auto-text-box { flex: 1; }
+
+        .auto-text-box h2 {
+            color: #6AC4EA; /* Azul Claro */
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .auto-text-box p {
+            color: #666666; 
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .auto-image-box {
+            flex: 1; 
+            position: relative; 
+            display: flex;
+            justify-content: flex-end; 
+        }
+
+        .auto-img {
+            width: 90%; 
+            border-radius: 40px; 
+            position: relative;
+            z-index: 2; 
+        }
+
+        .auto-image-box::after {
+            content: '';
+            position: absolute;
+            top: 20px; 
+            right: -10px; 
+            width: 90%;
+            height: 100%;
+            animation: myAnimation 20s infinite; /* Ciano Esverdeado */
+            border-radius: 40px; 
+            z-index: 1; 
+
+
+        }
+
+       
+        @keyframes myAnimation {
+  0%   {background-color: #1AC8B9;}
+  50%  {background-color: #dd2daa;}
+  100%  {background-color: #63c2de;}
+  
+}
+
+
+
+
+        .auto-btn-wrapper {
+            display: flex;
+            justify-content: center; 
+            margin-top: 20px;
+        }
+
+        .btn-whatsapp-green {
+            background-color: #25d366; /* Ciano Esverdeado */
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none; 
+            padding: 15px 40px;
+            border-radius: 50px; 
+            display: inline-flex;
+            align-items: center;
+            gap: 12px; 
+            box-shadow: 0 8px 25px rgba(26, 200, 0, 0.4); 
+            border: 4px solid white; /* Borda Azul Claro */
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp-green:hover {
+            background-color: #25d366; 
+            border-color: white; /* Magenta Hover */
+            transform: scale(1.02);
+            color: #ffffff;
+        }
+
+        .btn-whatsapp-green svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor; 
+        }
+
+       
+        /* ========================================================
+           PÁGINA 2: RODAPÉ ROXO
+           ======================================================== */
+        .footer-santiago {
+            background-color: #1AC8B9; 
+            color: #ffffff;
+            padding: 150px 60px;
+            min-height: 600px;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 2000px;
+            margin: 0 auto; 
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+
+        .footer-logo {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px; 
+        }
+
+        .footer-slogan {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 0 0 40px 0;
+            opacity: 0.9; 
+        }
+
+        .footer-address {
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+            line-height: 1.8; 
+        }
+
+        .footer-address p { margin: 5px 0; }
+
+        .footer-contacts-list {
+            display: flex;
+            flex-direction: row; 
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; 
+        }
+
+        .contact-item {
+            background-color: #ffffff;
+            color: #8c52ff;
+            padding: 12px 24px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2); 
+        }
+
+        .contact-item svg {
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: #DD2DAA; /* Magenta da sua paleta nos ícones do rodapé */
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* ========================================================
+           RESPONSIVIDADE (Tablets e Celulares)
+           ======================================================== */
+        @media (max-width: 992px) {
+            /* Responsividade Autoatendimento */
+            .auto-top-row { flex-direction: column; gap: 40px; }
+            .auto-image-box { justify-content: center; }
+            .auto-image-box::after { right: 0; width: 100%; }
+            .auto-cards-grid { grid-template-columns: repeat(2, 1fr); }
+            
+            /* Responsividade Formulário */
+            .contact-container { flex-direction: column; gap: 30px; }
+            .form-row { flex-direction: column; gap: 0; }
+            .contact-form-box { width: 100%; padding: 30px 20px; }
+            .contact-text h2 { font-size: 2.2rem; }
+
+            /* Responsividade Rodapé */
+            .footer-logo { font-size: 2.5rem; }
+            .footer-slogan { font-size: 1.2rem; }
+        }
+
+        @media (max-width: 576px) {
+            /* Responsividade Autoatendimento */
+            .auto-cards-grid { grid-template-columns: 1fr; }
+            .btn-whatsapp-green { width: 100%; justify-content: center; }
+
+            /* Responsividade Rodapé */
+            .footer-logo { font-size: 2rem; }
+            .footer-contacts-list { flex-direction: column; width: 100%; }
+            .contact-item { width: 100%; justify-content: center; }
+        }

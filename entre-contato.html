@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Lavanderia</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/home-animation.css">
+    <link rel="stylesheet" href="styles/entre-contato.css">
+	<link rel="icon" type="image/x-icon" href="src/img/clean-lavanderia-favicon.png">
+</head>
+<body>
+
+	
+	<!--
+	abaixo está a estrutura do cabeçalho, só replicar nas outras páginas (copia e cola)
+	-->
+	<header class="header-menu">
+		<nav class="nav-menu">
+			<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img id="menu-img" src="src/img/menu-button.png" alt=""></button>
+
+			
+			<ul class="list-nav">
+				<li class="nav-option"><a href="home.html">HOME</a></li>
+				<li class="nav-option"><a href="quem-somos.html">QUEM SOMOS</a></li>
+				<li class="nav-option"><a href="">VANTAGENS</a></li>
+				<li class="nav-option"><a href="">NOSSAS LAVANDERIAS</a></li>
+				<li class="nav-option"><a href="entre-contato.html">ENTRE EM CONTATO</a></li>
+				<li class="nav-option"><a href="franquie.html">FRANQUIE</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+<main>
+		<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+			<div class="offcanvas-header">
+					
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="list-offcanvas">
+					<li class="offcanvas-option"><a href="home.html">HOME</a></li>
+					<li class="offcanvas-option"><a href="quem-somos.html">QUEM SOMOS</a></li>
+					<li class="offcanvas-option"><a href="">VANTAGENS</a></li>
+					<li class="offcanvas-option"><a href="">NOSSAS LAVANDERIAS</a></li>
+					<li class="offcanvas-option"><a href="entre-contato.html">ENTRE EM CONTATO</a></li>
+					<li class="offcanvas-option"><a href="franquie.html">FRANQUIE</a></li>
+					<li class="offcanvas-option"><a href="creditos.html">CRÉDITOS</a></li>
+				</ul>
+			</div>
+		</div>
+
+    <section class="autoatendimento-section">
+        <div class="autoatendimento-container">
+            
+            <div class="auto-top-row">
+                <div class="auto-text-box">
+                    <h2>Autoatendimento</h2>
+                    <p>
+                        Serviço padrão da lavanderia, onde a pessoa coloca a roupa para lavar e secar. 
+                        A dosagem dos produtos é automática e disponibilizamos cesto medidor na 
+                        lavanderia para ajudar na quantidade de roupa (média de 20 peças de roupas).
+                    </p>
+                </div>
+                
+                <div class="auto-image-box">
+                    <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ilustração da Lavanderia" class="auto-img">
+                </div>
+            </div>
+
+          
+
+            <div class="auto-btn-wrapper">
+                <a href="#" class="btn-whatsapp-green">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+                    </svg>
+                    Entre em contato com a nossa equipe
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+           
+ 
+    <footer class="footer-santiago">
+        <div class="footer-container">
+            
+            <h2 class="footer-logo">CLEAN LAVANDERIA</h2>
+            <p class="footer-slogan">Sua roupa cuidada com carinho</p>
+
+            <div class="footer-address">
+                <p>Rua Guido Fecchio, 514 - Centro - Cotia/SP</p>
+                <p>+55 (11) 4703 5080 - +55 (11) 4612 3593</p>
+                <p>+55 (11) 99319 4984 - +55 (11) 99319 4649</p>
+            </div>
+
+            <div class="footer-contacts-list">
+                <a href="mailto:soulavanderia@gmail.com" class="contact-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>soulavanderia@gmail.com</span>
+                </a>
+
+                
+
+                <a href="#" class="contact-item">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <span>+55 (11) 99319-4984</span>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+<br><br><br><br><br>
+      <footer>
+        <div id="footer-top-container">
+            <div class="footer-top-div">
+                <a href="quem-somos.html">QUEM SOMOS</a>
+                <a href="" target="_blank">NOSSAS LAVANDERIAS</a>
+            </div>
+            <div class="footer-top-div">
+                <a href="" target="_blank">ENTRE EM CONTATO</a>
+                <a href="" target="_blank">FRANQUIA</a>
+            </div>
+        </div>
+        
+        <div id="footer-bottom-container">
+            <div class="footer-bottom-div">
+                <p>Atendimento 24 horas, de domingo a domingo.</p>
+                <a href="">Suporte ao cliente</a>
+                <a href="creditos.html" id="credits">Créditos</a>
+            </div>
+        </div>  
+    </footer>
+
+</body>
+</html>
