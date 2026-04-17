@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clean Lavanderia</title>
@@ -16,27 +15,56 @@
     <link rel="stylesheet" href="styles/franquie.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="module" src="js/send-form.js"></script>
+	<link rel="icon" type="image/x-icon" href="src/img/clean-lavanderia-favicon.png">
 </head>
 <body>
-<body>
-    <header class="header-menu">
-        <nav class="nav-menu">
-            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-                <img id="menu-img" src="src/img/menu-button.png" alt="">
-            </button>
-            
-            <ul class="list-nav">
-                <li class="nav-option"><a href="home.html" target="_blank">HOME</a></li>
-                <li class="nav-option"><a href="quem-somos.html">QUEM SOMOS</a></li>
-                <li class="nav-option"><a href="" target="_blank">VANTAGENS</a></li>
-                <li class="nav-option"><a href="" target="_blank">NOSSAS LAVANDERIAS</a></li>
-                <li class="nav-option"><a href="" target="_blank">ENTRE EM CONTATO</a></li>
-                <li class="nav-option"><a href="" target="_blank">FRANQUIA</a></li>
-            </ul>
-        </nav>
-    </header>
+
+	
+	<!--
+	abaixo está a estrutura do cabeçalho, só replicar nas outras páginas (copia e cola)
+	-->
+	<header class="header-menu">
+		<nav class="nav-menu">
+			<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img id="menu-img" src="src/img/menu-button.png" alt=""></button>
+
+			
+			<ul class="list-nav">
+				<li class="nav-option"><a href="home.html">HOME</a></li>
+				<li class="nav-option"><a href="quem-somos.html">QUEM SOMOS</a></li>
+				<li class="nav-option"><a href="">VANTAGENS</a></li>
+				<li class="nav-option"><a href="">NOSSAS LAVANDERIAS</a></li>
+				<li class="nav-option"><a href="entre-contato.html">ENTRE EM CONTATO</a></li>
+				<li class="nav-option"><a href="franquie.html">FRANQUIE</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+
     
     <main class="hero-section">
+
+
+
+		<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+			<div class="offcanvas-header">
+					
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="list-offcanvas">
+				<li class="offcanvas-option"><a href="home.html">HOME</a></li>
+					<li class="offcanvas-option"><a href="quem-somos.html">QUEM SOMOS</a></li>
+					<li class="offcanvas-option"><a href="">VANTAGENS</a></li>
+					<li class="offcanvas-option"><a href="">NOSSAS LAVANDERIAS</a></li>
+					<li class="offcanvas-option"><a href="entre-contato.html">ENTRE EM CONTATO</a></li>
+					<li class="offcanvas-option"><a href="franquie.html">FRANQUIE</a></li>
+					<li class="offcanvas-option"><a href="creditos.html">CRÉDITOS</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+
         <div class="hero-container">
             
             <div class="hero-blob">
@@ -51,8 +79,8 @@
             </div>
 
             <div class="hero-images">
-                <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Máquinas de Lavar" class="img-machines">
-                <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mulher cheirando toalha limpa" class="img-woman">
+                <img src="src/img/maquinas.png" alt="Máquinas de Lavar" class="img-machines">
+                <img src="src/img/asiatica.cheirando.png" alt="Mulher cheirando toalha limpa" class="img-woman">
             </div>
 
         </div>
@@ -93,13 +121,13 @@
 
         <div class="image-grid">
             <div class="grid-card">
-                <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Homem no celular na lavanderia">
+                <img src="src/img/homem.celular.png" alt="Homem no celular na lavanderia">
             </div>
             <div class="grid-card">
-                <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mulher com toalha limpa no sol">
+                <img src="src/img/mulher.cheirando.png" alt="Mulher com toalha limpa no sol">
             </div>
             <div class="grid-card">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Garota relaxando no sofá com celular, simbolizando tempo ganho com lavanderia autônoma">
+                <img src="src/img/crianca.celular.png" alt="Garota relaxando no sofá com celular, simbolizando tempo ganho com lavanderia autônoma">
             </div>
         </div>
     </section>

@@ -1,14 +1,4 @@
- /* Estiliza o elemento 'body', o corpo da página inteira */
-        body {
-            /* Aplica a fonte 'Inter' carregada do Google Fonts, com 'sans-serif' como fallback caso falhe */
-            font-family: 'Inter', sans-serif;
-            /* Esconde qualquer conteúdo que vaze para os lados, evitando a barra de rolagem horizontal (muito importante para responsividade) */
-            overflow-x: hidden;
-            /* Zera as margens padrão que o navegador adiciona ao corpo da página */
-            margin: 0;
-            /* Zera os preenchimentos padrão do navegador */
-            padding: 0;
-        }
+
 
         /* Estiliza a seção hero, o container principal da primeira dobra da página */
         .hero-section {
@@ -33,7 +23,7 @@
             /* Posição relativa para referência de posicionamento absoluto dos elementos filhos */
             position: relative;
             /* Limita a largura máxima do conteúdo a 1100px, para não ficar gigante em monitores grandes */
-            max-width: 1100px;
+            max-width: 1300px;
             /* Ocupa 100% da largura até o limite de 1100px definido acima */
             width: 100%;
             /* Ativa o Flexbox para alinhar o texto (blob) e as imagens lado a lado */
@@ -104,6 +94,7 @@
             height: 350px;
             /* Coloca o container de imagens na camada intermediária, acima do blob e abaixo da mulher */
             z-index: 2;
+            
         }
 
         /* Estiliza a imagem de fundo (as máquinas de lavar) */
@@ -118,6 +109,7 @@
             border-radius: 40px;
             /* Adiciona uma sombra suave para dar a impressão de profundidade, destacando a imagem do fundo */
             box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            
         }
 
         /* Estiliza a imagem que fica à frente (a mulher cheirando a toalha) */
@@ -135,15 +127,16 @@
             /* Ajusta a imagem para cobrir a área sem distorcer (cortando excessos) */
             object-fit: cover;
             /* Cria um formato de "janela": arredondado em cima (50%), quase reto embaixo (25px) */
-            border-radius: 50% 50% 25px 25px; 
+            border-radius: 50% 50% 5px 5px; 
             /* Adiciona uma borda grossa cinza clara, simulando um porta-retrato */
-            border: 10px solid #dcdcdc; 
+            border: 10px dashed #dcdcdc; 
             /* Cor de fundo cinza, visível caso a imagem não carregue rápido */
             background-color: #dcdcdc;
             /* Sombra para dar a sensação de que está flutuando acima da outra imagem */
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             /* Coloca a imagem na camada mais alta, sobrepondo as outras */
             z-index: 3;
+            object-fit: cover
         }
 
         /* ========================================================
@@ -158,6 +151,8 @@
             width: 100%;
             /* Espaçamento interno inferior para dar respiro aos cards */
             padding-bottom: 80px;
+            margin: 0;
+            
         }
 
         /* Container principal do carrossel infinito */
