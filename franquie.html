@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="styles/home-animation.css">
     <link rel="stylesheet" href="styles/franquie.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module" src="js/send-form.js"></script>
 	<link rel="icon" type="image/x-icon" href="src/img/clean-lavanderia-favicon.png">
+
 </head>
 <body>
 
@@ -143,53 +146,74 @@
             </div>
 
             <div class="contact-form-box">
-                <form action="#" method="POST">
+                <form id="contact-form">
                     
                     <div class="form-row">
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input type="text" id="nome" placeholder="Seu nome" required>
+                            <input type="text" name="name" id="nome" placeholder="Seu nome" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="seu.email@exemplo.com" required>
+                            <input type="email" name="email" id="email" placeholder="seu.email@exemplo.com" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="telefone">Telefone</label>
-                        <input type="tel" id="telefone" placeholder="(00) 0000-0000" required>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="condominio">Nome do condomínio</label>
-                            <input type="text" id="condominio" placeholder="Nome do seu condomínio ou empresa">
-                        </div>
-                        <div class="form-group">
-                            <label for="unidades">Nº unidades</label>
-                            <input type="text" id="unidades" placeholder="Ex: 50, 120, 300+">
-                        </div>
+                        <input type="tel" name="telefone" id="telefone" placeholder="(00) 0000-0000" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="cargo">Seu cargo/posição</label>
-                        <select id="cargo">
+                        <label for="condominio">Cidade</label>
+                        <input type="text" name="cidade" id="cidade" placeholder="Cidade para a franquia" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="investimento">Investimento inicial</label>
+                        <select name="investimento" id="investimento" required>
                             <option value="">Selecione</option>
-                            <option value="sindico">Síndico</option>
-                            <option value="administrador">Administrador</option>
-                            <option value="morador">Morador</option>
-                            <option value="outro">Outro</option>
+                            <option value="sindico">R$ 100-200 mil</option>
+                            <option value="administrador">R$ 200-300 mil</option>
+                            <option value="morador">R$ 300 mil ou mais</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" rows="4" placeholder="Conte-nos mais sobre suas necessidades ou dúvidas"></textarea>
+                        <label for="estados-brasil">Estado</label>
+                        <select name="estados-brasil" id="estados-brasil" required>
+                            <option value="">Selecione</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
                     </div>
 
-                    <button type="submit" class="btn-submit">Enviar</button>
-
+                    <input type="submit" value="Enviar" class="btn-submit">
                 </form>
             </div>
 

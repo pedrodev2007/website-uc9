@@ -1,0 +1,24 @@
+{
+  "name": "website-uc9",
+  "version": "1.0.0",
+  "description": "Este é o repositório oficial do website que simula uma empresa de lavanderia, que visa ser um site responsivo, e que deve ser apresentado aos devidos professores, para a conclusão satisfatória da unidade curricular nº9 (UC9) do curso de Desenvolvimento de Sistemas (DS).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrodev2007/website-uc9.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pedrodev2007/website-uc9/issues"
+  },
+  "homepage": "https://github.com/pedrodev2007/website-uc9#readme",
+  "devDependencies": {
+    "vite": "^8.0.8"
+  }
+}

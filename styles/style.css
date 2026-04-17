@@ -193,7 +193,7 @@ footer {
 	}
 
 	.nav-option:hover {
-		transform: scale(1.2);
+		transform: scale(1.05);
 	}
 
 	.nav-option a {

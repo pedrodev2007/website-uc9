@@ -75,7 +75,7 @@ main section {
     justify-self: center;
     font-size: 1rem;
     max-width: 200px;
-    text-align: center;
+    text-align: justify;
 }
 
 #step-1 {
