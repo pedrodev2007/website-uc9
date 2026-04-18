@@ -20,7 +20,7 @@ https://github.com/pedrodev2007/website-uc9/blob/7ba9e3b8e497cfe370400f8c07d115d
 
 ### Configurando a Vercel
 
-Configuração necessária para a Vercel reconhecer o arquivo home.html, como arquivo se fosse o arquivo index.html do projeto.
+Configuração necessária para a Vercel reconhecer o arquivo home.html, como se fosse o arquivo index.html do projeto.
 
 https://github.com/pedrodev2007/website-uc9/blob/7ba9e3b8e497cfe370400f8c07d115d79673571b/vercel.json#L1-L6
 
