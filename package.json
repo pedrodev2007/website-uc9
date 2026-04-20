@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/pedrodev2007/website-uc9#readme",
   "devDependencies": {
-    "vite": "^8.0.8"
+    "vite": "^8.0.9"
   }
 }
