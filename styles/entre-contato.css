@@ -58,7 +58,7 @@
             right: -10px; 
             width: 90%;
             height: 100%;
-            animation: myAnimation 20s infinite; /* Ciano Esverdeado */
+            animation: myAnimation 8s infinite; /* Ciano Esverdeado */
             border-radius: 40px; 
             z-index: 1; 
 
@@ -69,8 +69,8 @@
         @keyframes myAnimation {
   0%   {background-color: #1AC8B9;}
   50%  {background-color: #dd2daa;}
-  100%  {background-color: #63c2de;}
-  
+  75%  {background-color: #63c2de;}
+  100%  {background-color: #1AC8B9;}
 }
 
 
