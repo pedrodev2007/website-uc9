@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Lavanderia</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/home-style.css">
+    <link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/home-animation.css">
+	<link rel="icon" type="image/x-icon" href="src/img/clean-lavanderia-favicon.png">
+	 <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="styles/nossas-lavanderias.css">
+</head>
+<body>
+
+	
+	<!--
+	abaixo está a estrutura do cabeçalho, só replicar nas outras páginas (copia e cola)
+	-->
+	<header class="header-menu">
+		<nav class="nav-menu">
+			<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img id="menu-img" src="src/img/menu-button.png" alt=""></button>
+
+			
+			<ul class="list-nav">
+				<li class="nav-option"><a href="home.html">HOME</a></li>
+				<li class="nav-option"><a href="quem-somos.html">QUEM SOMOS</a></li>
+				<li class="nav-option"><a href="">VANTAGENS</a></li>
+				<li class="nav-option"><a href="" >NOSSAS LAVANDERIAS</a></li>
+			    <li class="nav-option"><a href="entre-contato.html" >ENTRE EM CONTATO</a></li>
+				<li class="nav-option"><a href="franquie.html" >FRANQUIE</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+
+
+
+    
+    <main class="container-principal">
+        <header class="header-site">
+            <h1 class="nome1">Encontre as melhores lavanderias perto de você</h1>
+        </header>
+
+       <section class="container-pesquisa">
+    <input type="text" id="campo-cep" placeholder="Digite o bairro ou CEP..." class="campo-pesquisa">
+    
+    <button type="button" onclick="buscarLavanderias()" class="botao-pesquisa">Buscar</button>
+</section>
+
+<section class="grade-lavanderias" id="lista-lavanderias">
+    </section>
+
+        <section class="grade-lavanderias">
+            <div class="box-lavanderia">
+                <div class="box-interna">
+                    <div class="comentario-transparente">
+                        <h3>Lavanderia Express</h3>
+                        <p>O melhor desfoque e cuidado com suas roupas.</p>
+                    </div>
+                    <div class="botoes-grupo">
+                        <button class="btn btn-outline-success">Telefone</button>
+                        <button class="btn btn-outline-secondary">Informações</button>
+                        <button class="btn btn-primary">Rotas</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-lavanderia">
+                <div class="box-interna">
+                    <div class="comentario-transparente">
+                        <h3>Clean & Go</h3>
+                        <p>Rápido, prático e totalmente responsivo.</p>
+                    </div>
+                    <div class="botoes-grupo">
+                        <button class="btn btn-outline-success">Telefone</button>
+                        <button class="btn btn-outline-secondary">Informações</button>
+                        <button class="btn btn-primary">Rotas</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+    </main>
+
+
+    <div class="roupas">
+<img src="src\img/lavanderia23.jpg" width="600" alt="Máquina de lavar moderna">
+</div>
+
+    <footer class="meu-rodape-persolizado">
+        <div class="roupas">
+            <span>&copy; 2026</span>
+        </div>
+    </footer>
+
+<section class="container-comentarios">
+    <div class="comentario-transparente">
+        <h3>Giovana</h3>
+        <p>Amo essa lavanderia, fui totalmente sem expectativa
+          e tive a melhor experiencia possivel. </p>
+    </div>
+
+    <div class="comentario-transparente">
+        <h3>Nathan</h3>
+        <p>Sempre que preciso de uma ajuda e neles que
+          eu confio, a minhas roupas sempre voltam limpas e cheirosas
+        </p>
+    </div>
+
+    <div class="comentario-transparente">
+        <h3>Lara</h3>
+        <p>Otima lavanderia, se algum dia voces estiverem 
+          em duvida de qual rede de lavanderia usar, confie neles.
+        </p>
+    </div>
+</section>
+
+<div class="roupas">
+<img src="src\img/imagemderoupas.png" width="600" alt="Máquina de lavar moderna">
+</div>
+
+
+<footer class="meu-rodape-persolizado-2">
+    <div class="container">
+        <div id="footer-top-container" class="row mb-4">
+            <div class="col-6 footer-top-div d-flex flex-column align-items-start">
+                <a href="quem-somos.html">QUEM SOMOS</a>
+                <a href="#" target="_blank">NOSSAS LAVANDERIAS</a>
+            </div>
+            <div class="col-6 footer-top-div d-flex flex-column align-items-start">
+                <a href="#" target="_blank">ENTRE EM CONTATO</a>
+                <a href="#" target="_blank">FRANQUIE</a>
+            </div>
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,0.3);">
+
+        <div id="footer-bottom-container" class="d-flex flex-column align-items-center text-center mt-4">
+            <img src="src/img/lavanderia23.jpg" alt="Logo" style="width: 60px; border-radius: 50%; margin-bottom: 15px;">
+            
+            <div class="footer-bottom-div">
+                <p>Atendimento 24 horas, de domingo a domingo.</p>
+                <div class="links-secundarios">
+                    <a href="#" class="text-white text-decoration-none">Suporte ao cliente</a> | 
+                    <a href="creditos.html" id="credits" class="text-white text-decoration-none">Créditos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+function buscarLavanderias() {
+    // 1. Sua lista de lojas (Insira as suas aqui)
+    const lavanderias = [
+        { nome: "Lavanderia Express", desc: "Cuidado premium com suas roupas.", bairro: "Centro", cep: "01", tel: "11 9999-9999" },
+        { nome: "Clean & Go", desc: "Rápido e prático.", bairro: "Jardins", cep: "04", tel: "11 8888-8888" }
+    ];
+
+    // 2. Pegando os elementos da tela
+    const input = document.getElementById('campo-cep');
+    const lista = document.getElementById('lista-lavanderias');
+
+    // Verificação de segurança: se o input ou a lista não existirem, o código para aqui
+    if (!input || !lista) {
+        console.error("Erro: Não encontrei os IDs 'campo-cep' ou 'lista-lavanderias' no seu HTML.");
+        return;
+    }
+
+    const termoBusca = input.value.toLowerCase();
+    lista.innerHTML = ""; // Limpa a busca anterior
+
+    // 3. Filtrando
+    const resultados = lavanderias.filter(lav => 
+        lav.cep.startsWith(termoBusca) || lav.bairro.toLowerCase().includes(termoBusca)
+    );
+
+    // 4. Mostrando o resultado
+    if (resultados.length > 0) {
+        resultados.forEach(lav => {
+            lista.innerHTML += `
+                <div class="box-lavanderia">
+                    <div class="box-interna">
+                        <div class="comentario-transparente">
+                            <h3>${lav.nome}</h3>
+                            <p>${lav.desc}</p>
+                            <small>Bairro: ${lav.bairro}</small>
+                        </div>
+                        <div class="botoes-grupo">
+                            <button class="btn btn-outline-success">${lav.tel}</button>
+                            <button class="btn btn-primary">Rotas</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+    } else {
+        lista.innerHTML = "<p>Nenhuma lavanderia encontrada.</p>";
+    }
+}
+</script>
+
+
+
+
+
+</body>
+</html>
