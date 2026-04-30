@@ -1,0 +1,605 @@
+.faixa-rosa {
+    background-color: #0974d1; 
+    width: 100vw;             
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+  
+    padding: 150px 0;          
+    color: white;             
+    display: flex;
+    align-items: center;
+    margin-top: 80px;          
+    margin-bottom: 40px;      
+    top: 220px;
+}
+
+.faixa-rosa h2 {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+.brasil {
+    max-width: 100%;
+    height: auto;    
+    display: block;  
+    margin: 0 auto;  
+    right: -600px;
+
+      margin-top: -300px; 
+    
+    position: relative; 
+    z-index: 10;        
+    
+    
+}
+
+@media (max-width: 768px) {
+    .faixa-rosa {
+        padding: 40px 20px; /* Diminui a altura no celular para não ficar gigante */
+    }
+    
+    .faixa-rosa h2 {
+        font-size: 1.5rem; /* Diminui o tamanho da letra para não quebrar linha feio */
+    }
+}
+
+ .auto-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+ 
+        .auto-card {
+            border: 2.5px solid #faf8f8;
+            border-radius: 12px;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #ffffff;
+            transition: transform 0.2s ease, border-color 0.3s ease;
+        }
+ 
+        .auto-card:hover {
+            transform: translateY(-5px);
+            border-color: #DD2DAA; /* Magenta Hover */
+            box-shadow: 0 10px 20px rgba(221, 45, 170, 0.15);
+        }
+ 
+        .auto-card svg {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+            fill: none;
+            stroke: #6AC4EA; /* Azul Claro */
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: stroke 0.3s ease;
+        }
+ 
+        .auto-card:hover svg { stroke: #1AC8B9; }
+ 
+        .auto-card h3 {
+            color: #6AC4EA; /* Azul Claro */
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin: 0;
+            line-height: 1.3;
+            transition: color 0.3s ease;
+        }
+ 
+        .auto-card:hover h3 { color: #1AC8B9; }
+ 
+    
+
+.titulo-vantagens {
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.item-vantagem {
+    text-align: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1); /* Um toque de transparência */
+    border-radius: 15px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.item-vantagem:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.emoji-vantagem {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.item-vantagem h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.item-vantagem p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 768px) {
+    .item-vantagem {
+        margin-bottom: 20px;
+    }
+}
+
+/* Container que segura tudo */
+.container-geral-vantagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Espaço entre a dupla de cima e a de baixo */
+    padding: 20px;
+}
+
+
+.dupla-rosa {
+    background-color: #dd2daa; /* O rosa que você escolheu */
+    padding: 30px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* Espaço entre os dois cards dentro do rosa */
+    width: 100%;
+    max-width: 800px; /* Limita para não ficar largo demais no PC */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Estilo dos cards dentro do rosa */
+.auto-card {
+    text-align: center;
+    color: white;
+    flex: 1;
+}
+
+.auto-card svg {
+    width: 50px;
+    height: 50px;
+    fill: none;
+    stroke: white; /* Deixa os ícones brancos */
+    stroke-width: 2;
+    margin-bottom: 15px;
+}
+
+.auto-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Responsivo para Celular */
+@media (max-width: 600px) {
+    .dupla-rosa {
+        flex-direction: column; /* No celular, os cards da dupla ficam um sob o outro */
+        gap: 30px;
+        align-items: center;
+    }
+}
+
+.meu-rodape {
+    background-color: #2c3e50; 
+    color: white;
+    padding: 60px 0; 
+    margin-top: 100px; 
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.container-avisos {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.titulo-avisos {
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.grade-avisos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card-alerta {
+    border-radius: 20px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-top: 8px solid; /* A linha colorida no topo */
+    transition: transform 0.3s;
+}
+
+.card-alerta:hover {
+    transform: scale(1.02);
+}
+
+/* Estilo específico para o PODE */
+.card-alerta.pode {
+    border-top-color: #2ecc71; /* Verde */
+    background: linear-gradient(to bottom, #f0fff4, #ffffff);
+}
+
+/* Estilo específico para o NÃO PODE */
+.card-alerta.nao-pode {
+    border-top-color: #e74c3c; /* Vermelho */
+    background: linear-gradient(to bottom, #fff5f5, #ffffff);
+}
+
+.header-alerta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon-alerta {
+    font-size: 1.8rem;
+}
+
+.header-alerta h4 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.lista-alerta {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-alerta li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    color: #555;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.lista-alerta li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Deixa a última linha sem a borda de baixo */
+.lista-alerta li:last-child {
+    border-bottom: none;
+}
+
+/* Responsivo para Celular */
+@media (max-width: 768px) {
+    .grade-avisos {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sua-foto-classe {
+  
+    position: relative; 
+    z-index: 10;
+
+    display: block;
+    margin-left: 0;
+    margin-right: auto; 
+
+   
+    margin-top: -200px; 
+    top: -100px;
+
+   
+    max-width: 300px;
+    height: auto;
+}
+
+.numero {
+    color: #fefffe;
+    position: relative; 
+    z-index: 9999;
+    margin-top: 0;      /* Comece com 0 para ver onde ele se posiciona */
+   right: -200px;
+}
+
+.numero h1 {
+    margin: 0; /* Remove espaços extras que podem empurrar o texto */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+
+.propaganda-clean {
+    font-family: 'Poppins', sans-serif;
+    padding: 100px 20px;
+    background: #fdfdfd; /* Fundo quase branco para destacar os elementos */
+    text-align: center;
+}
+
+.glass-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    background: #ffffff;
+    border-radius: 40px;
+    /* Sombra suave e moderna */
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}
+
+.reveal-text {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #333;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.reveal-text span {
+    color: #dd2daa; /* O seu rosa de destaque */
+    display: inline-block;
+}
+
+.desc-clean {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.desc-clean strong {
+    color: #333;
+    border-bottom: 2px solid #dd2daa;
+}
+
+.detalhes-venda {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px dashed #5cb0ff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-chamada {
+    background: linear-gradient(135deg, #ff5cdc 0%, #ff85b1 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(255, 92, 151, 0.3);
+}
+
+.btn-chamada:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(255, 92, 151, 0.4);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .reveal-text { font-size: 1.8rem; }
+    .glass-content { padding: 30px 20px; }
+}
+
+.secao-vantagens-fun {
+    padding: 60px 20px;
+    background-color: #f0f9ff; /* Azul bem clarinho para destacar do resto do site */
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.container-fun {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-fun h2 {
+    color: #007bff;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.emoji-bounce {
+    font-size: 3rem;
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+.grid-vantagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.item-vantagem {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s, border-color 0.3s;
+    border: 3px solid transparent;
+}
+
+.item-vantagem:hover {
+    transform: translateY(-10px);
+    border-color: #ff0080; /* Rosa vibrante no hover */
+}
+
+.icone-circulo {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.item-vantagem h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.item-vantagem p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.footer-fun {
+    margin-top: 40px;
+    font-size: 1.1rem;
+    color: #007bff;
+}
+
+/* Animação do emoji */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Ajuste para celulares */
+@media (max-width: 600px) {
+    .header-fun h2 { font-size: 1.6rem; }
+}
+
+
+.container-promessa {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #ffffff; /* Fundo do site */
+}
+
+.card-promessa {
+    max-width: 650px;
+    background: #f8fbff; /* Azul bem clarinho */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.08);
+    border: 1px solid #e1effe;
+    position: relative;
+    text-align: left;
+}
+
+.detalhe-topo {
+    height: 6px;
+    background: linear-gradient(90deg, #007bff, #00d2ff);
+}
+
+.conteudo-promessa {
+    padding: 40px;
+}
+
+.badge-exclusivo {
+    background: #ff0080;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+
+.card-promessa h2 {
+    color: #003d80;
+    font-size: 1.8rem;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.card-promessa p {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.lista-check {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.lista-check span {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.ponto {
+    width: 8px;
+    height: 8px;
+    background: #007bff;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.frase-efeito {
+    border-top: 1px solid #ddecff;
+    padding-top: 20px;
+    color: #007bff !important;
+}
+
+/* Responsividade para celular */
+@media (max-width: 480px) {
+    .conteudo-promessa { padding: 25px; }
+    .card-promessa h2 { font-size: 1.5rem; }
+}

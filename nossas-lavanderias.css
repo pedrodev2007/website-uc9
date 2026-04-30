@@ -1,0 +1,348 @@
+
+
+/* Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    min-height: 200vh; /* '200vh' significa: o tamanho de duas telas cheias */
+}
+
+section {
+    padding-top: 100px;    /* Aumenta o espaço dentro da seção no topo */
+    padding-bottom: 100px; /* Aumenta o espaço dentro da seção embaixo */
+}
+
+main {
+    margin-bottom: 150px;  /* Empurra o rodapé bem para baixo */
+}
+/* Header */
+.nome1 {
+    text-align: center;
+    color: rgb(49, 194, 216);
+    padding: 40px 20px;
+    font-size: 2rem;
+}
+
+/* Pesquisa Responsiva */
+.container-pesquisa {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.campo-pesquisa {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #3498db;
+    border-radius: 5px 0 0 5px;
+}
+
+.botao-pesquisa {
+    padding: 12px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Grade de Lavanderias (O segredo da responsividade) */
+.grade-lavanderias {
+    display: flex;
+    flex-wrap: wrap; /* Se não couber, pula para baixo */
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.box-lavanderia {
+    background: rgb(58, 217, 222);
+    width: 100%;
+    max-width: 350px; /* Largura máxima no PC */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Efeito Glassmorphism nos Comentários */
+.comentario-transparente {
+    /* ... seu código anterior ... */
+    color: #ffffff; /* Branco puro destaca melhor no fundo escuro */
+    /* OU */
+    color: #004d4d; /* Um azul bem escuro para fundos muito claros */
+}
+
+/* Grupo de Botões dentro do Card */
+.botoes-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Rodapé */
+.meu-rodape-persolizado {
+    background-color: rgb(74, 223, 228) !important;
+    background-image: url('src/img/lavanderia23.jpg'); /* O caminho da sua foto */
+    background-size: cover;      /* Faz a foto cobrir todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    padding: 50px 0 !important;  /* Aumentei o padding para a foto aparecer mais */
+    padding-left: 360px;
+    margin-top: 50px;
+    color: rgb(249, 245, 248);                /* Cor do texto para contrastar com a foto */
+}
+
+.meu-rodape-persolizado-2 {
+    background-color: rgb(74, 223, 228) !important;
+    padding: 80px 0 !important; /* Aumentei para dar ainda mais "chão" */
+    margin-top: 50px;
+    color: white;
+    position: relative;
+}
+
+/* Estilo para os links do topo ficarem brancos e bonitos */
+.footer-top-div a {
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-top-div a:hover {
+    text-decoration: underline;
+}
+
+/* Ajuste para garantir que o texto de baixo também fique legível */
+.footer-bottom-div p {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+
+
+
+
+/* MEDIA QUERIES - Ajustes para Celular */
+@media (max-width: 768px) {
+    .nome1 {
+        font-size: 1.5rem;
+    }
+    
+    .container-pesquisa {
+        flex-direction: row; /* Mantém lado a lado, ou 'column' se preferir */
+    }
+
+    .box-lavanderia {
+        max-width: 95%; /* Quase a tela toda no celular */
+    }
+}
+
+
+/* --- ESTILO DOS COMENTÁRIOS NO FINAL --- */
+
+.container-comentarios {
+    display: flex;
+    flex-wrap: wrap;       /* Faz os cards pularem de linha se não couberem */
+    justify-content: center; /* Centraliza os cards no meio da tela */
+    gap: 20px;             /* Espaço entre os cards */
+    padding: 60px 20px;    /* Espaço em cima e embaixo da seção */
+    width: 100%;           /* Garante que a seção ocupe a largura da tela */
+    background: url('seu-fundo.jpg') no-repeat center center/cover; /* Opcional: fundo para destacar o vidro */
+}
+
+.comentario-transparente {
+    /* O SEU ESTILO TRANSPARENTE */
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    color: rgb(28, 199, 211);
+
+    /* RESPONSIVIDADE (O segredo para não dar erro) */
+    width: 100%;           /* No celular, ocupa a largura total */
+    max-width: 320px;      /* No computador, limita o tamanho do card */
+    
+   transition: all 0.3s ease-in-out; 
+    cursor: pointer; /* Faz aparecer a "mãozinha" do mouse */
+}
+
+.comentario-transparente:hover {
+    transform: translateY(-10px) scale(1.02); /* Sobe e cresce um pouquinho */
+    background: rgba(255, 255, 255, 0.1);    /* Fica levemente mais claro */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Cria uma sombra embaixo */
+}
+
+/* Ajuste para telas pequenas (Celulares) */
+@media (max-width: 768px) {
+    .container-comentarios {
+        flex-direction: column; /* No celular, coloca um embaixo do outro */
+        align-items: center;
+    }
+    
+    .comentario-transparente {
+        max-width: 90%; /* Deixa o card quase na largura total do celular */
+    }
+}
+
+
+.roupas {
+    width: 10px;      /* Define a largura */
+    height: auto;
+    top: -30px;
+}
+
+ 
+.container-horizontal {
+    display: flex;
+    flex-wrap: wrap; /* Faz os itens pularem para baixo quando a tela termina */
+    gap: 15px;       /* Espaço entre as unidades */
+    padding: 20px;
+    justify-content: center;
+}
+
+.unidade-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px 15px;
+    min-width: 200px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.unidade-card:hover {
+    transform: translateY(-3px);
+    border-color: #007bff;
+}
+
+.uf {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-right: 12px;
+    font-size: 0.8em;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info strong {
+    font-size: 14px;
+    color: #333;
+}
+
+.info span {
+    font-size: 12px;
+    color: #777;
+}
+
+.toast {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+}
+
+.toast-header {
+    border-bottom: none;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.container-horizontal {
+    display: flex;
+    flex-wrap: nowrap; /* Não quebra linha */
+    overflow-x: auto;  /* Habilita rolagem lateral */
+    gap: 15px;
+    padding: 20px;
+    -webkit-overflow-scrolling: touch; /* Rolagem suave no celular */
+}
+
+.unidade-card {
+    flex: 0 0 auto; /* Impede que os cards estiquem ou encolham */
+    min-width: 220px;
+}
+
+.wrapper-suporte {
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    padding: 40px 20px;
+}
+
+.card-ajuda-compacto {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px; /* Aqui controlamos para não pegar a tela toda */
+    padding: 30px;
+    border-radius: 25px; /* Bordas bem arredondadas */
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 1px solid #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.badge-rapido {
+    background: #e7f3ff;
+    color: #007bff;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-ajuda-compacto h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card-ajuda-compacto p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.agradecimento-box {
+    margin-bottom: 25px;
+    font-style: italic;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.btn-contato {
+    display: block;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-contato:hover {
+    background: #0056b3;
+}
+
