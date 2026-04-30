@@ -158,7 +158,7 @@
 
 
 .dupla-rosa {
-    background-color: #dd2daa; /* O rosa que você escolheu */
+    background-color: #dd2daa; 
     padding: 30px;
     border-radius: 25px;
     display: flex;
@@ -168,6 +168,8 @@
     max-width: 800px; /* Limita para não ficar largo demais no PC */
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
+
+
 
 /* Estilo dos cards dentro do rosa */
 .auto-card {
@@ -180,7 +182,7 @@
     width: 50px;
     height: 50px;
     fill: none;
-    stroke: white; /* Deixa os ícones brancos */
+    stroke: white; 
     stroke-width: 2;
     margin-bottom: 15px;
 }
@@ -307,7 +309,7 @@
     font-weight: bold;
 }
 
-/* Deixa a última linha sem a borda de baixo */
+
 .lista-alerta li:last-child {
     border-bottom: none;
 }
@@ -346,7 +348,7 @@
 }
 
 .numero h1 {
-    margin: 0; /* Remove espaços extras que podem empurrar o texto */
+    margin: 0; 
 }
 
 
@@ -355,7 +357,7 @@
 .propaganda-clean {
     font-family: 'Poppins', sans-serif;
     padding: 100px 20px;
-    background: #fdfdfd; /* Fundo quase branco para destacar os elementos */
+    background: #fdfdfd; 
     text-align: center;
 }
 
@@ -378,7 +380,7 @@
 }
 
 .reveal-text span {
-    color: #dd2daa; /* O seu rosa de destaque */
+    color: #dd2daa; 
     display: inline-block;
 }
 
@@ -441,7 +443,7 @@
 
 .secao-vantagens-fun {
     padding: 60px 20px;
-    background-color: #f0f9ff; /* Azul bem clarinho para destacar do resto do site */
+    background-color: #f0f9ff; 
     font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -481,7 +483,7 @@
 
 .item-vantagem:hover {
     transform: translateY(-10px);
-    border-color: #ff0080; /* Rosa vibrante no hover */
+    border-color: #ff0080; 
 }
 
 .icone-circulo {

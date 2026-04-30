@@ -76,10 +76,12 @@ main {
 /* Efeito Glassmorphism nos Comentários */
 .comentario-transparente {
     /* ... seu código anterior ... */
-    color: #ffffff; /* Branco puro destaca melhor no fundo escuro */
+    color: #ffffff; 
     /* OU */
-    color: #004d4d; /* Um azul bem escuro para fundos muito claros */
+    color: #004d4d; 
 }
+
+
 
 /* Grupo de Botões dentro do Card */
 .botoes-grupo {
@@ -88,28 +90,30 @@ main {
     gap: 10px;
 }
 
+
+
 /* Rodapé */
 .meu-rodape-persolizado {
     background-color: rgb(74, 223, 228) !important;
-    background-image: url('src/img/lavanderia23.jpg'); /* O caminho da sua foto */
-    background-size: cover;      /* Faz a foto cobrir todo o espaço */
+    background-image: url('src/img/lavanderia23.jpg'); /* O caminho da foto */
+    background-size: cover;      
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat;
-    padding: 50px 0 !important;  /* Aumentei o padding para a foto aparecer mais */
+    padding: 50px 0 !important;  
     padding-left: 360px;
     margin-top: 50px;
-    color: rgb(249, 245, 248);                /* Cor do texto para contrastar com a foto */
+    color: rgb(249, 245, 248);               
 }
 
 .meu-rodape-persolizado-2 {
     background-color: rgb(74, 223, 228) !important;
-    padding: 80px 0 !important; /* Aumentei para dar ainda mais "chão" */
+    padding: 80px 0 !important;
     margin-top: 50px;
     color: white;
     position: relative;
 }
 
-/* Estilo para os links do topo ficarem brancos e bonitos */
+/* Estilo para os links do topo ficarem brancos */
 .footer-top-div a {
     color: white !important;
     text-decoration: none;
@@ -122,7 +126,9 @@ main {
     text-decoration: underline;
 }
 
-/* Ajuste para garantir que o texto de baixo também fique legível */
+
+
+
 .footer-bottom-div p {
     margin-bottom: 8px;
     font-size: 1.1rem;
@@ -139,7 +145,7 @@ main {
     }
     
     .container-pesquisa {
-        flex-direction: row; /* Mantém lado a lado, ou 'column' se preferir */
+        flex-direction: row; 
     }
 
     .box-lavanderia {
@@ -148,20 +154,20 @@ main {
 }
 
 
-/* --- ESTILO DOS COMENTÁRIOS NO FINAL --- */
+
 
 .container-comentarios {
     display: flex;
-    flex-wrap: wrap;       /* Faz os cards pularem de linha se não couberem */
-    justify-content: center; /* Centraliza os cards no meio da tela */
-    gap: 20px;             /* Espaço entre os cards */
-    padding: 60px 20px;    /* Espaço em cima e embaixo da seção */
-    width: 100%;           /* Garante que a seção ocupe a largura da tela */
+    flex-wrap: wrap;       
+    justify-content: center; 
+    gap: 20px;            
+    padding: 60px 20px;   
+    width: 100%;           
     background: url('seu-fundo.jpg') no-repeat center center/cover; /* Opcional: fundo para destacar o vidro */
 }
 
 .comentario-transparente {
-    /* O SEU ESTILO TRANSPARENTE */
+  
     background: rgba(255, 255, 255, 0.05); 
     backdrop-filter: blur(15px); 
     -webkit-backdrop-filter: blur(15px);
@@ -171,7 +177,7 @@ main {
     padding: 25px;
     color: rgb(28, 199, 211);
 
-    /* RESPONSIVIDADE (O segredo para não dar erro) */
+    /* RESPONSIVIDADE  */
     width: 100%;           /* No celular, ocupa a largura total */
     max-width: 320px;      /* No computador, limita o tamanho do card */
     
@@ -181,7 +187,7 @@ main {
 
 .comentario-transparente:hover {
     transform: translateY(-10px) scale(1.02); /* Sobe e cresce um pouquinho */
-    background: rgba(255, 255, 255, 0.1);    /* Fica levemente mais claro */
+    background: rgba(255, 255, 255, 0.1);    
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Cria uma sombra embaixo */
 }
 
@@ -207,7 +213,7 @@ main {
  
 .container-horizontal {
     display: flex;
-    flex-wrap: wrap; /* Faz os itens pularem para baixo quando a tela termina */
+    flex-wrap: wrap;
     gap: 15px;       /* Espaço entre as unidades */
     padding: 20px;
     justify-content: center;
@@ -291,7 +297,6 @@ main {
 .card-ajuda-compacto {
     background: #ffffff;
     width: 100%;
-    max-width: 400px; /* Aqui controlamos para não pegar a tela toda */
     padding: 30px;
     border-radius: 25px; /* Bordas bem arredondadas */
     text-align: center;
