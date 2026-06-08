@@ -4,8 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área de cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/cadastrar-style.css">
+    <link rel="stylesheet" href="styles/style.css">
+	<link rel="icon" type="image/x-icon" href="src/img/clean-lavanderia-favicon.png">
 </head>
 <body>
-    
+    <main>
+        <section>
+                <div id="cadastro-card">
+                    <div>
+                        <div id="cadastro-header">
+                            <h1>Área de cadastro</h1>
+                        </div>
+                        <div id="cadastro-body">
+                            <form action="POST">
+                                <div class="mb-3" id="input-area">
+                                    <input id="inputNome" name="nome" class="form-control" type="text" placeholder="Nome de usuário" > 
+                                    <input id="inputEmail" name="email" class="form-control" type="email" placeholder="Email" autocomplete="on" required>
+                                    <input id="inputSenha" name="senha" class="form-control" type="password" placeholder="Senha" required>
+                                </div>
+                                <div id="button-area">
+                                    <input class="btn btn-outline-primary" type="submit" value="Cadastrar">
+                                    <input class="btn btn-outline-danger" type="button" value="Cancelar">
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer>
+		<div id="footer-top-container">
+			<div class="footer-top-div">
+				<a href="quem-somos.html">QUEM SOMOS</a>
+				<a href="">NOSSAS LAVANDERIAS</a>
+			</div>
+			<div class="footer-top-div">
+				<a href="entre-contato.html">ENTRE EM CONTATO</a>
+				<a href="franquie.html">FRANQUIE</a>
+			</div>
+		</div>
+		<div id="footer-bottom-container">
+			<div class="footer-bottom-div">
+				<p>Atendimento 24 horas, de domingo a domingo.</p>
+				<a href="creditos.html" id="credits">Créditos</a>
+			</div>
+		</div>	
+	</footer>
 </body>
 </html>
