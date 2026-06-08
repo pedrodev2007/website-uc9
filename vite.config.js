@@ -8,6 +8,7 @@ export default defineConfig({
 				main: resolve(__dirname, './home.html'),
 				'quem-somos': resolve(__dirname, './quem-somos.html'),
 				'entre-contato': resolve(__dirname, './entre-contato.html'),
+				cadastrar: resolve(__dirname, './cadastrar.html'),
 				franquie: resolve(__dirname, './franquie.html'),
 				creditos: resolve(__dirname, './creditos.html'),
 			},
