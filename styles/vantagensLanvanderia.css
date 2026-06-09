@@ -1,0 +1,751 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Aplica globalmente em tudo */
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    background-color: #fdfeff;
+    min-height: 200vh;
+}
+
+section {
+    padding-top: 100px;    
+    padding-bottom: 100px; 
+}
+
+main {
+    margin-bottom: 150px;  
+}
+
+/* Header */
+.nome1 {
+    text-align: center;
+    color: rgb(49, 194, 216);
+    padding: 40px 20px;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Pesquisa Responsiva */
+.container-pesquisa {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.campo-pesquisa {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #2DAADD;
+    border-radius: 5px 0 0 5px;
+    font-family: 'Inter', sans-serif;
+}
+
+.botao-pesquisa {
+    padding: 12px 20px;
+    background: #2DAADD;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Grade de Lavanderias */
+.grade-lavanderias {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.box-lavanderia {
+    background: #53a4cc;
+    color: #f3f6f8;
+    width: 100%;
+    max-width: 350px; 
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.box-interna {
+    color: #f0f8ff;
+}
+
+.comentario-transparente h3, p {
+    color: #f0f0f0;
+    font-family: 'Inter', sans-serif;
+}
+
+.bairro {
+    color: #f0f8ff;
+}
+
+/* Grupo de Botões dentro do Card */
+.botoes-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Rodapé */
+.meu-rodape-persolizado {
+    background-color: #2DAADD !important;
+    background-image: url('src/img/lavanderia23.jpg'); 
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    padding: 50px 0 !important;  
+    padding-left: 360px;
+    margin-top: 50px;
+    color: rgb(249, 245, 248);       
+}
+
+/* Estilo para os links do topo ficarem brancos */
+.footer-top-div a {
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-top-div a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom-div p {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Faixa Rosa / Azul */
+.faixa-rosa {
+    background-color: #0974d1; 
+    width: 100vw;             
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 150px 0;          
+    color: white;             
+    display: flex;
+    align-items: center;
+    margin-top: 80px;          
+    margin-bottom: 40px;      
+    top: 220px;
+    font-family: 'Inter', sans-serif;
+}
+
+.faixa-rosa h2 {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Grid de Auto Cards */
+.auto-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.auto-card {
+    border: 2.5px solid #faf8f8;
+    border-radius: 12px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    transition: transform 0.2s ease, border-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.auto-card:hover {
+    transform: translateY(-5px);
+    border-color: #DD2DAA; 
+    box-shadow: 0 10px 20px rgba(221, 45, 170, 0.15);
+}
+
+.auto-card svg {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    fill: none;
+    stroke: #63c2de; 
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.3s ease;
+}
+
+.auto-card:hover svg { stroke: #2DAADD; }
+
+.auto-card h3 {
+    color: #6AC4EA; 
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.auto-card:hover h3 { color: #2DAADD; }
+
+/* Vantagens */
+.titulo-vantagens {
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+}
+
+.item-vantagem {
+    background: #ffffff !important; /* Força o fundo a ser branco */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: none; 
+    transition: transform 0.3s, border-color 0.3s;
+    border: 3px solid transparent;
+    font-family: 'Inter', sans-serif;
+}
+
+.item-vantagem:hover {
+    background: #faf8fa !important; /* Garante que continue branco ao passar o mouse */
+    transform: scale(1.05);
+    z-index: 99;
+}
+
+.emoji-vantagem {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.item-vantagem h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+       z-index: 99;
+}
+
+.item-vantagem p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-family: 'Inter', sans-serif;
+       z-index: 99;
+}
+
+/* Container Geral */
+.container-geral-vantagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; 
+    padding: 20px;
+}
+
+.dupla-rosa {
+    background-color: #dd2daa; 
+    padding: 30px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 60px; 
+    width: 100%;
+    max-width: 800px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Rodapé Padrão */
+.meu-rodape {
+    background-color: #2c3e50; 
+    color: white;
+    padding: 60px 0; 
+    margin-top: 100px; 
+    font-family: 'Inter', sans-serif;
+}
+
+/* WhatsApp Flutuante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Container de Avisos */
+.container-avisos {
+    font-family: 'Inter', sans-serif;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.titulo-avisos {
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+}
+
+.titulo-avisos2 {
+    color: #00d2ff;
+    font-family: 'Inter', sans-serif;
+}
+
+.grade-avisos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card-alerta {
+    border-radius: 20px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-top: 8px solid; 
+    transition: transform 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-alerta:hover {
+    transform: scale(1.02);
+}
+
+.card-alerta.pode {
+    border-top-color: #2ecc71; 
+    background: linear-gradient(to bottom, #f0fff4, #ffffff);
+}
+
+.card-alerta.nao-pode {
+    border-top-color: #e74c3c; 
+    background: linear-gradient(to bottom, #fff5f5, #ffffff);
+}
+
+.header-alerta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon-alerta {
+    font-size: 1.8rem;
+}
+
+.header-alerta h4 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.4rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.lista-alerta {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-alerta li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    color: #555;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.lista-alerta li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.lista-alerta li:last-child {
+    border-bottom: none;
+}
+
+/* Custom Image/Number Positioning Classes */
+.sua-foto-classe {
+    position: relative; 
+    z-index: 10;
+    display: block;
+    margin-left: 0;
+    margin-right: auto; 
+    margin-top: -200px; 
+    top: -100px;
+    max-width: 300px;
+    height: auto;
+}
+
+.numero {
+    color: #fefffe;
+    position: relative; 
+    z-index: 9999;
+    margin-top: 0;      
+    right: -200px;
+    font-family: 'Inter', sans-serif;
+}
+
+.numero h1 {
+    margin: 0; 
+    font-family: 'Inter', sans-serif;
+}
+
+/* Seção de Propaganda */
+.propaganda-clean {
+    font-family: 'Inter', sans-serif;
+    padding: 100px 20px;
+    background: #fdfdfd; 
+    text-align: center;
+}
+
+.glass-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}
+
+.reveal-text {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #333;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    font-family: 'Inter', sans-serif;
+}
+
+.reveal-text span {
+    color: #dd2daa; 
+    display: inline-block;
+}
+
+.desc-clean {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    font-family: 'Inter', sans-serif;
+}
+
+.desc-clean strong {
+    color: #333;
+    border-bottom: 2px solid #dd2daa;
+}
+
+.detalhes-venda {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px dashed #2DAADD;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-chamada {
+    background: linear-gradient(135deg, #ff5cdc 0%, #ff85b1 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(255, 92, 151, 0.3);
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-chamada:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(255, 92, 151, 0.4);
+}
+/* Seção de Vantagens Fun */
+.secao-vantagens-fun {
+    padding: 60px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #2DAADD;
+}
+
+.container-fun {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* CORREÇÃO: Ajustado para formatar o parágrafo corretamente (removido o 'h2' colado) */
+.header-fun p, p {
+    color: #2DAADD; /* Modifique esta cor hexadecimal se quiser outro tom */
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.grid-vantagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* Onde a mágica acontece: Seus Cards com Sombra */
+.secao-vantagens-fun .item-vantagem {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    /* Adicionada uma sombra suave e moderna (Efeito Blur Elevado) */
+    box-shadow: 0 10px 30px rgba(0, 61, 128, 0.08); 
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    border: 3px solid transparent;
+    font-family: 'Inter', sans-serif;
+    z-index: 5;
+}
+
+/* Efeito ao passar o mouse por cima do card (Hover) */
+.secao-vantagens-fun .item-vantagem:hover {
+    transform: translateY(-10px);
+    border-color: #ff0080;
+    /* A sombra fica um pouco mais intensa para dar efeito de flutuação */
+    box-shadow: 0 15px 35px rgba(255, 0, 128, 0.15); 
+}
+
+
+
+.item-vantagem {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(247, 242, 242, 0.05);
+    transition: transform 0.3s, border-color 0.3s;
+    border: 3px solid transparent;
+    font-family: 'Inter', sans-serif;
+       z-index: 5;
+}
+
+.item-vantagem:hover {
+    transform: translateY(-10px);
+    border-color: #ff0080; 
+}
+
+.icone-circulo {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.item-vantagem h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+    z-index: 5;
+}
+
+.item-vantagem p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-family: 'Inter', sans-serif;
+       z-index: 5;
+}
+
+.footer-fun {
+    margin-top: 40px;
+    font-size: 1.1rem;
+    color: #2DAADD;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Seção do Card de Promessa */
+.container-promessa {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #ffffff; 
+}
+
+.card-promessa {
+    max-width: 650px;
+    background: #fcfdfd; 
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.08);
+    border: 1px solid #f8fafc;
+    position: relative;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.detalhe-topo {
+    height: 6px;
+    background: linear-gradient(90deg, #2DAADD, #2DAADD);
+}
+
+.conteudo-promessa {
+    padding: 40px;
+}
+
+.badge-exclusivo {
+    background: #ff0080;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-promessa h2 {
+    color: #003d80;
+    font-size: 1.8rem;
+    margin: 20px 0;
+    line-height: 1.2;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-promessa p {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.lista-check {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.lista-check span {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.ponto {
+    width: 8px;
+    height: 8px;
+    background: #2DAADD;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.frase-efeito {
+    border-top: 1px solid #ddecff;
+    padding-top: 20px;
+    color: #2DAADD !important;
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- (Responsividade) --- */
+
+@media (max-width: 768px) {
+    .nome1 {
+        font-size: 1.5rem;
+    }
+    
+    .container-pesquisa {
+        flex-direction: row; 
+    }
+
+    .box-lavanderia {
+        max-width: 95%; 
+    }
+
+    .faixa-rosa {
+        padding: 40px 20px; 
+    }
+    
+    .faixa-rosa h2 {
+        font-size: 1.5rem; 
+    }
+
+    .item-vantagem {
+        margin-bottom: 20px;
+    }
+
+    .grade-avisos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .dupla-rosa {
+        flex-direction: column; 
+        gap: 30px;
+        align-items: center;
+    }
+
+    .reveal-text { font-size: 1.8rem; }
+    .glass-content { padding: 30px 20px; }
+    .header-fun h2 { font-size: 1.6rem; }
+}
+
+@media (max-width: 480px) {
+    .conteudo-promessa { padding: 25px; }
+    .card-promessa h2 { font-size: 1.5rem; }
+}
+
+/* Animações */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
