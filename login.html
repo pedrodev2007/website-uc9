@@ -15,7 +15,6 @@
 </head>
 <body>
     <main>
-        
         <section>
                 <div id="login-card">
                     <div>
@@ -25,14 +24,17 @@
                         <div id="login-body">
                             <form action="GET">
                                 <div class="mb-3" id="input-area">
-                                    <input id="inputNome" name="nome" class="form-control" type="text" placeholder="Nome de usuário">
-                                    <input id="inputEmail" name="email" class="form-control" type="email" placeholder="Email" autocomplete="on">
-                                    <input id="inputSenha" name="senha" class="form-control" type="password" placeholder="Senha">
+                                    <!-- <input id="inputNome" name="nome" class="form-control" type="text" placeholder="Nome de usuário" > -->
+                                    <input id="inputEmail" name="email" class="form-control" type="email" placeholder="Email" autocomplete="on" required>
+                                    <input id="inputSenha" name="senha" class="form-control" type="password" placeholder="Senha" required>
                                 </div>
-                                
+                                <div>
+                                    <p><a href="login.html">Esqueci minha senha</a></p> <!-- não funciona -->
+                                    <p>Não tem uma conta ainda? <a href="cadastrar.html">Crie uma aqui</a></p>
+                                </div>
                                 <div id="button-area">
-                                    <input class="btn btn-outline-primary" type="button" value="Realizar login">
-                                    <input class="btn btn-outline-danger" type="button" value="Cancelar">
+                                    <input class="btn btn-outline-primary" type="submit" value="Realizar login">
+                                    <input class="btn btn-outline-danger" type="button" value="Cancelar" onclick="history.back()">
                                 </div>
                                 
                             </form>
