@@ -5,7 +5,7 @@ export default defineConfig({
 	build: {
 		rollupOptions: {
 			input: {
-				main: resolve(__dirname, './home.html'),
+				
 				'quem-somos': resolve(__dirname, './quem-somos.html'),
 				'entre-contato': resolve(__dirname, './entre-contato.html'),
 				franquie: resolve(__dirname, './franquie.html'),
@@ -13,8 +13,6 @@ export default defineConfig({
 			},
 		},
 	},
-	server: {
-		open: '/home.html',
-	}
+	
 })
 
