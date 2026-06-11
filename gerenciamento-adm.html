@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/gerenciamento-style.css">
+    <link rel="stylesheet" href="styles/home-style.css">
+    <link rel="stylesheet" href="styles/style.css">
+	<link rel="icon" type="image/x-icon" href="src/img/clean-lavanderia-favicon.png">
+
+
+	<script src="js/view/gerenciamento-view.js" defer></script>
+</head>
+<body>
+
+    <header class="header-menu">
+		<nav class="nav-menu">
+			<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img id="menu-img" src="src/img/menu-button.png" alt=""></button>
+
+			
+			<ul class="list-nav">
+				<li class="nav-option"><a href="home.html">HOME</a></li>
+				<li class="nav-option"><a href="quem-somos.html">QUEM SOMOS</a></li>
+				<li class="nav-option"><a href="">VANTAGENS</a></li>
+				<li class="nav-option"><a href="" >NOSSAS LAVANDERIAS</a></li>
+			    <li class="nav-option"><a href="entre-contato.html" >ENTRE EM CONTATO</a></li>
+				<li class="nav-option"><a href="franquie.html" >FRANQUIE</a></li>
+			</ul>
+		</nav>
+	</header>
+    <main>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+			<div class="offcanvas-header">
+					
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="list-offcanvas">
+					<li class="offcanvas-option"><a href="home.html">HOME</a></li>
+					<li class="offcanvas-option"><a href="quem-somos.html">QUEM SOMOS</a></li>
+					<li class="offcanvas-option"><a href="">VANTAGENS</a></li>
+					<li class="offcanvas-option"><a href="">NOSSAS LAVANDERIAS</a></li>
+					<li class="offcanvas-option"><a href="entre-contato.html">ENTRE EM CONTATO</a></li>
+					<li class="offcanvas-option"><a href="franquie.html">FRANQUIE</a></li>
+                    <li class="offcanvas-option"><a href="login.html">GERENCIAMENTO</a></li>
+					<li class="offcanvas-option"><a href="creditos.html">CRÉDITOS</a></li>
+				</ul>
+			</div>
+		</div>
+        <div id="logo-title-container">
+			<figure>
+				<img id="logo-home" src="src/img/clean-lavanderia-logo-home.png">
+			</figure>
+			<h1 id="title-home">CLEAN LAVANDERIA</h1>
+		</div>
+		<hr>
+        <section>
+			<div id="usuario-container" class="container">
+				<div class="info-text">
+					<p>Abaixo, você pode cadastrar, ver e editar todos os usuários cadastrados no serviço da Clean Lavanderia e suas respectivas informações, como nome, por exemplo. Email e senhas são todos criptografados.</p>
+				</div>
+				<div class="cadastro-card">
+						<div>
+							<div id="cadastro-header">
+								<h1>Cadastrar Usuários</h1>
+							</div>
+							<div id="cadastro-body">
+								<form  id="formCadastroUsuario" action="POST">
+									<div class="mb-3" id="input-area">
+										<input id="inputNome" name="nome" class="form-control" type="text" placeholder="Nome de usuário" >
+										<input id="inputEmail" name="email" class="form-control" type="email" placeholder="Email" autocomplete="on" required>
+										<input id="inputSenha" name="senha" class="form-control" type="password" placeholder="Senha" required>
+									</div>
+									<div class="button-area">
+										<input class="btn btn-outline-primary" type="submit" value="Cadastrar">
+									</div>
+									
+								</form>
+							</div>
+						</div>
+					</div>
+
+				
+				<div class="gerenciamento-card">
+					<div>
+						<table id="table-usuarios" class="table table-hover">
+							<thead>
+								<div>
+									<h2>Usuários</h2>
+								</div>
+								<tr>
+									<th>Nome</th>
+									<th>Email</th>
+									<th>Senha</th>
+									<th>Ações</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Teste 1</td>
+									<td>email criptografado</td>
+									<td>senha criptografada</td>
+									<td>
+										<button class="btn btn-outline-success">Franquias</button>
+										<button class="btn btn-outline-primary">Atualizar</button>
+										<button class="btn btn-outline-danger">Excluir</button>
+									</td>
+								</tr>
+								<tr>
+									<td>Teste 2</td>
+									<td>email criptografado</td>
+									<td>senha criptografada</td>
+									<td>
+										<button class="btn btn-outline-success">Franquias</button>
+										<button class="btn btn-outline-primary">Atualizar</button>
+										<button class="btn btn-outline-danger">Excluir</button>
+									</td>
+								</tr>
+								
+							</tbody>
+						</table>
+						<div class="button-area">
+							<button  id="btnConsultarUsuarios" class="btn btn-outline-primary">Consultar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<hr>
+			<div id="franquia-container" class="container">
+				<div class="info-text">
+					<p>Abaixo, você pode ver todas as franquias em que o usuário selecionado atua como franqueado, como também informações sobre cada uma delas, como endereço, orçamento inicial e ID (identificador). Além disso, pode cadastrar novas franquias para o usuário selecionado.</p>
+				</div>
+				<div class="cadastro-card">
+						<div>
+							<div id="cadastro-header">
+								<h1>Cadastrar Franquias</h1>
+							</div>
+							<div id="cadastro-body">
+								<form id="formCadastroFranquia" action="POST">
+									<div class="mb-3" id="input-area">
+										<input id="inputCidade" name="cidade" class="form-control" type="text" placeholder="Cidade" >
+										<select name="estados-brasil" id="estados-brasil" class="form-control" required>
+											<option value="">Selecione um estado</option>
+											<option value="AC">Acre</option>
+											<option value="AL">Alagoas</option>
+											<option value="AP">Amapá</option>
+											<option value="AM">Amazonas</option>
+											<option value="BA">Bahia</option>
+											<option value="CE">Ceará</option>
+											<option value="DF">Distrito Federal</option>
+											<option value="ES">Espírito Santo</option>
+											<option value="GO">Goiás</option>
+											<option value="MA">Maranhão</option>
+											<option value="MT">Mato Grosso</option>
+											<option value="MS">Mato Grosso do Sul</option>
+											<option value="MG">Minas Gerais</option>
+											<option value="PA">Pará</option>
+											<option value="PB">Paraíba</option>
+											<option value="PR">Paraná</option>
+											<option value="PE">Pernambuco</option>
+											<option value="PI">Piauí</option>
+											<option value="RJ">Rio de Janeiro</option>
+											<option value="RN">Rio Grande do Norte</option>
+											<option value="RS">Rio Grande do Sul</option>
+											<option value="RO">Rondônia</option>
+											<option value="RR">Roraima</option>
+											<option value="SC">Santa Catarina</option>
+											<option value="SP">São Paulo</option>
+											<option value="SE">Sergipe</option>
+											<option value="TO">Tocantins</option>
+										</select>
+										<select name="investimento" id="investimento" class="form-control" required>
+											<option value="">Orçamento inicial</option>
+											<option value="R$ 100-200 mil">R$ 100-200 mil</option>
+											<option value="R$ 200-300 mil">R$ 200-300 mil</option>
+											<option value="R$ 300 mil ou mais">R$ 300 mil ou mais</option>
+										</select>
+										
+									</div>
+									<div class="button-area">
+										<input class="btn btn-outline-primary" type="submit" value="Cadastrar">
+									</div>
+									
+								</form>
+							</div>
+						</div>
+					</div>
+				
+				<div id="franquias-container" class="gerenciamento-card">
+					<div>
+						<table id="table-franquias" class="table table-hover">
+							<thead>
+								<div>
+									<h2>Franquias</h2>
+								</div>
+								<tr>
+									<th>Endereço</th>
+									<th>Orçamento Inicial</th>
+									<th>ID</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Cidade teste, Estado</td>
+									<td>300 mil reais</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>Cidade teste, Estado</td>
+									<td>300 mil reais</td>
+									<td>2</td>
+								</tr>
+								
+							</tbody>
+						</table>
+						<div class="button-area">
+							<button id="btnConsultarFranquias" class="btn btn-outline-primary">Consultar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+                
+        </section>
+    </main>
+    <footer>
+		<div id="footer-top-container">
+			<div class="footer-top-div">
+				<a href="quem-somos.html">QUEM SOMOS</a>
+				<a href="">NOSSAS LAVANDERIAS</a>
+			</div>
+			<div class="footer-top-div">
+				<a href="entre-contato.html">ENTRE EM CONTATO</a>
+				<a href="franquie.html">FRANQUIE</a>
+			</div>
+		</div>
+		<div id="footer-bottom-container">
+			<div class="footer-bottom-div">
+				<p>Atendimento 24 horas, de domingo a domingo.</p>
+				<a href="creditos.html" id="credits">Créditos</a>
+			</div>
+		</div>	
+	</footer>
+</body>
+<script type="module" src="js/view/gerenciamento-view.js" defer></script>
+</html>

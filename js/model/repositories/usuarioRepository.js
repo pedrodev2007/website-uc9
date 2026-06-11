@@ -2,27 +2,27 @@ const db = require('../../database/db');
 
 class UsuarioRepository {
     async listarTodos() {
-        const [rows] = await db.execute('SELECT id, nome, email FROM tb_usuarios');
+        const [rows] = await db.execute('SELECT id, nome, email, tipo FROM tb_usuarios');
         return rows;
     }
 
     async buscarPorId(id) {
-        const [rows] = await db.execute('SELECT id, nome, email FROM tb_usuarios WHERE id = ?', [id]);
+        const [rows] = await db.execute('SELECT id, nome, email, tipo FROM tb_usuarios WHERE id = ?', [id]);
         return rows[0];
     }
 
     async buscarPorEmail(email) {
-        const [rows] = await db.execute('SELECT id, nome, email, senha FROM tb_usuarios WHERE email = ?', [email]);
+        const [rows] = await db.execute('SELECT id, nome, email, senha, tipo FROM tb_usuarios WHERE email = ?', [email]);
         return rows[0];
     }
 
     async buscarPorEmailESenha(email, senha) {
-        const [rows] = await db.execute('SELECT id, nome, email FROM tb_usuarios WHERE email = ? AND senha = ?', [email, senha]);
+        const [rows] = await db.execute('SELECT id, nome, email, tipo FROM tb_usuarios WHERE email = ? AND senha = ?', [email, senha]);
         return rows[0];
     }
 
-    async criar(nome, email, senha) {
-        const [result] = await db.execute('INSERT INTO tb_usuarios (nome, email, senha) VALUES (?, ?, ?)', [nome, email, senha]);
+    async criar(nome, email, senha, tipo = 'usuario') {
+        const [result] = await db.execute('INSERT INTO tb_usuarios (nome, email, senha, tipo) VALUES (?, ?, ?, ?)', [nome, email, senha, tipo]);
         return result.insertId;
     }
 

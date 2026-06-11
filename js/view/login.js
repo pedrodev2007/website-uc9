@@ -5,19 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputEmail = document.getElementById('inputEmail');
     const inputSenha = document.getElementById('inputSenha');
     
-    // --- O ESCUDO INVISÍVEL ---
-    // Pega o formulário e proíbe ele de recarregar a página (seja pelo botão ou pela tecla Enter)
     const form = document.querySelector('form');
     if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault(); 
-        });
+        form.addEventListener('submit', (e) => { e.preventDefault(); });
     }
-    // --------------------------
 
     btnLogin.addEventListener('click', async (e) => {
         e.preventDefault(); 
-
         const email = inputEmail.value;
         const senha = inputSenha.value;
 
@@ -27,13 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            // Utiliza o serviço isolado
             const data = await UsuarioService.login(email, senha);
 
             if (data.success) {
+                // SALVA O ID NO NAVEGADOR PARA USAR NAS TABELAS
+                localStorage.setItem('usuarioLogadoId', data.usuario.id);
+                localStorage.setItem('usuarioTipo', data.usuario.tipo);
+
                 alert('Login realizado com sucesso! Bem-vindo(a).');
-                // Redireciona para a página interna
-                window.location.href = 'dashboard.html';
+
+                // REDIRECIONA BASEADO NO TIPO
+                if (data.usuario.tipo === 'admin') {
+                    window.location.href = 'gerenciamento-adm.html';
+                } else {
+                    window.location.href = 'gerenciamento-usuario.html';
+                }
             } else {
                 alert(data.message || 'Email ou senha incorretos.');
             }
