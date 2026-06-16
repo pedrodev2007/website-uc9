@@ -15,6 +15,7 @@
 	<link rel="icon" type="image/x-icon" href="src/img/clean-lavanderia-favicon.png">
 
 	<script src="./repositories/usuarios.js" defer></script>
+	<script src="./repositories/franquias.js" defer></script>
 
 	<script src="./js/view/gerenciamento-view.js" type="module" defer></script>
 	<script src="./js/view/modal-view.js" type="module" defer></script>
@@ -23,6 +24,9 @@
 	<script src="./controllers/cadastrar_usuarios.js" type="module" defer></script>
 	<script src="./controllers/atualizar_usuarios.js" type="module" defer></script>
 	<script src="./controllers/excluir_usuarios.js" type="module" defer></script>
+
+	<script src="./controllers/consultar_franquias.js" type="module" defer></script>
+	<script src="./controllers/cadastrar_franquias.js" type="module" defer></script>
 </head>
 <body>
 
@@ -122,7 +126,7 @@
 				<div class="cadastro-card">
 						<div>
 							<div id="cadastro-header">
-								<h1>Cadastrar Usuários</h1>
+								<h1>Atualizar Usuários</h1>
 							</div>
 							<div id="cadastro-body">
 								<form id="frmUsuarioUpdate" action="POST">
@@ -152,7 +156,7 @@
 									<h1>Cadastrar Franquias</h1>
 								</div>
 								<div id="cadastro-body">
-									<form action="POST">
+									<form id="frmFranquias" action="POST">
 										<div class="mb-3" id="input-area">
 											<input id="inputCidade" name="cidade" class="form-control" type="text" placeholder="Cidade" >
 											<select name="estados-brasil" id="estados-brasil" class="form-control" required>
@@ -185,16 +189,18 @@
 												<option value="SE">Sergipe</option>
 												<option value="TO">Tocantins</option>
 											</select>
-											<select name="investimento" id="investimento" class="form-control" required>
+											<select name="orcamentoInicial" id="orcamento" class="form-control" required>
 												<option value="">Orçamento inicial</option>
-												<option value="R$ 100-200 mil">R$ 100-200 mil</option>
-												<option value="R$ 200-300 mil">R$ 200-300 mil</option>
-												<option value="R$ 300 mil ou mais">R$ 300 mil ou mais</option>
+												<option value="100000.00">R$ 100 mil</option>
+												<option value="200000.00">R$ 200 mil</option>
+												<option value="300000.00">R$ 300 mil</option>
+												<option value="400000.00">R$ 400 mil</option>
+												<option value="500000.00">R$ 500 mil</option>
 											</select>
 
 										</div>
 										<div class="button-area">
-											<input class="btn btn-outline-primary" type="submit" value="Cadastrar">
+											<input id="btnCadastrar" class="btn btn-outline-primary" type="submit" value="Cadastrar">
 										</div>
 
 									</form>
@@ -210,31 +216,21 @@
 										<h2>Franquias</h2>
 									</div>
 									<tr>
-										<th>Endereço</th>
+										<th>Cidade</th>
+										<th>UF</th>
 										<th>Orçamento Inicial</th>
-										<th>ID</th>
+										<th>Ações</th>
 									</tr>
 								</thead>
-								<tbody>
-									<tr>
-										<td>Cidade teste, Estado</td>
-										<td>300 mil reais</td>
-										<td>1</td>
-									</tr>
-									<tr>
-										<td>Cidade teste, Estado</td>
-										<td>300 mil reais</td>
-										<td>2</td>
-									</tr>
-
-								</tbody>
+								<tbody></tbody>
 							</table>
 							<div class="button-area">
-								<button class="btn btn-outline-primary">Consultar</button>
+								<button id="btnConsultarFranquias" class="btn btn-outline-primary">Consultar</button>
 							</div>
 						</div>
 					</div>
 				</div>
+				<input id="btnCancelar" class="btn btn-outline-danger" type="button" value="Cancelar">
 			</dialog>
                 
         </section>

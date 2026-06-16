@@ -1,10 +1,12 @@
 var tabela = document.querySelector("#table-usuarios");
-var btnAtualizarAluno = document.querySelector("#btnAtualizarAluno");
+//var btnAtualizarAluno = document.querySelector("#btnAtualizarAluno");
 var modal = document.querySelector("#atualizarModal");
+var frmUsuarioUpdate = document.querySelector("#frmUsuarioUpdate");
 import  { mostrar, fechar } from '/js/view/modal-view.js';
 import  { getFormulario } from '/controllers/cadastrar_usuarios.js';
 
 tabela.addEventListener("click", function (e) {
+
 
     var elemento = e.target;
 /*
@@ -32,8 +34,12 @@ tabela.addEventListener("click", function (e) {
         })
 
         btnAtualizar.addEventListener("click", () => {
-
             var usuario = getFormulario(frmUsuarioUpdate)
+
+            if(usuario.nome == '' || usuario.senha == '' || usuario.email == '') {
+                alert('Preencha todos os campos')
+                return
+            }
 
             fetch(`http://localhost:3000/usuarios/${id}`, {
                 method: "PUT",
@@ -49,6 +55,8 @@ tabela.addEventListener("click", function (e) {
             .catch(erro => {
                 console.error(erro);
             });
+
+            frmUsuarioUpdate.reset()
 
             fechar(modal);
         })

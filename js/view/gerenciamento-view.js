@@ -1,10 +1,3 @@
-
-
-export function teste(d) {
-
-    console.log(d)
-}
-
 export function addUsuarioView(dados) {
     const TABELA = document.getElementById("table-usuarios");
     const TBODY = TABELA.querySelector("tbody");
@@ -22,14 +15,12 @@ export function addUsuarioView(dados) {
     }
 
     const BOTOES = document.createElement("td");
-    BOTOES.innerHTML = `
-    <button class='btn btn-outline-success btnFranquias'>Franquias</button>
-    <button class='btn btn-outline-primary btnAtualizar'>Atualizar</button>
-    <button class='btn btn-outline-danger btnExcluir'>Excluir</button>
-    `
+
+    BOTOES.appendChild(BTN_FRANQUIAS);
+    BOTOES.innerHTML = "<button class='btn btn-outline-success btnFranquias'>Franquias</button><button class='btn btn-outline-primary btnAtualizar'>Atualizar</button><button class='btn btn-outline-danger btnExcluir'>Excluir</button>";
     LINHA.appendChild(BOTOES);
 
-    TBODY.appendChild(LINHA)
+    TBODY.appendChild(LINHA);
 }
 
 
@@ -50,7 +41,10 @@ export function addFranquiaView(dados) {
         LINHA.appendChild(INFO);
     }
 
-    TBODY.appendChild(LINHA)
+    const BTN_EXCLUIR = document.createElement("td");
+    BTN_EXCLUIR.innerHTML = "<button class='btn btn-outline-danger btnExcluir'>Excluir</button>";
+    LINHA.appendChild(BTN_EXCLUIR);
+    TBODY.appendChild(LINHA);
 }
 /*
 export function recarregarTabela() {

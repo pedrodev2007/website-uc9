@@ -1,12 +1,12 @@
 const conexao = require("../db/connection");
 
-exports.listar = (callback) => {
-    const sql = "SELECT * FROM tb_franquias";
+exports.listar = (callback, id) => {
+    const sql = "SELECT cidade, uf, orcamentoInicial FROM tb_franquias WHERE franqueadoId = ?";
 
-    conexao.query(sql, (erro, resultado) => {
+    conexao.query(sql, [id], (erro, resultado) => {
         if (erro) {
             console.error(erro);
-            callback({errooo: "parabéns, tá errado"});
+            return callback({errooo: "parabéns, tá errado"});
         }
 
         callback(resultado);
@@ -19,7 +19,7 @@ exports.salvar = (callback, cidade, uf, orcamentoInicial, franqueadoId) => {
     const sql = "insert into tb_franquias (cidade, uf, orcamentoInicial, franqueadoId) values (?, ?, ?, ?)"
 
 
-    conexao.query(sql, [cidade, uf, orcamentoInicial], (erro, resultado) => {
+    conexao.query(sql, [cidade, uf, orcamentoInicial, franqueadoId], (erro, resultado) => {
         if (erro) {
             console.error("DEU ERRO: " + erro);
             return callback({status: "ERRO", mensagem: erro.message});
@@ -35,7 +35,7 @@ exports.excluir = (callback, id) => {
     conexao.query(sql, [id], (erro, resultado) => {
         if (erro) {
             console.error(erro);
-	    return callback({status: "ERRO", mensagem: erro.message});
+	       return callback({status: "ERRO", mensagem: erro.message});
         }
         callback({status: "sucesso", dados: resultado});
     })

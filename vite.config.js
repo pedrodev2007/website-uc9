@@ -5,7 +5,6 @@ export default defineConfig({
 	build: {
 		rollupOptions: {
 			input: {
-				
 				'quem-somos': resolve(__dirname, './quem-somos.html'),
 				'entre-contato': resolve(__dirname, './entre-contato.html'),
 				franquie: resolve(__dirname, './franquie.html'),

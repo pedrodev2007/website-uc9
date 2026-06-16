@@ -38,6 +38,8 @@ btnCadastrar.addEventListener("click", (event) => {
             console.log("Usuario salvo:", dados);
         });
 
+    frmUsuarios.reset();
+
 })
 
 export function getFormulario(frmUsuarios) {

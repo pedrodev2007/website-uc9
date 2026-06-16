@@ -1,29 +1,33 @@
-import { addFranquiaView } from '/js/view/gerenciamento-view.js';
+import { addFranquiaView } from '../js/view/gerenciamento-view.js';
+import { mostrar, fechar } from '/js/view/modal-view.js';
 
+var tabela = document.querySelector("#table-usuarios");
+var modal = document.querySelector("#franquiasModal");
 var btnConsultar = document.querySelector("#btnConsultarFranquias");
 
+tabela.addEventListener("click", function (e) {
+	var elemento = e.target;
 
-export function listarFranquias() {
+	if (elemento.classList.contains("btnFranquias")) {
+		let linha = elemento.closest("tr");
+		const id = linha.dataset.id;
+		mostrar(modal);
 
-    var tbody = document.querySelector("#table-franquias tbody");
+		console.log(id)
 
-    tbody.innerHTML = "";
+		btnConsultar.addEventListener("click", function () {
+		    var tbody = document.querySelector("#table-franquias tbody");
+		    tbody.innerHTML = "";
 
-    obterFranquias().then(function(lista) {
+		    obterFranquias(id).then(function(lista) {
+		    	console.log(lista)
+		        lista.forEach(function(franquia) {
 
-        lista.forEach(function(franquia) {
+		            addFranquiaView(franquia)
+		            console.log(franquia)
 
-            addFranquiaView(franquia)
-            console.log(franquia)
-
-        });
-
-    });
-
+		        });
+		    });
+		});
+	}
 }
-
-btnConsultar.addEventListener("click", function () {
-
-    listarFranquias();
-
-});

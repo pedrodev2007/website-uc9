@@ -1,35 +1,71 @@
-//vem do form-aluno
-var btnCadastrar = document.querySelector("#btnCadastrarUsuarios");
+var tabela = document.querySelector("#table-usuarios");
+var modal = document.querySelector("#franquiasModal")
 
+import { mostrar, fechar } from '/js/view/modal-view.js';
 
-btnCadastrar.addEventListener("click", (event) => {
-    event.preventDefault();
+tabela.addEventListener("click", function (e) {
+    var tbodyFranquias = document.querySelector("#table-franquias tbody");
+    var elemento = e.target;
 
-    var frmUsuarios = document.querySelector("#frmUsuarios");
+    if (elemento.classList.contains("btnFranquias")) {
+        let linha = elemento.closest("tr");
+        const id = linha.dataset.id;
+        mostrar(modal);
 
-    var usuario = getFormulario(frmUsuarios);
-    //console.log(JSON.stringify(aluno));
+        const btnCancelar = modal.querySelector("#btnCancelar");
+        const btnCadastrar = modal.querySelector("#btnCadastrar");
 
-    
-    fetch("http://localhost:3000/usuarios", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(usuario)
-    })
-        .then(response => response.json())
-        .then(dados => {
-            console.log("Usuario salvo:", dados);
-        });
+        btnCancelar.addEventListener("click", () => {
+            frmFranquias.reset();
+            tbodyFranquias.innerHTML = "";
+            fechar(modal);
+        })
 
+        btnCadastrar.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            var frmFranquias = document.querySelector("#frmFranquias");
+
+            if (frmFranquias.cidade.value === "") {
+                alert("Erro!")
+                return false;
+            }
+
+            if (frmFranquias.uf.value === "") {
+                alert("Erro!")
+                return false;
+            }
+
+            if (frmFranquias.orcamentoInicial.value === "") {
+                alert("Erro!")
+                return false;
+            }
+
+            var franquia = getFormulario(frmFranquias);
+            //console.log(JSON.stringify(aluno));
+
+            
+            fetch(`http://localhost:3000/franquias/${id}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(franquia)
+            })
+                .then(response => response.json())
+                .then(dados => {
+                    console.log("Franquia salva:", dados);
+                });
+            frmFranquias.reset();
+        })
+    }
 })
 
-export function getFormulario(frmUsuarios) {
+export function getFormulario(frmFranquias) {
     return {
-        nome: frmUsuarios.nome.value,
-        email: frmUsuarios.email.value,
-        senha: frmUsuarios.senha.value,
+        nome: frmFranquias.cidade.value,
+        email: frmFranquias.uf.value,
+        senha: frmFranquias.orcamentoInicial.value,
         cargoId: parseInt("1")
     };
 }

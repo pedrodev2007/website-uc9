@@ -14,12 +14,12 @@ exports.listar = (callback) => {
 };
 
 
-exports.salvar = (callback, nome, email, senha) => {
+exports.salvar = (callback, nome, email, senha, cargoId) => {
 
-    const sql = "insert into tb_usuarios (nome, email, senha) values (?, ?, ?)"
+    const sql = "insert into tb_usuarios (nome, email, senha, cargoId) values (?, ?, ?, ?)"
 
 
-    conexao.query(sql, [nome, email, senha], (erro, resultado) => {
+    conexao.query(sql, [nome, email, senha, cargoId], (erro, resultado) => {
         if (erro) {
             console.error("DEU ERRO: " + erro);
             callback({status: "ERRO", mensagem: erro.message});

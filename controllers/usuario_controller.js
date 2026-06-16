@@ -10,13 +10,14 @@ exports.salvar = (req, res) => {
 
 	try {
 		
-	const nome = req.body.nome;
-	const email = req.body.email;
-	const senha = req.body.senha;
-	
-	model.salvar((resultado) => {
-		res.status(201).json(resultado);
-	}, nome, email, senha);
+		const nome = req.body.nome;
+		const email = req.body.email;
+		const senha = req.body.senha;
+		const cargoId = req.body.cargoId;
+		
+		model.salvar((resultado) => {
+			res.status(201).json(resultado);
+		}, nome, email, senha, cargoId);
 
 	} catch(erro) {
 		return res.status(500).json({status: "erro!", mensagem: erro.message});
@@ -49,7 +50,7 @@ exports.atualizar = (req, res) => {
 		const email = req.body.email;
 		const senha = req.body.senha;
 
-		model.atualizar((resultado) => {
+		model.atualizar((erro, resultado) => {
 			if (erro) {
 				return res.status(400).json(erro);
 			}

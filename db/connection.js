@@ -1,11 +1,11 @@
 const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
-	host: DB_HOST,
-	port: POST,
-	user: DB_USER,
+	host: 'localhost',
+	port: 3306,
+	user: 'root',
 	password: '',
-	database: DB_NAME,
+	database: 'lavanderia',
 	namedPlaceholders: true
 });
 

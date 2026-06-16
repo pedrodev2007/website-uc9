@@ -1,6 +1,6 @@
-import { listarUsuarios} from '/controllers/consultar_usuarios.js';
+import { listarFranquias } from '/controllers/consultar_franquias.js';
 
-var tabela = document.querySelector("#table-usuarios");
+var tabela = document.querySelector("#table-franquias");
 
 tabela.addEventListener("click", function (event) {
 
@@ -16,21 +16,16 @@ tabela.addEventListener("click", function (event) {
 
         var id = linha.dataset.id;
 
-        fetch(`http://localhost:3000/usuarios/${id}`, {
+        fetch(`http://localhost:3000/franquias/${id}`, {
             method: "DELETE"
         })
         .then(response => response.json())
         .then(dados => {
-
-            //console.log(dados);
-
-            listarUsuarios();
+            listarFranquias();
 
         })
         .catch(erro => {
             console.log(erro);
         });
-
     }
-
 });
