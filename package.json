@@ -1,4 +1,11 @@
 {
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "npm install && vite build"
+  } 
+},
+{
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
