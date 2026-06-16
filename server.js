@@ -11,6 +11,6 @@ app.use(express.json());
 app.use("/usuarios", usuarios_router);
 app.use("/franquias", franquias_router);
 
-app.listen(3000, () => {
-	console.log("tá rodando em http://localhost:3000");
+app.listen(DB_PORT, () => {
+	console.log(`tá rodando em http://localhost:${DB_PORT}`);
 });
