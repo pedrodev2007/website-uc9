@@ -3,7 +3,7 @@
     "start": "node server.js",
     "dev": "node server.js",
     "build": "npm install && vite build"
-  } 
+  }
 },
 {
   "dependencies": {
