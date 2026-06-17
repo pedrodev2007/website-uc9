@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-const usuarios_router = require("./routers/usuarios_routes");
-const franquias_router = require("./routers/franquias_routes");
+const usuarios_router = require("./backend/routers/usuarios_routes");
+const franquias_router = require("./backend/routers/franquias_routes");
 
 const app = express();
 

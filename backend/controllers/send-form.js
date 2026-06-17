@@ -3,11 +3,6 @@
 		publicKey: import.meta.env.VITE_API_KEY,
 	})
 })();
-/*
-function emailValido(email) {
-	const padrao = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-	return padrao.test(email);
-} função para verificar o email | não utilizado por conta da própria verificação do HTML*/
 
 window.onload = function() {
 	this.document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -26,18 +21,5 @@ window.onload = function() {
 				console.log("erro: " + error + " " + error.text);
 			});
 		};
-		
-		/*
-		if (nome == "" || email == "") {
-			alert("Os campos nome e email devem estar preenchidos");
-			return;
-		}
-		
-		if (!emailValido(email)) {
-			alert("Email inválido!");
-			return;
-		} apenas para mostrar como poderia ser feito de outra forma */
-
-		
 	});
 }
