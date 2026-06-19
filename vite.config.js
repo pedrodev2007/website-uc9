@@ -16,15 +16,5 @@ export default defineConfig({
 			},
 		},
 	},
-	resolve: {
-		alias: {
-			'@view': path.resolve(__dirname, './src/view'),
-			'@routers': path.resolve(__dirname, './backend/routers'),
-			'@controllers': path.resolve(__dirname, './backend/controllers'),
-			'@repositories': path.resolve(__dirname, './backend/repositories'),
-			//'@styles': path.resolve(__dirname, './styles'),
-		}
-	}
-	
 })
 

@@ -1,4 +1,4 @@
-import { addUsuarioView } from '/js/view/gerenciamento-view.js';
+import { addUsuarioView } from '../../src/view/gerenciamento-view.js';
 
 var btnConsultar = document.querySelector("#btnConsultarUsuarios");
 

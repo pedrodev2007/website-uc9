@@ -1,4 +1,4 @@
-import { listarFranquias } from '/controllers/consultar_franquias.js';
+import { listarFranquias } from './consultar_franquias.js';
 
 var tabela = document.querySelector("#table-franquias");
 

@@ -1,5 +1,5 @@
-import { addFranquiaView } from '../js/view/gerenciamento-view.js';
-import { mostrar, fechar } from '/js/view/modal-view.js';
+import { addFranquiaView } from '../../src/view/gerenciamento-view.js';
+import { mostrar, fechar } from '../../src/view/modal-view.js';
 
 var tabela = document.querySelector("#table-usuarios");
 var modal = document.querySelector("#franquiasModal");

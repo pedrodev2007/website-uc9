@@ -1,4 +1,4 @@
-import { listarUsuarios} from '/controllers/consultar_usuarios.js';
+import { listarUsuarios} from './consultar_usuarios.js';
 
 var tabela = document.querySelector("#table-usuarios");
 
