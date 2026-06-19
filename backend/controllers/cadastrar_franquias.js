@@ -1,7 +1,7 @@
 var tabela = document.querySelector("#table-usuarios");
 var modal = document.querySelector("#franquiasModal")
 
-import { mostrar, fechar } from '../../src/view/modal-view.js';
+import { mostrar, fechar } from '#view/modal-view.js';
 
 tabela.addEventListener("click", function (e) {
     var tbodyFranquias = document.querySelector("#table-franquias tbody");

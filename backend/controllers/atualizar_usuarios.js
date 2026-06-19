@@ -2,7 +2,7 @@ var tabela = document.querySelector("#table-usuarios");
 //var btnAtualizarAluno = document.querySelector("#btnAtualizarAluno");
 var modal = document.querySelector("#atualizarModal");
 var frmUsuarioUpdate = document.querySelector("#frmUsuarioUpdate");
-import  { mostrar, fechar } from '../../src/view/modal-view.js';
+import  { mostrar, fechar } from '#view/modal-view.js';
 import  { getFormulario } from './cadastrar_usuarios.js';
 
 tabela.addEventListener("click", function (e) {

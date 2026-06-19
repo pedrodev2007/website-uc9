@@ -1,5 +1,5 @@
-import { addFranquiaView } from '../../src/view/gerenciamento-view.js';
-import { mostrar, fechar } from '../../src/view/modal-view.js';
+import { addFranquiaView } from '#view/gerenciamento-view.js';
+import { mostrar, fechar } from '#view/modal-view.js';
 
 var tabela = document.querySelector("#table-usuarios");
 var modal = document.querySelector("#franquiasModal");
@@ -30,4 +30,4 @@ tabela.addEventListener("click", function (e) {
 		    });
 		});
 	}
-}
+})
