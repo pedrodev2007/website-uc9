@@ -29,12 +29,12 @@
 
 			
 			<ul class="list-nav">
-				<li class="nav-option"><a href="home.html">HOME</a></li>
+				<li class="nav-option"><a href="home.html" target="_blank">HOME</a></li>
 				<li class="nav-option"><a href="quem-somos.html">QUEM SOMOS</a></li>
-				<li class="nav-option"><a href="">VANTAGENS</a></li>
-				<li class="nav-option"><a href="" >NOSSAS LAVANDERIAS</a></li>
-			    <li class="nav-option"><a href="entre-contato.html" >ENTRE EM CONTATO</a></li>
-				<li class="nav-option"><a href="franquie.html" >FRANQUIE</a></li>
+				<li class="nav-option"><a href="vantagensLavanderia.html" target="_blank">VANTAGENS</a></li>
+				<li class="nav-option"><a href="nossas-lavanderias.html" target="_blank">NOSSAS LAVANDERIAS</a></li>
+				<li class="nav-option"><a href="entre-contato.html" target="_blank">ENTRE EM CONTATO</a></li>
+				<li class="nav-option"><a href="franquie.html" target="_blank">FRANQUIE</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -99,10 +99,12 @@
                         <h3>Lavanderia Express</h3>
                         <p>O melhor desfoque e cuidado com suas roupas.</p>
                     </div>
-                    <div class="botoes-grupo">
-                        <button class="btn btn-outline-success">Telefone</button>
-                        <button class="btn btn-outline-secondary">Informações</button>
-                        <button class="btn btn-primary">Rotas</button>
+                   <div class="botoes-grupo">
+                       <a href="entre-contato.html" target="_blank" class="btn btn-outline-success">WhatsApp</a>
+                       <a href="Home.html" target="_blank" class="btn btn-outline-secondary">Informações</a>
+                       <a href="https://www.google.com/maps" target="_blank" class="btn btn-primary">Rotas</a>
+                       
+                      
                     </div>
                 </div>
             </div>
@@ -114,9 +116,11 @@
                         <p>Rápido, prático e totalmente responsivo.</p>
                     </div>
                     <div class="botoes-grupo">
-                        <button class="btn btn-outline-success">Telefone</button>
-                        <button class="btn btn-outline-secondary">Informações</button>
-                        <button class="btn btn-primary">Rotas</button>
+                       <a href="entre-contato.html" target="_blank" class="btn btn-outline-success">WhatsApp</a>
+                       <a href="Home.html" target="_blank" class="btn btn-outline-secondary">Informações</a>
+                       <a href="https://www.google.com/maps" target="_blank" class="btn btn-primary">Rotas</a>
+                       
+                      
                     </div>
                 </div>
             </div>
@@ -215,21 +219,21 @@
         <h3>Giovana</h3>
         <span class="usuario-arroba">@giovana_silva</span>
         <div class="estrelas">★★★★★</div>
-        <p>Amo essa lavanderia, fui totalmente sem expectativa e tive a melhor experiencia possivel.</p>
+        <b>Amo essa lavanderia, fui totalmente sem expectativa e tive a melhor experiencia possivel.</b>
     </div>
 
     <div class="comentario-transparente">
         <h3>Nathan</h3>
         <span class="usuario-arroba">@nathan.oliveira</span>
         <div class="estrelas">★★★★★</div>
-        <p>Sempre que preciso de uma ajuda é neles que eu confio, as minhas roupas sempre voltam limpas e cheirosas.</p>
+        <b>Sempre que preciso de uma ajuda é neles que eu confio, as minhas roupas sempre voltam limpas e cheirosas.</b>
     </div>
 
     <div class="comentario-transparente">
         <h3>Lara</h3>
         <span class="usuario-arroba">@lara_faria</span>
         <div class="estrelas">★★★★☆</div>
-        <p>Otima lavanderia, se algum dia voces estiverem em duvida de qual rede de lavanderia usar, confie neles.</p>
+        <b>Otima lavanderia, se algum dia voces estiverem em duvida de qual rede de lavanderia usar, confie neles.</b>
     </div>
 </section>
 
@@ -273,13 +277,7 @@
         <div id="footer-bottom-container" class="d-flex flex-column align-items-center text-center mt-4">
             <img src="src/img/lavanderia23.jpg" alt="Logo" style="width: 60px; border-radius: 50%; margin-bottom: 15px;">
             
-            <div class="footer-bottom-div">
-                <p>Atendimento 24 horas, de domingo a domingo.</p>
-                <div class="links-secundarios">
-                    <a href="#" class="text-white text-decoration-none">Suporte ao cliente</a> | 
-                    <a href="creditos.html" id="credits" class="text-white text-decoration-none">Créditos</a>
-                </div>
-            </div>
+           
         </div>
     </div>
 
@@ -292,7 +290,7 @@
 
 <script>
 function buscarLavanderias() {
-    // 1. Lista completa com os 70 locais
+    // 1. Lista completa com  70 locais
     const lavanderias = [
         // SÃO PAULO CAPITAL
         { nome: "Unidade Sé", desc: "Sua lavanderia no coração de SP.", bairro: "Centro", cep: "01001-000", tel: "11 9999-0001" },
@@ -414,14 +412,21 @@ function buscarLavanderias() {
         lista.innerHTML = "<p class='text-white'>Nenhuma lavanderia encontrada para este termo.</p>";
     }
 }
+
+
+
 </script>
 
 
- <footer>
+ 
+
+</body>
+
+<footer>
 		<div id="footer-top-container">
 			<div class="footer-top-div">
 				<a href="quem-somos.html">QUEM SOMOS</a>
-				<a href="">NOSSAS LAVANDERIAS</a>
+				<a href="nossas-Lavanderias.html">NOSSAS LAVANDERIAS</a>
 			</div>
 			<div class="footer-top-div">
 				<a href="entre-contato.html">ENTRE EM CONTATO</a>
@@ -437,5 +442,5 @@ function buscarLavanderias() {
 	</footer>
 
 
-</body>
+
 </html>

@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif; /* Aplica globalmente em tudo */
-    font-weight: 900;
 }
 
 body {
@@ -14,7 +13,6 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #fdfeff;
     min-height: 200vh;
-    font-weight: 900;
 }
 
 section {
@@ -22,7 +20,9 @@ section {
     padding-bottom: 100px; 
 }
 
-
+main {
+    margin-bottom: 150px;  
+}
 
 /* Header */
 .nome1 {
@@ -31,11 +31,133 @@ section {
     padding: 40px 20px;
     font-size: 2rem;
     font-family: 'Inter', sans-serif;
-    font-weight: 900;
 }
 
+/* Pesquisa Responsiva */
+.container-pesquisa {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
+.campo-pesquisa {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #2DAADD;
+    border-radius: 5px 0 0 5px;
+    font-family: 'Inter', sans-serif;
+}
 
+.botao-pesquisa {
+    padding: 12px 20px;
+    background: #2DAADD;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Grade de Lavanderias */
+.grade-lavanderias {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.box-lavanderia {
+    background: #53a4cc;
+    color: #f3f6f8;
+    width: 100%;
+    max-width: 350px; 
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.box-interna {
+    color: #f0f8ff;
+}
+
+.comentario-transparente h3, p {
+    color: #f0f0f0;
+    font-family: 'Inter', sans-serif;
+}
+
+.bairro {
+    color: #f0f8ff;
+}
+
+/* Grupo de Botões dentro do Card */
+.botoes-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Rodapé */
+.meu-rodape-persolizado {
+    background-color: #2DAADD !important;
+    background-image: url('src/img/lavanderia23.jpg'); 
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    padding: 50px 0 !important;  
+    padding-left: 360px;
+    margin-top: 50px;
+    color: rgb(249, 245, 248);       
+}
+
+/* Estilo para os links do topo ficarem brancos */
+.footer-top-div a {
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-top-div a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom-div p {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Faixa Rosa / Azul */
+.faixa-rosa {
+    background-color: #0974d1; 
+    width: 100vw;             
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 150px 0;          
+    color: white;             
+    display: flex;
+    align-items: center;
+    margin-top: 80px;          
+    margin-bottom: 40px;      
+    top: 220px;
+    font-family: 'Inter', sans-serif;
+}
+
+.faixa-rosa h2 {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Inter', sans-serif;
+}
 
 /* Grid de Auto Cards */
 .auto-cards-grid {
@@ -97,7 +219,6 @@ section {
     letter-spacing: 2px;
     margin-bottom: 30px;
     font-family: 'Inter', sans-serif;
-    font-weight: 900;
 }
 
 .item-vantagem {
@@ -108,7 +229,6 @@ section {
     transition: transform 0.3s, border-color 0.3s;
     border: 3px solid transparent;
     font-family: 'Inter', sans-serif;
-    font-weight: 900;
 }
 
 .item-vantagem:hover {
@@ -203,7 +323,7 @@ section {
 }
 
 .titulo-avisos2 {
-    color: #2DAADD;
+    color: #00d2ff;
     font-family: 'Inter', sans-serif;
 }
 
@@ -228,12 +348,12 @@ section {
 }
 
 .card-alerta.pode {
-    border-top-color: #2DAADD; 
+    border-top-color: #2ecc71; 
     background: linear-gradient(to bottom, #f0fff4, #ffffff);
 }
 
 .card-alerta.nao-pode {
-    border-top-color: #DD2DAA; 
+    border-top-color: #e74c3c; 
     background: linear-gradient(to bottom, #fff5f5, #ffffff);
 }
 
@@ -253,7 +373,6 @@ section {
     font-weight: 700;
     font-size: 1.4rem;
     font-family: 'Inter', sans-serif;
-    font-weight: 900;
 }
 
 .lista-alerta {
@@ -269,7 +388,6 @@ section {
     position: relative;
     padding-left: 20px;
     font-family: 'Inter', sans-serif;
-    font-weight: 900;
 }
 
 .lista-alerta li::before {
@@ -303,13 +421,11 @@ section {
     margin-top: 0;      
     right: -200px;
     font-family: 'Inter', sans-serif;
-    font-weight: 900;
 }
 
 .numero h1 {
     margin: 0; 
     font-family: 'Inter', sans-serif;
-    font-weight: 900;
 }
 
 /* Seção de Propaganda */
@@ -336,11 +452,10 @@ section {
     line-height: 1.1;
     margin-bottom: 25px;
     font-family: 'Inter', sans-serif;
-    font-weight: 500;
 }
 
 .reveal-text span {
-    color: #DD2DAA; 
+    color: #dd2daa; 
     display: inline-block;
 }
 
@@ -354,7 +469,7 @@ section {
 
 .desc-clean strong {
     color: #333;
-    border-bottom: 2px solid #DD2DAA;
+    border-bottom: 2px solid #dd2daa;
 }
 
 .detalhes-venda {
@@ -380,7 +495,7 @@ section {
 }
 
 .btn-chamada {
-    background: linear-gradient(135deg, #DD2DAA 0%, #DD2DAA 100%);
+    background: linear-gradient(135deg, #ff5cdc 0%, #ff85b1 100%);
     color: white;
     border: none;
     padding: 18px 40px;
@@ -410,8 +525,9 @@ section {
     text-align: center;
 }
 
+/* CORREÇÃO: Ajustado para formatar o parágrafo corretamente (removido o 'h2' colado) */
 .header-fun p, p {
-    color: #2DAADD;
+    color: #2DAADD; /* Modifique esta cor hexadecimal se quiser outro tom */
     font-size: 1.2rem;
     margin-top: 10px;
     font-family: 'Inter', sans-serif;
@@ -425,12 +541,12 @@ section {
     margin-top: 40px;
 }
 
-/* Cards com Sombra */
+/* Onde a mágica acontece: Seus Cards com Sombra */
 .secao-vantagens-fun .item-vantagem {
     background: white;
     padding: 30px;
     border-radius: 20px;
-    /*  uma sombra suave e moderna (Efeito Blur Elevado) */
+    /* Adicionada uma sombra suave e moderna (Efeito Blur Elevado) */
     box-shadow: 0 10px 30px rgba(0, 61, 128, 0.08); 
     transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
     border: 3px solid transparent;
@@ -441,7 +557,7 @@ section {
 /* Efeito ao passar o mouse por cima do card (Hover) */
 .secao-vantagens-fun .item-vantagem:hover {
     transform: translateY(-10px);
-    border-color: #DD2DAA;
+    border-color: #ff0080;
     /* A sombra fica um pouco mais intensa para dar efeito de flutuação */
     box-shadow: 0 15px 35px rgba(255, 0, 128, 0.15); 
 }
@@ -461,7 +577,7 @@ section {
 
 .item-vantagem:hover {
     transform: translateY(-10px);
-    border-color: #DD2DAA; 
+    border-color: #ff0080; 
 }
 
 .icone-circulo {
@@ -521,7 +637,7 @@ section {
 }
 
 .badge-exclusivo {
-    background: #DD2DAA;
+    background: #ff0080;
     color: white;
     font-size: 0.7rem;
     font-weight: bold;
@@ -632,4 +748,3 @@ section {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
 }
-
