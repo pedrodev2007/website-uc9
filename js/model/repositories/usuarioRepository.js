@@ -12,12 +12,8 @@ class UsuarioRepository {
     }
 
     async buscarPorEmail(email) {
+        // Certifique-se de selecionar o campo 'senha' para que o Controller possa validá-lo
         const [rows] = await db.execute('SELECT id, nome, email, senha, tipo FROM tb_usuarios WHERE email = ?', [email]);
-        return rows[0];
-    }
-
-    async buscarPorEmailESenha(email, senha) {
-        const [rows] = await db.execute('SELECT id, nome, email, tipo FROM tb_usuarios WHERE email = ? AND senha = ?', [email, senha]);
         return rows[0];
     }
 
