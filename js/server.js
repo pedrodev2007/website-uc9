@@ -15,16 +15,6 @@ app.use(express.json());
 
 
 
-app.use((req, res, next) => {
-    console.log("--- NOVA REQUISIÇÃO ---");
-    console.log("Rota acessada:", req.url);
-    console.log("O que chegou no Body:", req.body);
-    next();
-});
-
-
-
-
 app.use('/api', usuarioRoutes);
 app.use('/api', franquiaRoutes); // <-- ADICIONADO
 
