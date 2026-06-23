@@ -1,0 +1,383 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESETS
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Aplica globalmente a fonte Inter em tudo */
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #f0f8ff;
+    min-height: 200vh; 
+}
+
+
+
+section {
+    padding-top: 100px;    /* Aumenta o espaço dentro da seção no topo */
+    padding-bottom: 100px; /* Aumenta o espaço dentro da seção embaixo */
+}
+
+
+/* ==========================================================================
+   2. HEADER (CABEÇALHO)
+   ========================================================================== */
+.nome1 {
+    text-align: center;
+    color: #2DAADD; /* Ajustado para o azul padrão */
+    padding: 40px 20px;
+    font-size: 2rem;
+}
+
+
+/* ==========================================================================
+   3. BARRA DE PESQUISA
+   ========================================================================== */
+/* Pesquisa Responsiva */
+.container-pesquisa {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.campo-pesquisa {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #2DAADD;
+    border-radius: 5px 0 0 5px;
+}
+
+.botao-pesquisa {
+    padding: 12px 20px;
+    background: #2DAADD;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+
+
+/* ==========================================================================
+   4. CARDS DE LAVANDERIAS (GRADE PRINCIPAL)
+   ========================================================================== */
+/* Grade de Lavanderias  */
+.grade-lavanderias {
+    display: flex;
+    flex-wrap: wrap; /* Se não couber, pula para baixo */
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.box-lavanderia {
+    background: #2DAADD;
+    color: #f3f6f8;
+    width: 100%;
+    max-width: 350px; /* Largura máxima no PC */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px #2DAADD;
+}
+
+.box-interna {
+    color: #f0f8ff;
+}
+
+.bairro {
+    color: #f0f8ff;
+}
+
+/* Grupo de Botões dentro do Card */
+.botoes-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* ==========================================================================
+   5. SEÇÃO DE COMENTÁRIOS (CARDS DE VIDRO / GLASSMORPHISM)
+   ========================================================================== */
+.container-comentarios1 {
+    display: flex;
+    flex-wrap: wrap;       
+    justify-content: center; 
+    gap: 20px;            
+    padding: 60px 20px;   
+    width: 100%;           
+    background: #53a4cc; 
+    background: url('seu-fundo.jpg') no-repeat center center/cover; 
+}
+
+/* Regra única para todos os cards de comentário */
+.comentario-transparente {
+    background: rgba(255, 255, 255, 0.2); /* Vidro um pouco mais visível */
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(45, 170, 221, 0.3); /* Ajustado para opacidade leve no box-shadow azul */
+    border-radius: 20px;
+    padding: 25px;
+    width: 100%;          
+    max-width: 320px;      
+    transition: all 0.3s ease-in-out; 
+    cursor: pointer;
+}
+
+.comentario-transparente h3, b {
+    color: #2DAADD;
+    z-index: 999;
+}
+
+.comentario-transparente h3 {
+    color: #0b91df; 
+    margin-bottom: 5px;
+    z-index: 999;
+}
+
+.comentario-transparente .usuario-arroba {
+    color: #0a6fce; 
+    font-size: 0.9rem;
+    z-index: 999;
+}
+
+.comentario-transparente1 p {
+    color: #18d4d4; 
+    margin-top: 10px;
+    z-index: 999;
+}
+
+.estrelas {
+    color: #2DAADD; 
+    margin-top: 5px;
+}
+
+
+
+/* Efeito de passar o mouse corrigido */
+.comentario-transparente:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(247, 244, 244, 0.4); /* Fica mais branquinho no fundo ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+.container .text-center0 {
+    color: #096ed3;
+    z-index: 999;
+}
+
+
+/* ==========================================================================
+   6. CARDS DE UNIDADES (ROLAGEM HORIZONTAL)
+   ========================================================================== */
+.container-horizontal {
+    display: flex;
+    flex-wrap: nowrap; /* Não quebra linha */
+    overflow-x: auto;  /* Habilita rolagem lateral */
+    gap: 15px;
+    padding: 20px;
+    -webkit-overflow-scrolling: touch; /* Rolagem suave no celular */
+    justify-content: center;
+}
+
+.unidade-card {
+    flex: 0 0 auto; /* Impede que os cards estiquem ou encolham */
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+    
+}
+
+.unidade-card:hover {
+    transform: translateY(-3px);
+    border-color: #2DAADD;
+}
+
+.uf {
+    background: #2DAADD;
+    color: white; /* Corrigido para o texto da UF contrastar no fundo azul */
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-right: 12px;
+    font-size: 0.8em;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info strong {
+    font-size: 14px;
+    color: #333; /* Ajustado para os textos fortes ficarem legíveis sobre fundo branco */
+}
+
+.info span {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* ==========================================================================
+   7. SEÇÃO DE SUPORTE E AJUDA
+   ========================================================================== */
+.wrapper-suporte {
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    padding: 40px 20px;
+}
+
+.card-ajuda-compacto {
+    background: #ffffff;
+    width: 100%;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 1px solid #f0f0f0;
+}
+
+.badge-rapido {
+    background: #e7f3ff;
+    color: #007bff;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-ajuda-compacto h3 {
+    color: #2DAADD; /* Modificado para o azul padrão das suas fontes */
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card-ajuda-compacto p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.agradecimento-box {
+    margin-bottom: 25px;
+    font-style: italic;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.btn-contato {
+    display: block;
+    background: #2DAADD;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-contato:hover {
+    background: #0056b3;
+}
+
+
+/* ==========================================================================
+   8. ELEMENTOS COMPLEMENTARES (ROUPAS, TOASTS, ETC.)
+   ========================================================================== */
+.roupas {
+    width: 10px;      
+    height: auto;
+    top: -30px;
+}
+
+.toast {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+}
+
+.toast-header {
+    border-bottom: none;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+
+/* ==========================================================================
+   9. RODAPÉ (FOOTER)
+   ========================================================================== */
+.meu-rodape-persolizado {
+    background-color: #2DAADD!important;
+    background-image: url('src/img/lavanderia23.jpg'); 
+    background-size: cover;      
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    padding: 50px 0 !important;  
+    padding-left: 360px;
+    margin-top: 50px;
+    color: rgb(249, 245, 248);               
+}
+
+/* Estilo para os links do topo ficarem brancos */
+.footer-top-div a {
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-top-div a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom-div p {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+
+/* ==========================================================================
+   10. MEDIA QUERIES (RESPONSIVIDADE / ADAPTAÇÃO PARA CELULAR)
+   ========================================================================== */
+/* MEDIA QUERIES - Ajustes para Celular */
+@media (max-width: 768px) {
+    .nome1 {
+        font-size: 1.5rem;
+    }
+    
+    .container-pesquisa {
+        flex-direction: row; 
+    }
+
+    .box-lavanderia {
+        max-width: 95%; /* Quase a tela toda no celular */
+    }
+
+    .container-comentarios {
+        flex-direction: column; /* No celular, coloca um embaixo do outro */
+        align-items: center;
+    }
+    
+    .comentario-transparente {
+        max-width: 90%; /* Deixa o card quase na largura total do celular */
+    }
+}
+
