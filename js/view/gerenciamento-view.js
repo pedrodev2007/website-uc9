@@ -2,7 +2,6 @@ import { UsuarioService } from '../model/service/usuarioService.js';
 import { FranquiaService } from '../model/service/franquiaService.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Variável de controle para armazenar qual usuário foi selecionado para receber a franquia
     let usuarioSelecionadoId = null;
 
     // ==========================================
@@ -15,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         tbody.innerHTML = '<tr><td colspan="4">Carregando...</td></tr>';
         
+
+
         try {
             const usuarios = await UsuarioService.listarTodos();
             tbody.innerHTML = usuarios.map(u => `
@@ -24,22 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     <td>********</td>
                     <td>
                         <button class="btn btn-outline-success btn-ver-franquias" data-id="${u.id}" data-nome="${u.nome}">Franquias</button>
-                        <button class="btn btn-outline-primary btn-atualizar-usuario" data-id="${u.id}">Atualizar</button>
+                        <!-- Agora enviamos o email no botão atualizar também -->
+                        <button class="btn btn-outline-primary btn-atualizar-usuario" data-id="${u.id}" data-nome="${u.nome}" data-email="${u.email}">Atualizar</button>
                         <button class="btn btn-outline-danger btn-excluir-usuario" data-id="${u.id}" data-nome="${u.nome}">Excluir</button>
                     </td>
                 </tr>
             `).join('');
 
-            // Ativa os eventos dos botões de Excluir e Seleção que acabaram de aparecer na tela
             configurarBotoesUsuarios();
-
         } catch (err) {
             tbody.innerHTML = '<tr><td colspan="4">Erro ao carregar usuários.</td></tr>';
         }
     }
 
     function configurarBotoesUsuarios() {
-        // OPERAÇÃO 1: Fazer o botão Excluir funcionar integrado ao banco de dados
+        // OPERAÇÃO 1: EXCLUIR USUÁRIO
         document.querySelectorAll('.btn-excluir-usuario').forEach(btn => {
             btn.addEventListener('click', async (e) => {
                 const id = e.target.getAttribute('data-id');
@@ -50,41 +50,52 @@ document.addEventListener('DOMContentLoaded', () => {
                         const response = await UsuarioService.deletar(id);
                         if (response.success) {
                             alert('Usuário excluído com sucesso!');
-                            
-                            // Se o usuário excluído era o que estava selecionado nas franquias, limpa a seleção
                             if (usuarioSelecionadoId === id) {
                                 usuarioSelecionadoId = null;
                                 atualizarIndicadorSelecao(null);
                             }
-                            
-                            await carregarUsuarios(); // Atualiza a tabela na hora
+                            await carregarUsuarios(); 
                         } else {
                             alert(response.message || 'Erro ao excluir usuário.');
                         }
                     } catch (error) {
-                        console.error('Erro ao excluir:', error);
                         alert('Erro ao conectar com o servidor.');
                     }
                 }
             });
         });
 
-        // OPERAÇÃO 2: Selecionar o usuário específico para listar e cadastrar franquias
+        // OPERAÇÃO 2: VER FRANQUIAS DO USUÁRIO
         document.querySelectorAll('.btn-ver-franquias').forEach(btn => {
             btn.addEventListener('click', async (e) => {
                 usuarioSelecionadoId = e.target.getAttribute('data-id');
                 const nome = e.target.getAttribute('data-nome');
 
-                // Mostra na tela para quem a franquia vai ser vinculada
                 atualizarIndicadorSelecao(nome);
-                
-                // Filtra automaticamente a tabela de franquias para exibir apenas as desse usuário
                 await carregarFranquias(usuarioSelecionadoId);
+            });
+        });
+
+        // OPERAÇÃO 3: ABRIR MODAL DE ATUALIZAÇÃO
+        document.querySelectorAll('.btn-atualizar-usuario').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const id = e.target.getAttribute('data-id');
+                const nome = e.target.getAttribute('data-nome');
+                const email = e.target.getAttribute('data-email');
+
+                // Preenche o formulário do Modal com os dados atuais do usuário
+                document.getElementById('updateUsuarioId').value = id;
+                document.getElementById('updateNome').value = nome;
+                document.getElementById('updateEmail').value = email;
+                document.getElementById('updateSenha').value = ''; // Limpa para a pessoa decidir se quer digitar uma nova
+
+                // Puxa a janela (Modal) do Bootstrap para aparecer na tela
+                const modal = new bootstrap.Modal(document.getElementById('modalAtualizarUsuario'));
+                modal.show();
             });
         });
     }
 
-    // Cria um aviso visual no topo do formulário de franquias mostrando o vínculo atual
     function atualizarIndicadorSelecao(nome) {
         let indicador = document.getElementById('indicador-usuario-franquia');
         const cadastroHeader = document.querySelector('#franquia-container #cadastro-header');
@@ -119,12 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         tbody.innerHTML = '<tr><td colspan="3">Carregando...</td></tr>';
         
-        const tipo = localStorage.getItem('usuarioTipo');
-        const idLogado = localStorage.getItem('usuarioLogadoId');
+        const tipo = sessionStorage.getItem('usuarioTipo');
+        const idLogado = sessionStorage.getItem('usuarioLogadoId');
         
         try {
             let franquias;
-            // Se um usuário foi explicitamente selecionado pelo botão "Franquias", traz só as dele
             if (idFiltro) {
                 franquias = await FranquiaService.listarPorUsuario(idFiltro);
             } else if (tipo === 'admin') {
@@ -150,64 +160,81 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // ESCUTAS DE CLIQUES (BOTÕES DE CONSULTAR)
+    // ESCUTAS DE CLIQUES GERAIS
     // ==========================================
 
     const btnConsultarUsuarios = document.getElementById('btnConsultarUsuarios');
-    if (btnConsultarUsuarios) {
-        btnConsultarUsuarios.addEventListener('click', carregarUsuarios);
-    }
+    if (btnConsultarUsuarios) btnConsultarUsuarios.addEventListener('click', carregarUsuarios);
 
     const btnConsultarFranquias = document.getElementById('btnConsultarFranquias');
-    if (btnConsultarFranquias) {
-        btnConsultarFranquias.addEventListener('click', () => carregarFranquias(usuarioSelecionadoId));
-    }
+    if (btnConsultarFranquias) btnConsultarFranquias.addEventListener('click', () => carregarFranquias(usuarioSelecionadoId));
 
-    // Exibe o aviso inicial para o admin saber que precisa selecionar alguém
-    if (document.getElementById('formCadastroFranquia')) {
-        atualizarIndicadorSelecao(null);
-    }
+    if (document.getElementById('formCadastroFranquia')) atualizarIndicadorSelecao(null);
 
     // ==========================================
-    // SUBMIT DO FORMULÁRIO DE USUÁRIOS
+    // SUBMIT DOS FORMULÁRIOS
     // ==========================================
 
+    // Form: Criar Usuário
     const formCadastroUsuario = document.getElementById('formCadastroUsuario');
     if (formCadastroUsuario) {
         formCadastroUsuario.addEventListener('submit', async (e) => {
             e.preventDefault();
-
             const nome = formCadastroUsuario.querySelector('#inputNome').value;
             const email = formCadastroUsuario.querySelector('#inputEmail').value;
             const senha = formCadastroUsuario.querySelector('#inputSenha').value;
 
             try {
                 const data = await UsuarioService.criar(nome, email, senha);
-
                 if (data.success) {
                     alert('Usuário cadastrado com sucesso!');
                     formCadastroUsuario.reset();
                     await carregarUsuarios(); 
-                } else {
-                    alert(data.error || 'Erro ao realizar o cadastro do usuário.');
-                }
+                } else alert(data.error || 'Erro ao realizar o cadastro do usuário.');
             } catch (error) {
-                console.error('Erro no cadastro de usuário:', error);
                 alert('Não foi possível conectar ao servidor.');
             }
         });
     }
 
-    // ==========================================
-    // SUBMIT DO FORMULÁRIO DE FRANQUIAS
-    // ==========================================
+    // Form: Atualizar Usuário Existente (Dentro do Modal)
+    const formAtualizarUsuario = document.getElementById('formAtualizarUsuario');
+    if (formAtualizarUsuario) {
+        formAtualizarUsuario.addEventListener('submit', async (e) => {
+            e.preventDefault();
 
+            const id = document.getElementById('updateUsuarioId').value;
+            const nome = document.getElementById('updateNome').value;
+            const email = document.getElementById('updateEmail').value;
+            const senha = document.getElementById('updateSenha').value; // Pode vir vazia
+
+            try {
+                const data = await UsuarioService.atualizar(id, nome, email, senha);
+
+                if (data.success) {
+                    alert('Dados do usuário atualizados com sucesso!');
+                    
+                    // Esconde a janela pop-up (Modal)
+                    const modalElement = document.getElementById('modalAtualizarUsuario');
+                    const modalInstance = bootstrap.Modal.getInstance(modalElement);
+                    modalInstance.hide();
+                    
+                    // Atualiza a tabela dinamicamente
+                    await carregarUsuarios(); 
+                } else {
+                    alert(data.error || 'Erro ao atualizar o usuário.');
+                }
+            } catch (error) {
+                alert('Erro ao conectar com o servidor.');
+            }
+        });
+    }
+
+    // Form: Criar Franquia
     const formCadastroFranquia = document.getElementById('formCadastroFranquia');
     if (formCadastroFranquia) {
         formCadastroFranquia.addEventListener('submit', async (e) => {
             e.preventDefault();
-
-            // VALIDAÇÃO CRÍTICA: Impede criar franquia solta sem associar a um usuário da tabela
             if (!usuarioSelecionadoId) {
                 alert('Erro: Por favor, selecione um usuário na tabela clicando no botão "Franquias" antes de cadastrar!');
                 return;
@@ -218,18 +245,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const investimento = document.getElementById('investimento').value;
 
             try {
-                // Envia o ID do usuário que foi selecionado na tabela, e não o do admin logado
                 const data = await FranquiaService.criar(cidade, estado, investimento, usuarioSelecionadoId);
-
                 if (data.success) {
                     alert('Franquia cadastrada com sucesso!');
                     formCadastroFranquia.reset();
-                    await carregarFranquias(usuarioSelecionadoId); // Atualiza na hora as franquias dele
-                } else {
-                    alert(data.error || 'Erro ao realizar o cadastro da franquia.');
-                }
+                    await carregarFranquias(usuarioSelecionadoId); 
+                } else alert(data.error || 'Erro ao cadastrar a franquia.');
             } catch (error) {
-                console.error('Erro no cadastro de franquia:', error);
                 alert('Não foi possível conectar ao servidor.');
             }
         });

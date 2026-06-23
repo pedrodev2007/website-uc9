@@ -22,19 +22,22 @@ class FranquiaRepository {
         return result.insertId;
     }
 
-    async listarFranquias(req, res) {
+ async listarFranquias(req, res) {
     try {
-        const usuarioId = req.params.usuarioId;
+        // Tenta pegar o ID tanto de params (/1) quanto de query (?usuarioId=1)
+        const usuarioId = req.params.usuarioId || req.query.usuarioId;
         
-        // Se o usuarioId for 'null', 'undefined' ou inexistente, lista tudo
+        // Verificação de segurança: Se não vier ID nenhum, ele NÃO deve listar tudo, 
+        // a menos que seja uma regra específica para administradores.
         if (!usuarioId || usuarioId === 'null' || usuarioId === 'undefined') {
-            const franquias = await franquiaRepository.listarTodas();
-            return res.json(franquias);
+            // O ideal é retornar erro se faltar o ID do usuário comum
+            return res.status(400).json({ error: 'ID do usuário não fornecido.' });
         }
 
-        // Caso contrário, filtra pelo usuário
-        const franquias = await franquiaRepository.listarPorUsuario(usuarioId);
+        // Caso contrário, filtra certinho pelo usuário
+        const franquias = await this.listarPorUsuario(usuarioId);
         return res.json(franquias);
+
     } catch (error) {
         return res.status(500).json({ error: error.message });
     }

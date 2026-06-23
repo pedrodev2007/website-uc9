@@ -24,13 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await UsuarioService.login(email, senha);
 
             if (data.success) {
-                // SALVA O ID NO NAVEGADOR PARA USAR NAS TABELAS
-                localStorage.setItem('usuarioLogadoId', data.usuario.id);
-                localStorage.setItem('usuarioTipo', data.usuario.tipo);
-
+                // ==========================================
+                // GUARDA O TOKEN NO NAVEGADOR
+                // ==========================================
+              
+            sessionStorage.setItem('token', data.token);
+            sessionStorage.setItem('usuarioLogadoId', data.usuario.id);
+            sessionStorage.setItem('usuarioTipo', data.usuario.tipo);
                 alert('Login realizado com sucesso! Bem-vindo(a).');
 
-                // REDIRECIONA BASEADO NO TIPO
                 if (data.usuario.tipo === 'admin') {
                     window.location.href = 'gerenciamento-adm.html';
                 } else {
