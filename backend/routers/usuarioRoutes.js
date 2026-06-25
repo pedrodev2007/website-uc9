@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const usuarioController = require('../../js/controllers/usuarioController');
-const authMiddleware = require('../../js/middlewares/authMiddleware'); // <-- MIDDLEWARE
+const usuarioController = require('../controllers/usuarioController');
+const authMiddleware = require('../middlewares/authMiddleware'); // <-- MIDDLEWARE
 
 // ROTAS PÚBLICAS (Qualquer um pode aceder para fazer login ou criar conta)
 router.post('/usuarios/login', usuarioController.login);
