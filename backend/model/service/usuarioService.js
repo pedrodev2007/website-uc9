@@ -1,4 +1,4 @@
-const API_URL = `http://localhost:${PORT}/api/usuarios`;
+const API_URL = `http://localhost:${process.env.PORT}/api/usuarios`;
 
 // Função auxiliar para enviar o Token JWT nos cabeçalhos
 function getAuthHeaders() {
