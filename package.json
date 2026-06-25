@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "build": "npm install && vite build"
+    "start": "node backend/server.js",
+    "dev": "vite frontend",
+    "build": "npm install && vite build frontend",
+    "preview": "vite preview frontend"
   },
   "repository": {
     "type": "git",
