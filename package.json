@@ -27,5 +27,8 @@
     "jsonwebtoken": "^9.0.3",
     "mysql2": "^3.22.5",
     "vite": "^8.0.16"
+  },
+  "imports": {
+    "#service/*": "./backend/model/service/*.js"
   }
 }

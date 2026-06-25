@@ -1,4 +1,4 @@
-import { UsuarioService } from '../model/service/usuarioService.js';
+import { UsuarioService } from '../../../backend/model/service/usuarioService.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const btnLogin = document.querySelector('.btn-outline-primary');
@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Login realizado com sucesso! Bem-vindo(a).');
 
                 if (data.usuario.tipo === 'admin') {
-                    window.location.href = 'gerenciamento-adm.html';
+                    window.location.href = '../../gerenciamento-adm/index.html';
                 } else {
-                    window.location.href = 'gerenciamento-usuario.html';
+                    window.location.href = '../../gerenciamento-usuario/index.html';
                 }
             } else {
                 alert(data.message || 'Email ou senha incorretos.');

@@ -1,5 +1,5 @@
-import { UsuarioService } from '../model/service/usuarioService.js';
-import { FranquiaService } from '../model/service/franquiaService.js';
+import { UsuarioService } from '../../../backend/model/service/usuarioService.js';
+import { FranquiaService } from '../../../backend/model/service/franquiaService.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     let usuarioSelecionadoId = null;

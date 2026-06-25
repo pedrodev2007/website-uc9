@@ -9,9 +9,10 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/login-style.css">
-    <link rel="stylesheet" href="styles/style.css">
-	<link rel="icon" type="image/x-icon" href="src/img/clean-lavanderia-favicon.png">
+    <link rel="stylesheet" href="/styles/login-style.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script type="module" src="/src/view/footer.js"></script>
+    <script type="module" src="/src/controllers/login.js" defer></script>
 </head>
 <body>
     <main>
@@ -29,8 +30,8 @@
                                     <input id="inputSenha" name="senha" class="form-control" type="password" placeholder="Senha" required>
                                 </div>
                                 <div>
-                                    <p><a href="login.html">Esqueci minha senha</a></p> <!-- não funciona -->
-                                    <p>Não tem uma conta ainda? <a href="cadastrar.html">Crie uma aqui</a></p>
+                                    <p><a href="/login/">Esqueci minha senha</a></p> <!-- não funciona -->
+                                    <p>Não tem uma conta ainda? <a href="/cadastrar/index.html">Crie uma aqui</a></p>
                                 </div>
                                 <div id="button-area">
                                     <input class="btn btn-outline-primary" type="submit" value="Realizar login">
@@ -43,26 +44,7 @@
                 </div>
         </section>
     </main>
-    <footer>
-		<div id="footer-top-container">
-			<div class="footer-top-div">
-				<a href="quem-somos.html">QUEM SOMOS</a>
-				<a href="">NOSSAS LAVANDERIAS</a>
-			</div>
-			<div class="footer-top-div">
-				<a href="entre-contato.html">ENTRE EM CONTATO</a>
-				<a href="franquie.html">FRANQUIE</a>
-			</div>
-		</div>
-		<div id="footer-bottom-container">
-			<div class="footer-bottom-div">
-				<p>Atendimento 24 horas, de domingo a domingo.</p>
-				<a href="creditos.html" id="credits">Créditos</a>
-			</div>
-		</div>	
-	</footer>
+    <footer class="main-footer"></footer>
 </body>
-
-<script type="module" src="js/view/login.js" defer></script>
 
 </html>

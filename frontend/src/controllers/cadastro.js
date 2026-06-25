@@ -1,4 +1,4 @@
-import { UsuarioService } from '../model/service/usuarioService.js';
+import { UsuarioService } from '../../../backend/model/service/usuarioService.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Agora pegamos pelo ID exato
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (data.success) {
                 alert('Usuário cadastrado com sucesso!');
-                window.location.href = 'login.html'; // Aqui sim a página muda!
+                window.location.href = '../../login/index.html'; // Aqui sim a página muda!
             } else {
                 alert(data.error || 'Erro ao realizar o cadastro.');
             }

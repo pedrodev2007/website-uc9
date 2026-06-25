@@ -1,5 +1,5 @@
-import { verificarInputValue } from "../utils/verificarInputValue";
-import { carregarAPIKey } from "../model/service/send-email";
+import { verificarInputValue } from "../../../backend/utils/verificarInputValue";
+import { carregarAPIKey } from "../../../backend/model/service/send-email";
 
 carregarAPIKey();
 
