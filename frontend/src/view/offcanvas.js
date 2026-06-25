@@ -9,13 +9,13 @@ OFFCANVAS_CONTAINER.innerHTML = `
     </div>
     <div class="offcanvas-body">
         <ul class="list-offcanvas">
-            <li class="offcanvas-option"><a href="index.html">HOME</a></li>
-            <li class="offcanvas-option"><a href="pages/quem-somos/">QUEM SOMOS</a></li>
+            <li class="offcanvas-option"><a href="/">HOME</a></li>
+            <li class="offcanvas-option"><a href="/quem-somos/">QUEM SOMOS</a></li>
             <li class="offcanvas-option"><a href="">VANTAGENS</a></li>
             <li class="offcanvas-option"><a href="">NOSSAS LAVANDERIAS</a></li>
-            <li class="offcanvas-option"><a href="pages/entre-contato/">ENTRE EM CONTATO</a></li>
-            <li class="offcanvas-option"><a href="pages/franquie/">FRANQUIE</a></li>
-            <li class="offcanvas-option"><a href="creditos/">CRÉDITOS</a></li>
+            <li class="offcanvas-option"><a href="/entre-contato/">ENTRE EM CONTATO</a></li>
+            <li class="offcanvas-option"><a href="/franquie/">FRANQUIE</a></li>
+            <li class="offcanvas-option"><a href="/creditos/">CRÉDITOS</a></li>
         </ul>
     </div>
 </div>
