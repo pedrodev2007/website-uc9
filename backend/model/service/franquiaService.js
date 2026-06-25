@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/franquias';
+const API_URL = 'https://website-uc9.onrender.com/api/franquias';
 
 function getAuthHeaders() {
     const token = sessionStorage.getItem('token');
