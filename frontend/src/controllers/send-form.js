@@ -30,8 +30,11 @@ window.onload = function() {
 			if (resultado.success === true) {
 				alert("Email enviado com sucesso!");
 				document.getElementById('contact-form').reset();
+				console.log(req.body);
 			} else {
 				alert("Algo de errado aconteceu! Erro: " + resultado.error);
+				console.log(req.body);
+				console.log(resultado.error);
 			}
 		} catch (error) {
 			alert("Erro com a conexão do servidor! Erro: " + error.message);
