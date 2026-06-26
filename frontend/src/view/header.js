@@ -1,4 +1,4 @@
-import menuBtn from './img/menu-button.png';
+import menuBtn from '/src/img/menu-button.png';
 const HEADER = document.querySelector('header');
 
 if (HEADER.classList.contains('header-menu')) {
