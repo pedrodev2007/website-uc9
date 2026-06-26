@@ -1,10 +1,11 @@
+import menuBtn from './img/menu-button.png';
 const HEADER = document.querySelector('header');
 
 if (HEADER.classList.contains('header-menu')) {
     HEADER.innerHTML = `
     
     <nav class="nav-menu">
-			<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img id="menu-img" src="/src/img/menu-button.png" alt=""></button>
+			<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img id="menu-img" src=${menuBtn} alt=""></button>
 			
 			<ul class="list-nav">
 				<li class="nav-option"><a href="/">HOME</a></li>
