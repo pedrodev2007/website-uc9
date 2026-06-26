@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/usuarios';
+const API_URL = "https://website-uc9.onrender.com/api/usuarios";
 
 // Função auxiliar para enviar o Token JWT nos cabeçalhos
 function getAuthHeaders() {

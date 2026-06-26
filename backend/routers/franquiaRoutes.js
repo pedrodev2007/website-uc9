@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const franquiaController = require('../../js/controllers/franquiaController');
-const authMiddleware = require('../../js/middlewares/authMiddleware'); // <-- MIDDLEWARE
+const franquiaController = require('../controllers/franquiaController');
+const authMiddleware = require('../middlewares/authMiddleware'); // <-- MIDDLEWARE
 
 // Todas as rotas de franquias são protegidas, exigem Token
 router.get('/franquias', authMiddleware, franquiaController.listarFranquias); 
