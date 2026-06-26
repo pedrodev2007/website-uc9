@@ -1,12 +1,9 @@
-import { carregarAPIKey } from "./emailjsCarregarAPIKey.js";
+const emailjs = require('@emailjs/nodejs');
 
-carregarAPIKey();
-
-export function enviarEmail() {
-    emailjs.sendForm('contact_service', 'auto-reply-lavanderia', this).then(() => {
-        return "sucesso";
-    }, (error) => {
-        return error;
-    });
+class EmailService {
+    async enviarEmail(dados) {
+        return await emailjs.send('contact_service', 'auto-reply-lavanderia', dados)
+    }
 }
 
+module.exports = new EmailService();

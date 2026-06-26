@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
+const emailRoutes = require('./routers/sendEmailRoute');
 const usuarioRoutes = require('./routers/usuarioRoutes'); 
 const franquiaRoutes = require('./routers/franquiaRoutes'); // <-- ADICIONADO
 
@@ -14,7 +15,7 @@ app.use(cors());
 app.use(express.json()); 
 
 
-
+app.use('/api', emailRoutes);
 app.use('/api', usuarioRoutes);
 app.use('/api', franquiaRoutes); // <-- ADICIONADO
 
