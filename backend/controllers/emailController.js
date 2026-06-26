@@ -20,7 +20,7 @@ class EmailController {
             });
             return res.status(200).json({success: true, error: null});
         } catch (error) {
-            return res.status(500).json({sucess: false, error: error.message});
+            return res.status(500).json({success: false, error: error.message});
         }
     }
 }
