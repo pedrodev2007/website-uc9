@@ -1,7 +1,7 @@
 import { verificarInputValue } from "../utils/verificarInputValue";
 
 window.onload = function() {
-	this.document.getElementById('contact-form').addEventListener('submit', function(event) {
+	this.document.getElementById('contact-form').addEventListener('submit', async function(event) {
 		event.preventDefault();
 		
 		const name = document.getElementById("nome").value;
