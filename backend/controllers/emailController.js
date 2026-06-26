@@ -18,8 +18,11 @@ class EmailController {
                 investimento: investimento,
                 estados_brasil: estados_brasil
             });
+            console.log(req.body);
             return res.status(200).json({success: true, error: null});
         } catch (error) {
+            console.log(req.body);
+            console.log(error.message);
             return res.status(500).json({success: false, error: error.message});
         }
     }
