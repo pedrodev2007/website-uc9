@@ -1,4 +1,4 @@
-import { carregarAPIKey } from "./emailjsCarregarAPIKey";
+import { carregarAPIKey } from "./emailjsCarregarAPIKey.js";
 
 carregarAPIKey();
 
