@@ -22,8 +22,9 @@ class EmailController {
             return res.status(200).json({success: true, error: null});
         } catch (error) {
             console.log(req.body);
-            console.log(error.message);
-            return res.status(500).json({success: false, error: error.message});
+            console.log(error);
+            console.log(error.text);
+            return res.status(500).json({success: false, error: error.text});
         }
     }
 }
