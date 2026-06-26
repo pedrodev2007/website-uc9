@@ -1,7 +1,5 @@
 import { verificarInputValue } from "../../../backend/utils/verificarInputValue";
-import { carregarAPIKey } from "../../../backend/model/service/send-email";
-
-carregarAPIKey();
+import { enviarEmail } from "../../../backend/model/service/sendEmailService";
 
 window.onload = function() {
 	this.document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -14,11 +12,13 @@ window.onload = function() {
 			alert("Nome ou email inválidos.");
 			return;
 		} else {
-			emailjs.sendForm('contact_service', 'auto-reply-lavanderia', this).then(() => {
-				console.log("sucesso");
-			}, (error) => {
-				console.log("erro: " + error + " " + error.text);
-			});
+			const EMAIL_RESULTADO = enviarEmail();
+			
+			if (EMAIL_RESULTADO == "sucesso") {
+				alert("Email enviado com sucesso!");
+			} else {
+				alert("Algo de errado aconteceu! Erro: " + EMAIL_RESULTADO + " " + EMAIL_RESULTADO.text);
+			}
 		};
 		
 	});
