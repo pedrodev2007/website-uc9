@@ -15,6 +15,7 @@ OFFCANVAS_CONTAINER.innerHTML = `
             <li class="offcanvas-option"><a href="/nossas-lavanderias/">NOSSAS LAVANDERIAS</a></li>
             <li class="offcanvas-option"><a href="/entre-contato/">ENTRE EM CONTATO</a></li>
             <li class="offcanvas-option"><a href="/franquie/">FRANQUIE</a></li>
+            <li class="offcanvas-option"><a href="/login/">ENTRAR</a></li>
             <li class="offcanvas-option"><a href="/creditos/">CRÉDITOS</a></li>
         </ul>
     </div>

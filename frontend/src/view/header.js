@@ -11,8 +11,9 @@ if (HEADER.classList.contains('header-menu')) {
 				<li class="nav-option"><a href="/quem-somos/">QUEM SOMOS</a></li>
 				<li class="nav-option"><a href="/vantagens/">VANTAGENS</a></li>
 				<li class="nav-option"><a href="/nossas-lavanderias/" >NOSSAS LAVANDERIAS</a></li>
-			    <li class="nav-option"><a href="/entre-contato/" >ENTRE EM CONTATO</a></li>
+			    	<li class="nav-option"><a href="/entre-contato/" >ENTRE EM CONTATO</a></li>
 				<li class="nav-option"><a href="/franquie/" >FRANQUIE</a></li>
+				<li class="nav-option"><a href="/login/" >ENTRAR</a></li>
 			</ul>
 		</nav>
     

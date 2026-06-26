@@ -10,7 +10,7 @@
 
 body {
     overflow-x: hidden;
-    background-color: #f0f8ff;
+    background-color: #ffffff;
     min-height: 200vh; 
 }
 
@@ -75,13 +75,13 @@ section {
 }
 
 .box-lavanderia {
-    background: #2DAADD;
+    background: #ffffff;
     color: #f3f6f8;
     width: 100%;
     max-width: 350px; /* Largura máxima no PC */
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 10px 20px #2DAADD;
+    box-shadow: 0 4px 30px rgba(45, 170, 221, 0.3);
 }
 
 .box-interna {
@@ -127,6 +127,10 @@ section {
     max-width: 320px;      
     transition: all 0.3s ease-in-out; 
     cursor: pointer;
+}
+
+.comentario-transparente p {
+    color: #2DAADD;
 }
 
 .comentario-transparente h3, b {
